@@ -259,7 +259,7 @@
         <div class="space-y-2">
           <!-- Backgrounds -->
           <div class="flex gap-0.5">
-            {#each ['#3D4A66', '#2D3A52', '#252E47', '#1E2538', '#151C2C', '#0D1220'] as bg, i}
+            {#each ['hsl(225, 20%, 4%)', 'hsl(225, 20%, 8%)', 'hsl(225, 20%, 12%)', 'hsl(225, 20%, 16%)', 'hsl(225, 20%, 20%)', 'hsl(225, 20%, 24%)'] as bg, i}
               <div class="flex-1">
                 <div class="border-b0 h-12 border" style="background:{bg}"></div>
                 <div class="mt-1.5 font-data text-[10px] tracking-wide text-ink-2">BG-{i}</div>
@@ -268,7 +268,7 @@
           </div>
           <!-- Accent ramps -->
           <div class="mt-4 grid grid-cols-4 gap-4">
-            {#each [{ name: 'ORA Blue / Primary', swatches: ['#001A33', '#003366', '#0055A4', '#3377CC'], active: 2 }, { name: 'Red / Alert', swatches: ['#991B1B', '#DC2626', '#EF4444'], active: 1 }, { name: 'Amber / Data', swatches: ['#B45309', '#F59E0B', '#FCD34D'], active: 1 }, { name: 'Teal / Nominal', swatches: ['#0F766E', '#14B8A6', '#5EEAD4'], active: 1 }] as ramp}
+            {#each [{ name: 'Orange / Primary', swatches: ['hsl(21, 100%, 25%)', 'hsl(21, 100%, 35%)', 'hsl(21, 100%, 45%)', 'hsl(21, 100%, 55%)'], active: 3 }, { name: 'Red / Alert', swatches: ['hsl(353, 82%, 22%)', 'hsl(353, 82%, 32%)', 'hsl(353, 82%, 42%)', 'hsl(353, 82%, 52%)'], active: 3 }, { name: 'Amber / Data', swatches: ['hsl(44, 65%, 21%)', 'hsl(44, 65%, 31%)', 'hsl(44, 65%, 41%)', 'hsl(44, 65%, 51%)'], active: 3 }, { name: 'Teal / Nominal', swatches: ['hsl(177, 68%, 16%)', 'hsl(177, 68%, 26%)', 'hsl(177, 68%, 36%)', 'hsl(177, 68%, 46%)'], active: 3 }] as ramp}
               <div>
                 <div class="mb-2 font-data text-[11px] uppercase tracking-widest text-ink-2">
                   {ramp.name}
@@ -288,7 +288,7 @@
           </div>
           <!-- Text scale -->
           <div class="mt-4 flex flex-wrap items-center gap-6">
-            {#each [['text-ink-0', 'Primary', '#F5F3E7'], ['text-ink-1', 'Secondary', '#CBD5E1'], ['text-ink-2', 'Muted', '#94A3B8'], ['text-ink-3', 'Faint', '#64748B']] as [cls, label, hex]}
+            {#each [['text-ink-0', 'Primary', 'hsl(225, 10%, 98%)'], ['text-ink-1', 'Secondary', 'hsl(225, 20%, 80%)'], ['text-ink-2', 'Muted', 'hsl(225, 20%, 60%)'], ['text-ink-3', 'Faint', 'hsl(225, 20%, 40%)']] as [cls, label, hex]}
               <div class="flex items-center gap-3">
                 <div class="border-b1 h-5 w-5 rounded-full border" style="background:{hex}"></div>
                 <span class="font-data text-[13px] {cls} tracking-wide">{label} · {hex}</span>

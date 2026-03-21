@@ -1,4 +1,4 @@
-import { colors, fontFamily, fontSize } from './src/lib/tokens/theme.js'
+import { colors, fontFamily, fontSize, chartColors } from './src/lib/tokens/theme.js'
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -13,6 +13,7 @@ export default {
         amb: colors.amb,
         teal: colors.teal,
         ink: colors.ink,
+        glow: chartColors.glow,
       },
       fontFamily: {
         display: fontFamily.display,
