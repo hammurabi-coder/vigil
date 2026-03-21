@@ -259,7 +259,7 @@
         <div class="space-y-2">
           <!-- Backgrounds -->
           <div class="flex gap-0.5">
-            {#each ['hsl(220, 15%, 12%)', 'hsl(220, 15%, 14%)', 'hsl(220, 15%, 16%)', 'hsl(220, 15%, 18%)', 'hsl(220, 15%, 20%)', 'hsl(220, 15%, 22%)'] as bg, i}
+            {#each ['hsl(225, 12%, 0%)', 'hsl(225, 12%, 2%)', 'hsl(225, 12%, 4%)', 'hsl(225, 12%, 6%)', 'hsl(225, 12%, 8%)', 'hsl(225, 12%, 10%)'] as bg, i}
               <div class="flex-1">
                 <div class="border-b0 h-12 border" style="background:{bg}"></div>
                 <div class="mt-1.5 font-data text-[10px] tracking-wide text-ink-2">BG-{i}</div>
