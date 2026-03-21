@@ -1,25 +1,19 @@
 /**
  * vigil Design Tokens
- * Retro NASA-inspired palette: medium-dark backgrounds, classic NASA blue, cream accents
- * Clean, geometric, space-age aesthetic
+ * Neon Genesis Evangelion-inspired palette: NERV mission control interfaces
+ * Monochrome-plus-accent palette, high-density data readouts
  * Single source of truth — consumed by tailwind.config.js
  */
 
-/**
- * Color architecture:
- * - Base: Medium-dark slate (#3D4A66) — like a dimly lit 1970s control room
- * - Primary: NASA Blue (#0055A4) — the classic agency blue
- * - Secondary: Dark slate (#2D3A52) — for sidebar/panels
- * - Accent: Red (#DC2626) — for alerts, US flag red
- */
+/** @type {Object} */
 export const colors = {
-  void: '#1C2840',
+  void: '#000000',
   bg: {
-    0: '#3D4A66', // medium-dark slate — main page background
-    1: '#2D3A52', // dark slate — sidebar
-    2: '#252E47', // deeper slate — header/masthead
-    3: '#1E2538', // deep navy — deep panels
-    4: '#151C2C', // darkest — card backgrounds
+    0: '#05050C', // main background
+    1: '#0B0D14', // sidebar
+    2: '#11141D', // header
+    3: '#181C27', // deep panels
+    4: '#202533', // card backgrounds
   },
   // Borders
   border: {
@@ -28,66 +22,51 @@ export const colors = {
     2: 'rgba(255,255,255,0.20)',
     3: 'rgba(255,255,255,0.32)',
   },
-  // NASA Blue — primary accent, the classic agency blue
-  nasa: {
-    DEFAULT: '#0055A4',
-    dim: '#003366',
-    mid: '#004080',
-    lo: 'rgba(0,85,164,0.12)',
-    xlo: 'rgba(0,85,164,0.05)',
-    300: '#3377CC',
-    500: '#0055A4',
-    700: '#003366',
-    900: '#001A33',
+  // Orange — primary accent (FF6B1A)
+  ora: {
+    DEFAULT: '#FF6B1A',
+    lo: 'rgba(255,107,26,0.12)',
+    xlo: 'rgba(255,107,26,0.05)',
+    300: '#FF8A47',
+    500: '#FF6B1A',
+    700: '#CC5515',
   },
-  // Cream — retro off-white for text/accent
-  cream: {
-    DEFAULT: '#F5F3E7',
-    dim: '#C9C7B8',
-    mid: '#E8E6D8',
-    lo: 'rgba(245,243,231,0.10)',
-    300: '#FAF9F3',
-    500: '#F5F3E7',
-    700: '#C9C7B8',
-  },
-  // Alert red — US flag red
+  // Red — alert/error (E82038)
   red: {
-    DEFAULT: '#DC2626',
-    lo: 'rgba(220,38,38,0.12)',
-    xlo: 'rgba(220,38,38,0.05)',
-    300: '#EF4444',
-    500: '#DC2626',
-    700: '#991B1B',
+    DEFAULT: '#E82038',
+    lo: 'rgba(232,32,56,0.12)',
+    xlo: 'rgba(232,32,56,0.05)',
+    300: '#ED4D60',
+    500: '#E82038',
+    700: '#B91A2D',
   },
-  // Data amber — kept for data readouts
+  // Amber — data readout values (D4A832)
   amb: {
-    DEFAULT: '#F59E0B',
-    lo: 'rgba(245,158,11,0.12)',
-    300: '#FCD34D',
-    500: '#F59E0B',
-    700: '#B45309',
+    DEFAULT: '#D4A832',
+    lo: 'rgba(212,168,50,0.12)',
+    300: '#E0BD5B',
+    500: '#D4A832',
+    700: '#AA8628',
   },
-  // Teal — nominal/ok signal
+  // Teal — nominal/ok signal (26C4BC)
   teal: {
-    DEFAULT: '#14B8A6',
-    lo: 'rgba(20,184,166,0.12)',
-    xlo: 'rgba(20,184,166,0.05)',
-    300: '#5EEAD4',
-    500: '#14B8A6',
-    700: '#0F766E',
+    DEFAULT: '#26C4BC',
+    lo: 'rgba(38,196,188,0.12)',
+    xlo: 'rgba(38,196,188,0.05)',
+    300: '#51D0C9',
+    500: '#26C4BC',
+    700: '#1E9D96',
   },
-  // Text scale — optimized for medium-dark backgrounds
+  // Text scale
   ink: {
-    0: '#F5F3E7', // cream — primary text
-    1: '#CBD5E1', // light blue-gray
-    2: '#94A3B8', // muted
-    3: '#64748B', // faint
+    0: '#FFFFFF', // primary text
+    1: '#A0AAB8', // secondary
+    2: '#64748B', // muted
+    3: '#334155', // faint
   },
 }
 
-/**
- *
- */
+/** @type {Object} */
 export const fontFamily = {
   display: ['Bebas Neue', 'sans-serif'],
   label: ['Barlow Condensed', 'sans-serif'],
@@ -95,9 +74,7 @@ export const fontFamily = {
   data: ['Share Tech Mono', 'monospace'],
 }
 
-/**
- *
- */
+/** @type {Object} */
 export const fontSize = {
   '2xs': ['0.625rem', { lineHeight: '1', letterSpacing: '0.3em' }],
   xs: ['0.75rem', { lineHeight: '1.4' }],
@@ -111,27 +88,26 @@ export const fontSize = {
   hero: ['6rem', { lineHeight: '0.85' }],
 }
 
-/** Chart.js palette */
+/** @type {Object} */
 export const chartColors = {
-  nasa: { stroke: colors.nasa.DEFAULT, fill: colors.nasa.xlo },
+  ora: { stroke: colors.ora.DEFAULT, fill: colors.ora.xlo },
   red: { stroke: colors.red.DEFAULT, fill: colors.red.xlo },
   amb: { stroke: colors.amb.DEFAULT, fill: colors.amb.lo },
   teal: { stroke: colors.teal.DEFAULT, fill: colors.teal.xlo },
-  cream: { stroke: colors.cream.DEFAULT, fill: colors.cream.lo },
   grid: 'rgba(255,255,255,0.06)',
   gridLine: 'rgba(255,255,255,0.07)',
   tick: colors.ink[2],
   tooltip: {
-    backgroundColor: colors.bg[2], // #3A4D6A
-    borderColor: 'rgba(0,85,164,0.4)',
+    backgroundColor: colors.bg[2],
+    borderColor: 'rgba(255,107,26,0.4)',
     borderWidth: 1,
-    titleColor: colors.cream.DEFAULT,
+    titleColor: colors.ink[0],
     bodyColor: colors.ink[1],
     padding: 10,
   },
   glow: {
-    nasa: 'rgba(0,85,164,0.35)',
-    red: 'rgba(220,38,38,0.35)',
-    nasaLight: 'rgba(0,85,164,0.06)',
+    ora: 'rgba(255,107,26,0.35)',
+    red: 'rgba(232,32,56,0.35)',
+    oraLight: 'rgba(255,107,26,0.06)',
   },
 }

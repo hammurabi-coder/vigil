@@ -12,8 +12,8 @@
     'font-label font-semibold tracking-wider uppercase inline-flex items-center gap-1.5 relative transition-all duration-150 cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed'
 
   const variants = {
-    primary: 'bg-nasa text-cream hover:bg-nasa-300 hover:shadow-[0_0_18px_theme(colors.glow.nasa)]',
-    outline: 'bg-transparent text-nasa border border-nasa hover:bg-nasa-xlo',
+    primary: 'bg-ora text-void hover:bg-ora-300 hover:shadow-[0_0_18px_theme(colors.glow.ora)]',
+    outline: 'bg-transparent text-ora border border-ora hover:bg-ora-xlo',
     ghost: 'bg-transparent text-ink-1 border border-b1 hover:border-b2 hover:text-ink-0',
     danger: 'bg-red text-white hover:brightness-110 hover:shadow-[0_0_20px_theme(colors.glow.red)]',
   }
@@ -33,7 +33,7 @@
     <span
       class="pointer-events-none absolute right-0 top-0 h-0
                  w-0 border-l-[7px]
-                 border-t-[7px] border-l-nasa-700
+                 border-t-[7px] border-l-ora-700
                  border-t-void"
     ></span>
   {/if}

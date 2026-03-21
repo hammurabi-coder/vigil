@@ -1,8 +1,8 @@
 <script>
   /* eslint-disable max-lines */
   import { onMount } from 'svelte'
-
-  import LogoMark from '$lib/components/LogoMark.svelte'
+  import Sidebar from '$lib/components/Sidebar.svelte'
+  import Topbar from '$lib/components/Topbar.svelte'
   import SectionLabel from '$lib/components/SectionLabel.svelte'
   import Panel from '$lib/components/Panel.svelte'
   import Badge from '$lib/components/Badge.svelte'
@@ -64,7 +64,7 @@
     { label: 'Reserve Unit-00', value: 'OFFLINE', status: 'off' },
   ]
 
-  /** @type {Array<{label: string, value: number, color: 'nasa'|'teal'|'red'|'amb'|'auto'}>} */
+  /** @type {Array<{label: string, value: number, color: 'ora'|'teal'|'red'|'amb'|'auto'}>} */
   const progressItems = [
     { label: 'CPU Load', value: 67, color: 'auto' },
     { label: 'Memory', value: 84, color: 'auto' },
@@ -83,7 +83,7 @@
         68, 71, 73, 70, 72, 74, 71, 68, 65, 69, 73, 76, 74, 71, 73, 75, 72, 70, 73, 74, 71, 69, 73,
         73,
       ],
-      color: 'nasa',
+      color: 'ora',
       fill: true,
     },
     { label: 'Threshold', data: Array(24).fill(65), color: 'red', dashed: true, fill: false },
@@ -97,7 +97,7 @@
     {
       label: 'Primary',
       data: [40, 42, 45, 44, 46, 48, 45, 47, 50, 48, 46, 49, 52, 50, 48, 51],
-      color: 'nasa',
+      color: 'ora',
     },
     {
       label: 'Reserve',
@@ -112,7 +112,7 @@
   ]
 
   const radarDatasets = [
-    { label: 'EVA-01', data: [73, 88, 72, 80, 60, 85], color: 'nasa' },
+    { label: 'EVA-01', data: [73, 88, 72, 80, 60, 85], color: 'ora' },
     { label: 'EVA-02', data: [88, 82, 90, 85, 88, 88], color: 'teal' },
   ]
 
@@ -245,61 +245,13 @@
 
 <div class="flex min-h-screen">
   <!-- ── SIDEBAR NAV ─────────────────────────────────────── -->
-  <nav
-    class="border-b1 sticky top-0 flex h-screen w-52 flex-shrink-0 flex-col overflow-y-auto border-r bg-bg-1"
-  >
-    <!-- Logo -->
-    <div class="border-b1 flex items-center gap-3 border-b p-5">
-      <LogoMark size={36} />
-      <div>
-        <div class="font-display text-[20px] leading-none tracking-wide">TERTIUS</div>
-        <div class="mt-0.5 font-data text-[10px] uppercase tracking-widest text-nasa">
-          Design System
-        </div>
-      </div>
-    </div>
-
-    <!-- Nav links -->
-    <div class="flex flex-1 flex-col py-4">
-      {#each nav as item}
-        <a
-          href="#{item.id}"
-          class="px-5 py-3 font-data text-[11px] uppercase tracking-widest transition-colors duration-100
-                 {activeSection === item.id
-            ? 'border-l-2 border-nasa bg-nasa-xlo pl-[calc(1.25rem-2px)] text-nasa'
-            : 'border-l-2 border-transparent text-ink-1 hover:text-ink-0'}"
-        >
-          {item.label}
-        </a>
-      {/each}
-    </div>
-
-    <!-- Clock footer -->
-    <div class="border-b1 border-t p-5 font-data text-[10px] tracking-wider text-ink-2">
-      <div class="text-[15px] tabular-nums text-amb">{clock}</div>
-      <div class="mt-0.5 text-[10px] uppercase tracking-widest text-ink-2">System Time</div>
-    </div>
-  </nav>
+  <Sidebar {nav} {activeSection} {clock} />
 
   <!-- ── MAIN CONTENT ───────────────────────────────────── -->
   <main class="flex-1 overflow-y-auto">
     <div class="mx-auto max-w-5xl space-y-20 px-8 py-12">
       <!-- MASTHEAD -->
-      <header
-        class="nasa-header border-b1 relative flex items-end justify-between border-b bg-bg-1 pb-6"
-      >
-        <div>
-          <div class="font-display text-[56px] leading-none tracking-wide">vigil</div>
-          <div class="mt-2 font-data text-[18px] uppercase tracking-widest text-nasa">
-            Operational Dark · Component Library · v0.1.0
-          </div>
-        </div>
-        <div class="text-right font-data text-[11px] leading-loose tracking-wider text-ink-1">
-          DOC <span class="text-amb">SP-168-NG</span><br />
-          REV <span class="text-amb">0.1.0-alpha</span><br />
-          STATUS <span class="text-teal">ACTIVE</span>
-        </div>
-      </header>
+      <Topbar {clock} />
 
       <!-- 01 · COLORS ─────────────────────────────────────── -->
       <section id="colors">
@@ -316,7 +268,7 @@
           </div>
           <!-- Accent ramps -->
           <div class="mt-4 grid grid-cols-4 gap-4">
-            {#each [{ name: 'NASA Blue / Primary', swatches: ['#001A33', '#003366', '#0055A4', '#3377CC'], active: 2 }, { name: 'Red / Alert', swatches: ['#991B1B', '#DC2626', '#EF4444'], active: 1 }, { name: 'Amber / Data', swatches: ['#B45309', '#F59E0B', '#FCD34D'], active: 1 }, { name: 'Teal / Nominal', swatches: ['#0F766E', '#14B8A6', '#5EEAD4'], active: 1 }] as ramp}
+            {#each [{ name: 'ORA Blue / Primary', swatches: ['#001A33', '#003366', '#0055A4', '#3377CC'], active: 2 }, { name: 'Red / Alert', swatches: ['#991B1B', '#DC2626', '#EF4444'], active: 1 }, { name: 'Amber / Data', swatches: ['#B45309', '#F59E0B', '#FCD34D'], active: 1 }, { name: 'Teal / Nominal', swatches: ['#0F766E', '#14B8A6', '#5EEAD4'], active: 1 }] as ramp}
               <div>
                 <div class="mb-2 font-data text-[11px] uppercase tracking-widest text-ink-2">
                   {ramp.name}
@@ -376,7 +328,7 @@
           </Panel>
           <Panel variant="accent" title="Accent Panel" badge="ACTIVE" badgeVariant="warn">
             <p class="font-body text-[13px] leading-relaxed text-ink-0">
-              NASA Red left border + faint tint. For primary action areas or selected states.
+              ORA Red left border + faint tint. For primary action areas or selected states.
             </p>
           </Panel>
           <Panel variant="alert" title="Alert Panel" badge="CRITICAL" badgeVariant="alert">
@@ -541,7 +493,7 @@
               <DonutChart
                 labels={['Primary', 'Reserve', 'Aux', 'Idle']}
                 data={[51, 20, 10, 19]}
-                colors={['nasa', 'amb', 'teal', 'red']}
+                colors={['ora', 'amb', 'teal', 'red']}
                 height={185}
               />
             </div>
@@ -575,7 +527,7 @@
           >
             <div class="px-5 pb-5">
               <BarChart
-                labels={['CPU', 'Memory', 'Network', 'Stnasage', 'GPU', 'Comms']}
+                labels={['CPU', 'Memory', 'Network', 'Storage', 'GPU', 'Comms']}
                 data={[67, 84, 31, 58, 45, 55]}
                 color="auto"
                 orientation="horizontal"

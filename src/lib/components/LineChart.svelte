@@ -8,7 +8,7 @@
   /**
    * LineChart
    * @prop {string[]} labels
-   * @prop {Array<{label:string, data:number[], color?:'nasa'|'red'|'amb'|'teal', dashed?:boolean, fill?:boolean}>} datasets
+   * @prop {Array<{label:string, data:number[], color?:'ora'|'red'|'amb'|'teal', dashed?:boolean, fill?:boolean}>} datasets
    * @prop {{min?:number, max?:number, callback?:Function}} yAxis
    * @prop {number} height
    */
@@ -40,7 +40,7 @@
       data: {
         labels,
         datasets: datasets.map((ds) => {
-          const palette = C[ds.color ?? 'nasa']
+          const palette = C[ds.color ?? 'ora']
           return {
             label: ds.label,
             data: ds.data,

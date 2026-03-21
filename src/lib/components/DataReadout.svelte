@@ -15,7 +15,7 @@
     ok: 'text-teal',
     alert: 'text-red animate-blink-slow',
     primary: 'text-ink-0',
-    warn: 'text-nasa',
+    warn: 'text-ora',
   }
 
   const sizeMap = {

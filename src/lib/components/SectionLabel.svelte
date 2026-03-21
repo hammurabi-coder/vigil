@@ -6,10 +6,10 @@
 </script>
 
 <div class="section-label font-data text-[11px] uppercase tracking-widest">
-  <span class="font-bold text-nasa">&#x5B;</span><!--
+  <span class="font-bold text-ora">&#x5B;</span><!--
   -->{#if number}<span class="text-ink-2"
       >{number} ·</span
     >{/if}<!--
   --><slot /><!--
-  --><span class="font-bold text-nasa">&#x5D;</span>
+  --><span class="font-bold text-ora">&#x5D;</span>
 </div>

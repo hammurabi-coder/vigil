@@ -52,13 +52,13 @@
     background: rgba(255, 255, 255, 0.12);
   }
 
-  /* NASA header — corner notches per SP-168 signage */
-  .nasa-header {
+  /* ORA header — corner notches per SP-168 signage */
+  .ora-header {
     position: relative;
     padding: 0 1.5rem 1.5rem;
     margin: 0 -0.5rem;
   }
-  .nasa-header::before {
+  .ora-header::before {
     content: '';
     position: absolute;
     left: 0;
@@ -68,7 +68,7 @@
     border-bottom: 3px solid #0055a4;
     border-right: 3px solid #0055a4;
   }
-  .nasa-header::after {
+  .ora-header::after {
     content: '';
     position: absolute;
     right: 0;
@@ -79,7 +79,7 @@
     border-left: 3px solid #0055a4;
   }
 
-  /* Breathing space — solid rule per NASA SP-168 */
+  /* Breathing space — solid rule per ORA SP-168 */
   .breathing-space {
     height: 1px;
     background: rgba(255, 255, 255, 0.12);

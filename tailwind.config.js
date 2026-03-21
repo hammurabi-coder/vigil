@@ -8,8 +8,7 @@ export default {
       colors: {
         void: colors.void,
         bg: colors.bg,
-        nasa: colors.nasa,
-        cream: colors.cream,
+        ora: colors.ora,
         red: colors.red,
         amb: colors.amb,
         teal: colors.teal,

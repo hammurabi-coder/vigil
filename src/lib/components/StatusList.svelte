@@ -8,7 +8,7 @@
   const dotBase = 'w-1.5 h-1.5 rounded-full flex-shrink-0'
   const dots = {
     ok: `${dotBase} bg-teal shadow-[0_0_5px_theme(colors.teal.DEFAULT)]`,
-    warn: `${dotBase} bg-nasa shadow-[0_0_5px_theme(colors.nasa.DEFAULT)] animate-blink-slow`,
+    warn: `${dotBase} bg-ora shadow-[0_0_5px_theme(colors.ora.DEFAULT)] animate-blink-slow`,
     alert: `${dotBase} bg-red shadow-[0_0_7px_theme(colors.red.DEFAULT)] animate-blink`,
     off: `${dotBase} bg-ink-2`,
   }

@@ -21,7 +21,7 @@
 
   const stateMap = {
     ok: { bg: 'bg-teal', text: 'text-teal', label: 'ACTIVE' },
-    warn: { bg: 'bg-nasa', text: 'text-nasa', label: 'WARN' },
+    warn: { bg: 'bg-ora', text: 'text-ora', label: 'WARN' },
     alert: { bg: 'bg-red', text: 'text-red', label: 'ALERT' },
     off: { bg: 'bg-ink-2', text: 'text-ink-2', label: 'OFFLINE' },
   }
@@ -57,7 +57,7 @@
     <div
       class="border-b1 flex aspect-square cursor-default items-center justify-center
              border font-data text-[10px] transition-all duration-150
-             hover:border-nasa {s.text} {s.bg}"
+             hover:border-ora {s.text} {s.bg}"
     >
       {node.id}
     </div>

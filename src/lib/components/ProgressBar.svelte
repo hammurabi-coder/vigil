@@ -3,28 +3,31 @@
    * ProgressBar
    * @prop {string} label
    * @prop {number} value — 0–100
-   * @prop {'nasa'|'teal'|'red'|'amb'} color
+   * @prop {'ora'|'teal'|'red'|'amb'} color
    * @prop {boolean} showValue
+   * @prop {{warn:number, alert:number}} thresholds
    */
   export let label = ''
   /** @type {number} */
   export let value = 0
-  /** @type {'nasa'|'teal'|'red'|'amb'|'auto'} */
-  export let color = 'nasa'
+  /** @type {'ora'|'teal'|'red'|'amb'|'auto'} */
+  export let color = 'ora'
   /** @type {boolean} */
   export let showValue = true
+  /** @type {{warn:number, alert:number}} */
+  export let thresholds = { warn: 65, alert: 85 }
 
   const colorMap = {
-    nasa: { bg: 'bg-nasa', text: 'text-nasa' },
+    ora: { bg: 'bg-ora', text: 'text-ora' },
     teal: { bg: 'bg-teal', text: 'text-teal' },
     red: { bg: 'bg-red', text: 'text-red' },
     amb: { bg: 'bg-amb', text: 'text-amb' },
   }
 
   $: capped = Math.min(100, Math.max(0, value))
-  $: autoColor = value >= 85 ? 'red' : value >= 65 ? 'nasa' : 'teal'
+  $: autoColor = value >= thresholds.alert ? 'red' : value >= thresholds.warn ? 'ora' : 'teal'
   $: resolved = color === 'auto' ? autoColor : color
-  $: styles = colorMap[resolved] ?? colorMap.nasa
+  $: styles = colorMap[resolved] ?? colorMap.ora
 </script>
 
 <div class="flex flex-col gap-1">

@@ -17,7 +17,7 @@
 
   const levelCls = {
     ok: 'text-teal',
-    warn: 'text-nasa',
+    warn: 'text-ora',
     alert: 'text-red',
     info: 'text-ink-2',
   }

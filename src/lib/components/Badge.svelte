@@ -7,7 +7,7 @@
 
   const variants = {
     ok: 'border-teal text-teal',
-    warn: 'border-nasa text-nasa',
+    warn: 'border-ora text-ora',
     alert: 'border-red text-red animate-blink',
     muted: 'border-b2 text-ink-3',
   }
