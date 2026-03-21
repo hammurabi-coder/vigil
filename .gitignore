@@ -1,0 +1,24 @@
+# deps
+node_modules/
+
+# SvelteKit
+.svelte-kit/
+build/
+dist/
+
+# env
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+Thumbs.db
+
+# editor
+.vscode/settings.json
+.idea/
+
+# logs
+*.log
+npm-debug.log*
