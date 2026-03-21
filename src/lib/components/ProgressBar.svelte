@@ -2,58 +2,40 @@
   /**
    * ProgressBar
    * @prop {string} label
-   * @prop {number} value   — 0–100
+   * @prop {number} value — 0–100
    * @prop {'nasa'|'teal'|'red'|'amb'} color
    * @prop {boolean} showValue
    */
   export let label = ''
-  /**
-   *
-   */
+  /** @type {number} */
   export let value = 0
-  /**
-   *
-   */
+  /** @type {'nasa'|'teal'|'red'|'amb'|'auto'} */
   export let color = 'nasa'
-  /**
-   *
-   */
+  /** @type {boolean} */
   export let showValue = true
 
-  const fills = {
-    nasa: 'bg-nasa',
-    teal: 'bg-teal',
-    red: 'bg-red',
-    amb: 'bg-amb',
-  }
-
-  const valueColors = {
-    nasa: 'text-nasa',
-    teal: 'text-teal',
-    red: 'text-red',
-    amb: 'text-amb',
+  const colorMap = {
+    nasa: { bg: 'bg-nasa', text: 'text-nasa' },
+    teal: { bg: 'bg-teal', text: 'text-teal' },
+    red: { bg: 'bg-red', text: 'text-red' },
+    amb: { bg: 'bg-amb', text: 'text-amb' },
   }
 
   $: capped = Math.min(100, Math.max(0, value))
   $: autoColor = value >= 85 ? 'red' : value >= 65 ? 'nasa' : 'teal'
-  $: resolvedColor = color === 'auto' ? autoColor : color
+  $: resolved = color === 'auto' ? autoColor : color
+  $: styles = colorMap[resolved] ?? colorMap.nasa
 </script>
 
 <div class="flex flex-col gap-1">
   {#if label || showValue}
     <div class="flex justify-between font-data text-[11px] uppercase tracking-wider text-ink-2">
       <span>{label}</span>
-      {#if showValue}
-        <span class={valueColors[resolvedColor] ?? 'text-ink-2'}>{capped}%</span>
-      {/if}
+      {#if showValue}<span class={styles.text}>{capped}%</span>{/if}
     </div>
   {/if}
   <div class="bg-b1 relative h-px">
-    <div
-      class="{fills[resolvedColor] ?? fills.nasa} relative h-full transition-all duration-500"
-      style="width: {capped}%"
-    >
-      <!-- tick mark -->
+    <div class="{styles.bg} relative h-full transition-all duration-500" style="width: {capped}%">
       <div class="absolute -right-px -top-1 h-2.5 w-px bg-ink-0"></div>
     </div>
   </div>
