@@ -14,13 +14,13 @@ const SAT = '20%'
 /** @type {Object} */
 export const colors = {
   // mathematical lightness increments for the surface stack
-  void: `hsl(${HUE}, ${SAT}, 4%)`,
+  void: `hsl(${HUE}, ${SAT}, 10%)`,
   bg: {
-    0: `hsl(${HUE}, ${SAT}, 8%)`, // main background
-    1: `hsl(${HUE}, ${SAT}, 12%)`, // sidebar
+    0: `hsl(${HUE}, ${SAT}, 12%)`, // main background
+    1: `hsl(${HUE}, ${SAT}, 14%)`, // sidebar
     2: `hsl(${HUE}, ${SAT}, 16%)`, // header
-    3: `hsl(${HUE}, ${SAT}, 20%)`, // deep panels
-    4: `hsl(${HUE}, ${SAT}, 24%)`, // card backgrounds
+    3: `hsl(${HUE}, ${SAT}, 18%)`, // deep panels
+    4: `hsl(${HUE}, ${SAT}, 20%)`, // card backgrounds
   },
   // Borders
   border: {
