@@ -1,100 +1,88 @@
 /**
- * NASA SP-168 + EVA–NERV Design Tokens
+ * vigil Design Tokens
+ * Retro NASA-inspired palette: medium-dark backgrounds, classic NASA blue, cream accents
+ * Clean, geometric, space-age aesthetic
  * Single source of truth — consumed by tailwind.config.js
- * Import in app code for runtime access if needed.
- * Ref: REFERENCE_MATERIALS/nasa_graphics_standards_strategy.md
  */
 
 /**
- * Color architecture following NASA SP-168 principles:
- * - NASA Red (#E3000F): Piercing vermilion, optically aggressive — reserved for CTAs/alerts only
- * - Warm Gray scale: Matte desaturated brownish-gray for UI chrome/secondary surfaces
- * - True black void base — NERV aesthetic
- * - Orange retained as secondary accent (NASA-compatible warm tone)
- * - Teal = nominal/ok only, Red = alert/error only
+ * Color architecture:
+ * - Base: Medium-dark blue (#1E2640) — like a 1970s control room background
+ * - Primary: NASA Blue (#0055A4) — the classic agency blue
+ * - Secondary: Cream/Off-white (#F5F3E7) — retro text, like old NASA print
+ * - Accent: Red (#DC2626) — for alerts, US flag red
+ * - Teal kept for nominal/ok
  */
 export const colors = {
-  void: '#000000',
+  void: '#0D1220',
   bg: {
-    0: '#05050C',
-    1: '#0A0A16',
-    2: '#0F0F1F',
-    3: '#151528',
-    4: '#1C1C34',
+    0: '#1E2640', // medium-dark navy — like a 1970s control room
+    1: '#252C4A', // lighter navy
+    2: '#2F3860', // medium navy
+    3: '#3A4478', // lighter purple-navy
+    4: '#465595', // even lighter
   },
-  // Borders (use as bg with opacity in tailwind via bg-b0 etc.)
+  // Borders
   border: {
-    0: 'rgba(255,255,255,0.04)',
-    1: 'rgba(255,255,255,0.09)',
-    2: 'rgba(255,255,255,0.16)',
-    3: 'rgba(255,255,255,0.28)',
+    0: 'rgba(255,255,255,0.06)',
+    1: 'rgba(255,255,255,0.12)',
+    2: 'rgba(255,255,255,0.20)',
+    3: 'rgba(255,255,255,0.32)',
   },
-  // NASA Red — primary accent, SP-168 #E3000F vermilion
+  // NASA Blue — primary accent, the classic agency blue
   nasa: {
-    DEFAULT: '#E3000F',
-    dim: '#7A0016',
-    mid: '#B3000C',
-    lo: 'rgba(227,0,15,0.12)',
-    xlo: 'rgba(227,0,15,0.05)',
-    300: '#FF3040',
-    500: '#E3000F',
-    700: '#B3000C',
-    900: '#7A0016',
+    DEFAULT: '#0055A4',
+    dim: '#003366',
+    mid: '#004080',
+    lo: 'rgba(0,85,164,0.12)',
+    xlo: 'rgba(0,85,164,0.05)',
+    300: '#3377CC',
+    500: '#0055A4',
+    700: '#003366',
+    900: '#001A33',
   },
-  // Orange — retained secondary accent (warm NASA-adjacent tone)
-  ora: {
-    DEFAULT: '#FF6B1A',
-    dim: '#7A3008',
-    mid: '#CC4E00',
-    lo: 'rgba(255,107,26,0.14)',
-    xlo: 'rgba(255,107,26,0.06)',
-    300: '#FF9050',
-    500: '#FF6B1A',
-    700: '#CC4E00',
-    900: '#7A3008',
+  // Cream — retro off-white for text/accent
+  cream: {
+    DEFAULT: '#F5F3E7',
+    dim: '#C9C7B8',
+    mid: '#E8E6D8',
+    lo: 'rgba(245,243,231,0.10)',
+    300: '#FAF9F3',
+    500: '#F5F3E7',
+    700: '#C9C7B8',
   },
-  // Alert red — signal/error state
+  // Alert red — US flag red
   red: {
-    DEFAULT: '#E82038',
-    lo: 'rgba(232,32,56,0.16)',
-    xlo: 'rgba(232,32,56,0.07)',
-    300: '#FF5068',
-    500: '#E82038',
-    700: '#8C0018',
+    DEFAULT: '#DC2626',
+    lo: 'rgba(220,38,38,0.12)',
+    xlo: 'rgba(220,38,38,0.05)',
+    300: '#EF4444',
+    500: '#DC2626',
+    700: '#991B1B',
   },
-  // Amber — data readout values
+  // Data amber — kept for data readouts
   amb: {
-    DEFAULT: '#D4A832',
-    lo: 'rgba(212,168,50,0.14)',
-    300: '#EDD070',
-    500: '#D4A832',
-    700: '#7A5800',
+    DEFAULT: '#F59E0B',
+    lo: 'rgba(245,158,11,0.12)',
+    300: '#FCD34D',
+    500: '#F59E0B',
+    700: '#B45309',
   },
-  // Teal — nominal/ok signal only
+  // Teal — nominal/ok signal
   teal: {
-    DEFAULT: '#26C4BC',
-    lo: 'rgba(38,196,188,0.14)',
-    xlo: 'rgba(38,196,188,0.06)',
-    300: '#5EEAE0',
-    500: '#26C4BC',
-    700: '#105C58',
+    DEFAULT: '#14B8A6',
+    lo: 'rgba(20,184,166,0.12)',
+    xlo: 'rgba(20,184,166,0.05)',
+    300: '#5EEAD4',
+    500: '#14B8A6',
+    700: '#0F766E',
   },
-  // Warm gray scale — NASA SP-168 "matte desaturated brownish-gray"
-  warm: {
-    0: '#F4F4F5', // light — NASA surface neutral
-    1: '#E8E6E1', // light-mid
-    2: '#D4D2CD', // mid
-    3: '#A8A49C', // mid-dark (NASA warm gray typical value)
-    4: '#706860', // dark — maps to ink-2 territory
-    5: '#484440', // darker
-    6: '#2C2824', // very dark
-  },
-  // Ink text scale
+  // Text scale — optimized for medium-dark backgrounds
   ink: {
-    0: '#F0EDE6', // primary text
-    1: '#A8A296', // secondary text
-    2: '#706860', // muted text
-    3: '#484440', // faint text
+    0: '#F5F3E7', // cream — primary text
+    1: '#CBD5E1', // light blue-gray
+    2: '#94A3B8', // muted
+    3: '#64748B', // faint
   },
 }
 
@@ -109,8 +97,7 @@ export const fontFamily = {
 }
 
 /**
- * Font sizes — modern readable baseline
- * Minimum annotation size: 10px (was 8px)
+ *
  */
 export const fontSize = {
   '2xs': ['0.625rem', { lineHeight: '1', letterSpacing: '0.3em' }],
@@ -125,20 +112,20 @@ export const fontSize = {
   hero: ['6rem', { lineHeight: '0.85' }],
 }
 
-/** Chart.js palette — import directly into chart components */
+/** Chart.js palette */
 export const chartColors = {
   nasa: { stroke: colors.nasa.DEFAULT, fill: colors.nasa.xlo },
-  ora: { stroke: colors.ora.DEFAULT, fill: colors.ora.xlo },
   red: { stroke: colors.red.DEFAULT, fill: colors.red.xlo },
   amb: { stroke: colors.amb.DEFAULT, fill: colors.amb.lo },
   teal: { stroke: colors.teal.DEFAULT, fill: colors.teal.xlo },
-  grid: 'rgba(255,255,255,0.05)',
+  cream: { stroke: colors.cream.DEFAULT, fill: colors.cream.lo },
+  grid: 'rgba(255,255,255,0.06)',
   tick: colors.ink[2],
   tooltip: {
-    backgroundColor: '#0A0A16',
-    borderColor: 'rgba(227,0,15,0.35)',
+    backgroundColor: '#1E2640',
+    borderColor: 'rgba(0,85,164,0.4)',
     borderWidth: 1,
-    titleColor: colors.amb.DEFAULT,
+    titleColor: colors.cream.DEFAULT,
     bodyColor: colors.ink[1],
     padding: 10,
   },

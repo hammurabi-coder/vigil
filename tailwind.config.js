@@ -9,11 +9,10 @@ export default {
         void: colors.void,
         bg: colors.bg,
         nasa: colors.nasa,
-        ora: colors.ora,
+        cream: colors.cream,
         red: colors.red,
         amb: colors.amb,
         teal: colors.teal,
-        warm: colors.warm,
         ink: colors.ink,
       },
       fontFamily: {
