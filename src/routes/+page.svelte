@@ -266,7 +266,7 @@
           class="px-5 py-3 font-data text-[11px] uppercase tracking-widest transition-colors duration-100
                  {activeSection === item.id
             ? 'border-l-2 border-nasa bg-nasa-xlo pl-[calc(1.25rem-2px)] text-nasa'
-            : 'text-warm-1 hover:text-warm-0 border-l-2 border-transparent'}"
+            : 'border-l-2 border-transparent text-ink-1 hover:text-ink-0'}"
         >
           {item.label}
         </a>
@@ -274,9 +274,9 @@
     </div>
 
     <!-- Clock footer -->
-    <div class="border-b1 text-warm-2 border-t p-5 font-data text-[10px] tracking-wider">
+    <div class="border-b1 border-t p-5 font-data text-[10px] tracking-wider text-ink-2">
       <div class="text-[15px] tabular-nums text-amb">{clock}</div>
-      <div class="text-warm-2 mt-0.5 text-[10px] uppercase tracking-widest">System Time</div>
+      <div class="mt-0.5 text-[10px] uppercase tracking-widest text-ink-2">System Time</div>
     </div>
   </nav>
 
@@ -291,7 +291,7 @@
             Operational Dark · Component Library · v0.1.0
           </div>
         </div>
-        <div class="text-warm-1 text-right font-data text-[11px] leading-loose tracking-wider">
+        <div class="text-right font-data text-[11px] leading-loose tracking-wider text-ink-1">
           DOC <span class="text-amb">SP-168-NG</span><br />
           REV <span class="text-amb">0.1.0-alpha</span><br />
           STATUS <span class="text-teal">ACTIVE</span>
@@ -304,7 +304,7 @@
         <div class="space-y-2">
           <!-- Backgrounds -->
           <div class="flex gap-0.5">
-            {#each ['#000000', '#05050C', '#0A0A16', '#0F0F1F', '#151528', '#1C1C34'] as bg, i}
+            {#each ['#0D1220', '#1E2640', '#252C4A', '#2F3860', '#3A4478', '#465595'] as bg, i}
               <div class="flex-1">
                 <div class="border-b0 h-12 border" style="background:{bg}"></div>
                 <div class="mt-1.5 font-data text-[10px] tracking-wide text-ink-2">BG-{i}</div>
@@ -313,9 +313,9 @@
           </div>
           <!-- Accent ramps -->
           <div class="mt-4 grid grid-cols-4 gap-4">
-            {#each [{ name: 'NASA Red / Primary', swatches: ['#7A0016', '#B3000C', '#E3000F', '#FF3040'], active: 2 }, { name: 'Red / Alert', swatches: ['#5C0018', '#E82038', '#FF5068'], active: 1 }, { name: 'Amber / Data', swatches: ['#7A5800', '#D4A832', '#EDD070'], active: 1 }, { name: 'Teal / Nominal', swatches: ['#105C58', '#26C4BC', '#5EEAE0'], active: 1 }] as ramp}
+            {#each [{ name: 'NASA Blue / Primary', swatches: ['#001A33', '#003366', '#0055A4', '#3377CC'], active: 2 }, { name: 'Red / Alert', swatches: ['#991B1B', '#DC2626', '#EF4444'], active: 1 }, { name: 'Amber / Data', swatches: ['#B45309', '#F59E0B', '#FCD34D'], active: 1 }, { name: 'Teal / Nominal', swatches: ['#0F766E', '#14B8A6', '#5EEAD4'], active: 1 }] as ramp}
               <div>
-                <div class="text-warm-3 mb-2 font-data text-[11px] uppercase tracking-widest">
+                <div class="mb-2 font-data text-[11px] uppercase tracking-widest text-ink-2">
                   {ramp.name}
                 </div>
                 <div class="flex gap-1">
@@ -333,7 +333,7 @@
           </div>
           <!-- Text scale -->
           <div class="mt-4 flex flex-wrap items-center gap-6">
-            {#each [['text-ink-0', 'Primary', '#F0EDE6'], ['text-warm-1', 'Secondary', '#E8E6E1'], ['text-warm-3', 'Muted', '#A8A49C'], ['text-warm-5', 'Faint', '#484440']] as [cls, label, hex]}
+            {#each [['text-ink-0', 'Primary', '#F5F3E7'], ['text-ink-1', 'Secondary', '#CBD5E1'], ['text-ink-2', 'Muted', '#94A3B8'], ['text-ink-3', 'Faint', '#64748B']] as [cls, label, hex]}
               <div class="flex items-center gap-3">
                 <div class="border-b1 h-5 w-5 rounded-full border" style="background:{hex}"></div>
                 <span class="font-data text-[13px] {cls} tracking-wide">{label} · {hex}</span>
@@ -353,7 +353,7 @@
               class="border-b0 flex items-baseline justify-between gap-4 border-b px-6 py-5 last:border-b-0"
             >
               <div class={row.cls}>{row.sample}</div>
-              <div class="text-warm-1 flex-shrink-0 font-data text-[11px] tracking-wide">
+              <div class="flex-shrink-0 font-data text-[11px] tracking-wide text-ink-2">
                 {row.meta}
               </div>
             </div>
@@ -609,7 +609,7 @@
           <Panel variant="deep" title="Button Variants">
             <div class="space-y-6">
               <div>
-                <div class="text-warm-3 mb-3 font-data text-[11px] uppercase tracking-widest">
+                <div class="mb-3 font-data text-[11px] uppercase tracking-widest text-ink-3">
                   Size · Primary
                 </div>
                 <div class="flex flex-wrap items-start gap-3">
@@ -619,7 +619,7 @@
                 </div>
               </div>
               <div>
-                <div class="text-warm-3 mb-3 font-data text-[11px] uppercase tracking-widest">
+                <div class="mb-3 font-data text-[11px] uppercase tracking-widest text-ink-3">
                   Style variants
                 </div>
                 <div class="flex flex-wrap items-start gap-3">
@@ -630,7 +630,7 @@
                 </div>
               </div>
               <div>
-                <div class="text-warm-3 mb-3 font-data text-[11px] uppercase tracking-widest">
+                <div class="mb-3 font-data text-[11px] uppercase tracking-widest text-ink-3">
                   Badges
                 </div>
                 <div class="flex flex-wrap items-center gap-3">
