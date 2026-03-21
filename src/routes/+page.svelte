@@ -64,6 +64,7 @@
     { label: 'Reserve Unit-00', value: 'OFFLINE', status: 'off' },
   ]
 
+  /** @type {Array<{label: string, value: number, color: 'nasa'|'teal'|'red'|'amb'|'auto'}>} */
   const progressItems = [
     { label: 'CPU Load', value: 67, color: 'auto' },
     { label: 'Memory', value: 84, color: 'auto' },
