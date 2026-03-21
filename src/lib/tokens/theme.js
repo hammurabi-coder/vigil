@@ -8,19 +8,19 @@
 // Color Math Design Tokens
 // Utilizing HSL to maintain strict mathematical relationships between lightness steps
 
-const HUE = 225
-const SAT = '12%'
+const HUE = 215
+const SAT = '8%'
 
 /** @type {Object} */
 export const colors = {
   // mathematical lightness increments for the surface stack
-  void: `hsl(${HUE}, ${SAT}, 0%)`,
+  void: `hsl(${HUE}, ${SAT}, 20%)`,
   bg: {
-    0: `hsl(${HUE}, ${SAT}, 2%)`, // main background
-    1: `hsl(${HUE}, ${SAT}, 4%)`, // sidebar
-    2: `hsl(${HUE}, ${SAT}, 6%)`, // header
-    3: `hsl(${HUE}, ${SAT}, 8%)`, // deep panels
-    4: `hsl(${HUE}, ${SAT}, 10%)`, // card backgrounds
+    0: `hsl(${HUE}, ${SAT}, 22%)`, // main background
+    1: `hsl(${HUE}, ${SAT}, 24%)`, // sidebar
+    2: `hsl(${HUE}, ${SAT}, 26%)`, // header
+    3: `hsl(${HUE}, ${SAT}, 28%)`, // deep panels
+    4: `hsl(${HUE}, ${SAT}, 30%)`, // card backgrounds
   },
   // Borders
   border: {
