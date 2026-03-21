@@ -7,20 +7,19 @@
 
 /**
  * Color architecture:
- * - Base: Light slate blue-gray (#3D4F6F) — like a 1970s control room background
+ * - Base: Medium slate blue-gray (#4A5D7A) — readable 1970s control room
  * - Primary: NASA Blue (#0055A4) — the classic agency blue
- * - Secondary: Dark slate (#1C2840) — for sidebar/deep panels
+ * - Secondary: Dark slate (#2A3A5A) — for sidebar/deep panels
  * - Accent: Red (#DC2626) — for alerts, US flag red
- * - Teal kept for nominal/ok
  */
 export const colors = {
   void: '#1C2840',
   bg: {
-    0: '#3D4F6F', // light slate blue-gray — control room background
-    1: '#2F3F5C', // darker slate
-    2: '#253352', // deep navy
-    3: '#1C2840', // darker
-    4: '#151D30', // darkest
+    0: '#6B7D98', // medium slate — main page background (was #3D4F6F, too dark)
+    1: '#4A5D7A', // medium-dark slate — sidebar
+    2: '#3A4D6A', // deeper slate — panels
+    3: '#2A3D5A', // deep navy — deep panels
+    4: '#1A2D4A', // darkest — void-adjacent
   },
   // Borders
   border: {
@@ -123,7 +122,7 @@ export const chartColors = {
   gridLine: 'rgba(255,255,255,0.07)',
   tick: colors.ink[2],
   tooltip: {
-    backgroundColor: colors.bg[2],
+    backgroundColor: colors.bg[2], // #3A4D6A
     borderColor: 'rgba(0,85,164,0.4)',
     borderWidth: 1,
     titleColor: colors.cream.DEFAULT,
