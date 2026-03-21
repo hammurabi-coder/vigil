@@ -18,15 +18,15 @@ The dev server runs the full component showcase — every module in one scrollab
 
 ## Scripts
 
-| Command | What it does |
-|---------|-------------|
-| `npm run dev` | Start showcase dev server |
-| `npm run build` | Build showcase + package library |
-| `npm run package` | Package src/lib to dist/ for consumption |
-| `npm run lint` | ESLint + Prettier check |
-| `npm run lint:fix` | Auto-fix lint + format |
-| `npm run format` | Prettier write |
-| `npm run check` | svelte-check type/prop validation |
+| Command            | What it does                             |
+| ------------------ | ---------------------------------------- |
+| `npm run dev`      | Start showcase dev server                |
+| `npm run build`    | Build showcase + package library         |
+| `npm run package`  | Package src/lib to dist/ for consumption |
+| `npm run lint`     | ESLint + Prettier check                  |
+| `npm run lint:fix` | Auto-fix lint + format                   |
+| `npm run format`   | Prettier write                           |
+| `npm run check`    | svelte-check type/prop validation        |
 
 ## Structure
 

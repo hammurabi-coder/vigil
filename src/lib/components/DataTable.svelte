@@ -5,14 +5,14 @@
    * @prop {Array<Record<string,any>>} rows
    */
   export let columns = []
-  export let rows    = []
+  export let rows = []
 
   const cellColor = {
     default: 'text-ink-1',
-    data:    'text-amb',
-    ok:      'text-teal',
-    warn:    'text-ora',
-    alert:   'text-red',
+    data: 'text-amb',
+    ok: 'text-teal',
+    warn: 'text-ora',
+    alert: 'text-red',
   }
 </script>
 
@@ -21,7 +21,9 @@
     <thead>
       <tr>
         {#each columns as col}
-          <th class="text-left px-3 py-2 text-ink-2 tracking-widest uppercase border-b border-b1 font-normal text-[8px]">
+          <th
+            class="border-b1 border-b px-3 py-2 text-left text-[8px] font-normal uppercase tracking-widest text-ink-2"
+          >
             {col.label}
           </th>
         {/each}
@@ -31,11 +33,13 @@
       {#each rows as row}
         <tr class="group">
           {#each columns as col}
-            <td class="px-3 py-2 border-b border-b0 group-last:border-b-0 tracking-wide align-middle
-                       group-hover:bg-bg-3 transition-colors duration-100
-                       {cellColor[col.color ?? 'default']}">
+            <td
+              class="border-b0 border-b px-3 py-2 align-middle tracking-wide transition-colors
+                       duration-100 group-last:border-b-0 group-hover:bg-bg-3
+                       {cellColor[col.color ?? 'default']}"
+            >
               {#if col.component}
-                <svelte:component this={col.component} value={row[col.key]} row={row} />
+                <svelte:component this={col.component} value={row[col.key]} {row} />
               {:else}
                 {row[col.key] ?? '—'}
               {/if}

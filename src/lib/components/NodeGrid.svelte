@@ -9,14 +9,12 @@
    * @prop {boolean} animate — randomly flicker nodes
    * @prop {number} interval — ms between random flickers
    */
-  export let cols      = 8
-  export let rows      = ['A','B','C','D','E','F']
+  export let cols = 8
+  export let rows = ['A', 'B', 'C', 'D', 'E', 'F']
   export let overrides = {}
-  export let animate   = true
-  export let interval  = 700
+  export let animate = true
+  export let interval = 700
 
-  const states = ['ok','ok','ok','warn','warn','alert','off','']
-  
   function randomState() {
     const r = Math.random()
     return r < 0.35 ? 'ok' : r < 0.5 ? 'warn' : r < 0.6 ? 'alert' : r < 0.75 ? 'off' : ''
@@ -24,7 +22,7 @@
 
   let nodes = []
   $: {
-    nodes = rows.flatMap(r =>
+    nodes = rows.flatMap((r) =>
       Array.from({ length: cols }, (_, i) => {
         const id = `${r}${i + 1}`
         return { id, state: overrides[id] ?? randomState() }
@@ -33,11 +31,11 @@
   }
 
   const nodeCls = {
-    ok:    'border-teal text-teal bg-teal-xlo',
-    warn:  'border-ora text-ora bg-ora-xlo',
+    ok: 'border-teal text-teal bg-teal-xlo',
+    warn: 'border-ora text-ora bg-ora-xlo',
     alert: 'border-red text-red bg-red-xlo animate-blink',
-    off:   'opacity-20',
-    '':    'border-b1 text-ink-2',
+    off: 'opacity-20',
+    '': 'border-b1 text-ink-2',
   }
 
   let timer
@@ -52,14 +50,11 @@
   onDestroy(() => clearInterval(timer))
 </script>
 
-<div
-  class="grid gap-[3px]"
-  style="grid-template-columns: repeat({cols}, 1fr)"
->
+<div class="grid gap-[3px]" style="grid-template-columns: repeat({cols}, 1fr)">
   {#each nodes as node (node.id)}
     <div
-      class="aspect-square border flex items-center justify-center
-             font-data text-[8px] cursor-default transition-all duration-150
+      class="flex aspect-square cursor-default items-center justify-center
+             border font-data text-[8px] transition-all duration-150
              hover:border-ora hover:text-ora
              {nodeCls[node.state] ?? nodeCls['']}"
     >
@@ -71,10 +66,10 @@
 {#if $$slots.legend !== undefined}
   <slot name="legend" />
 {:else}
-  <div class="flex gap-3 mt-3 flex-wrap">
-    {#each [['ok','teal','ACTIVE'],['warn','ora','WARN'],['alert','red','ALERT'],['off','ink-2','OFFLINE']] as [s,c,l]}
+  <div class="mt-3 flex flex-wrap gap-3">
+    {#each [['ok', 'teal', 'ACTIVE'], ['warn', 'ora', 'WARN'], ['alert', 'red', 'ALERT'], ['off', 'ink-2', 'OFFLINE']] as [c, l]}
       <div class="flex items-center gap-1.5 font-data text-[8px] text-{c}">
-        <div class="w-[5px] h-[5px] rounded-full bg-{c}"></div>
+        <div class="h-[5px] w-[5px] rounded-full bg-{c}"></div>
         {l}
       </div>
     {/each}

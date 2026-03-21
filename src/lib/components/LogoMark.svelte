@@ -1,12 +1,12 @@
 <script>
-  export let size = 40   // px
+  export let size = 40 // px
 </script>
 
 <div
-  class="border border-ora flex items-center justify-center relative flex-shrink-0"
+  class="relative flex flex-shrink-0 items-center justify-center border border-ora"
   style="width:{size}px;height:{size}px"
 >
   <div class="absolute w-px bg-ora" style="height:55%"></div>
   <div class="absolute h-px bg-ora" style="width:55%"></div>
-  <div class="w-[7px] h-[7px] bg-ora absolute animate-pip"></div>
+  <div class="absolute h-[7px] w-[7px] animate-pip bg-ora"></div>
 </div>

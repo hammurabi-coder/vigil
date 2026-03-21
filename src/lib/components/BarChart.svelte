@@ -1,4 +1,10 @@
 <script>
+  import { onMount, onDestroy } from 'svelte'
+  import { Chart, registerables } from 'chart.js'
+  import { chartColors } from '$lib/tokens/theme.js'
+
+  Chart.register(...registerables)
+
   /**
    * BarChart — vertical or horizontal
    * @prop {string[]} labels
@@ -7,14 +13,11 @@
    * @prop {'vertical'|'horizontal'} orientation
    * @prop {number} height
    */
-  import { onMount, onDestroy } from 'svelte'
-  import { chartColors } from '$lib/tokens/theme.js'
-
-  export let labels      = []
-  export let data        = []
-  export let color       = 'auto'
+  export let labels = []
+  export let data = []
+  export let color = 'auto'
   export let orientation = 'vertical'
-  export let height      = 200
+  export let height = 200
 
   const C = chartColors
 
@@ -31,38 +34,42 @@
   $: if (canvas && labels && data) buildChart()
 
   function buildChart() {
-    if (!canvas || typeof Chart === 'undefined') return
+    if (!canvas) return
     chart?.destroy()
     chart = new Chart(canvas, {
       type: 'bar',
       data: {
         labels,
-        datasets: [{
-          data,
-          backgroundColor: data.map(v => resolveColor(v).fill),
-          borderColor:     data.map(v => resolveColor(v).stroke),
-          borderWidth: 1,
-          borderRadius: 0,
-        }],
+        datasets: [
+          {
+            data,
+            backgroundColor: data.map((v) => resolveColor(v).fill),
+            borderColor: data.map((v) => resolveColor(v).stroke),
+            borderWidth: 1,
+            borderRadius: 0,
+          },
+        ],
       },
       options: {
-        indexAxis:          orientation === 'horizontal' ? 'y' : 'x',
-        responsive:         true,
+        indexAxis: orientation === 'horizontal' ? 'y' : 'x',
+        responsive: true,
         maintainAspectRatio: false,
-        animation:          { duration: 800 },
+        animation: { duration: 800 },
         plugins: { legend: { display: false }, tooltip: C.tooltip },
         scales: {
-          x: { grid: { color: orientation === 'horizontal' ? C.grid : 'transparent' }, ticks: { color: C.tick, font: { family: "'Share Tech Mono', monospace", size: 9 } } },
-          y: { grid: { color: orientation === 'vertical'   ? C.grid : 'transparent' }, ticks: { color: C.tick, font: { family: "'Share Tech Mono', monospace", size: 9 } } },
+          x: {
+            grid: { color: orientation === 'horizontal' ? C.grid : 'transparent' },
+            ticks: { color: C.tick, font: { family: "'Share Tech Mono', monospace", size: 9 } },
+          },
+          y: {
+            grid: { color: orientation === 'vertical' ? C.grid : 'transparent' },
+            ticks: { color: C.tick, font: { family: "'Share Tech Mono', monospace", size: 9 } },
+          },
         },
       },
     })
   }
 </script>
-
-<svelte:head>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-</svelte:head>
 
 <div style="height: {height}px; position: relative;">
   <canvas bind:this={canvas}></canvas>
