@@ -245,7 +245,7 @@
 <div class="flex min-h-screen">
   <!-- ── SIDEBAR NAV ─────────────────────────────────────── -->
   <nav
-    class="border-b1 sticky top-0 flex h-screen w-52 flex-shrink-0 flex-col overflow-y-auto border-r bg-bg-0"
+    class="border-b1 sticky top-0 flex h-screen w-52 flex-shrink-0 flex-col overflow-y-auto border-r bg-bg-1"
   >
     <!-- Logo -->
     <div class="border-b1 flex items-center gap-3 border-b p-5">
@@ -284,10 +284,12 @@
   <main class="flex-1 overflow-y-auto">
     <div class="mx-auto max-w-5xl space-y-20 px-8 py-12">
       <!-- MASTHEAD -->
-      <header class="nasa-header border-b1 relative flex items-end justify-between border-b pb-6">
+      <header
+        class="nasa-header border-b1 relative flex items-end justify-between border-b bg-bg-1 pb-6"
+      >
         <div>
           <div class="font-display text-[56px] leading-none tracking-wide">vigil</div>
-          <div class="mt-2 font-data text-[12px] uppercase tracking-widest text-nasa">
+          <div class="mt-2 font-data text-[18px] uppercase tracking-widest text-nasa">
             Operational Dark · Component Library · v0.1.0
           </div>
         </div>

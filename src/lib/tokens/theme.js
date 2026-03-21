@@ -7,20 +7,20 @@
 
 /**
  * Color architecture:
- * - Base: Medium-dark blue (#1E2640) — like a 1970s control room background
+ * - Base: Light slate blue-gray (#3D4F6F) — like a 1970s control room background
  * - Primary: NASA Blue (#0055A4) — the classic agency blue
- * - Secondary: Cream/Off-white (#F5F3E7) — retro text, like old NASA print
+ * - Secondary: Dark slate (#1C2840) — for sidebar/deep panels
  * - Accent: Red (#DC2626) — for alerts, US flag red
  * - Teal kept for nominal/ok
  */
 export const colors = {
-  void: '#0D1220',
+  void: '#1C2840',
   bg: {
-    0: '#1E2640', // medium-dark navy — like a 1970s control room
-    1: '#252C4A', // lighter navy
-    2: '#2F3860', // medium navy
-    3: '#3A4478', // lighter purple-navy
-    4: '#465595', // even lighter
+    0: '#3D4F6F', // light slate blue-gray — control room background
+    1: '#2F3F5C', // darker slate
+    2: '#253352', // deep navy
+    3: '#1C2840', // darker
+    4: '#151D30', // darkest
   },
   // Borders
   border: {
