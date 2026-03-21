@@ -54,7 +54,7 @@
   {#each nodes as node (node.id)}
     <div
       class="flex aspect-square cursor-default items-center justify-center
-             border font-data text-[8px] transition-all duration-150
+             border font-data text-[10px] transition-all duration-150
              hover:border-ora hover:text-ora
              {nodeCls[node.state] ?? nodeCls['']}"
     >
@@ -66,10 +66,10 @@
 {#if $$slots.legend !== undefined}
   <slot name="legend" />
 {:else}
-  <div class="mt-3 flex flex-wrap gap-3">
+  <div class="mt-4 flex flex-wrap gap-4">
     {#each [['ok', 'teal', 'ACTIVE'], ['warn', 'ora', 'WARN'], ['alert', 'red', 'ALERT'], ['off', 'ink-2', 'OFFLINE']] as [c, l]}
-      <div class="flex items-center gap-1.5 font-data text-[8px] text-{c}">
-        <div class="h-[5px] w-[5px] rounded-full bg-{c}"></div>
+      <div class="flex items-center gap-2 font-data text-[10px] text-{c}">
+        <div class="h-[6px] w-[6px] rounded-full bg-{c}"></div>
         {l}
       </div>
     {/each}

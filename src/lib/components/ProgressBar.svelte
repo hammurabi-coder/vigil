@@ -32,20 +32,20 @@
 
 <div class="flex flex-col gap-1">
   {#if label || showValue}
-    <div class="flex justify-between font-data text-[9px] uppercase tracking-wider text-ink-2">
+    <div class="flex justify-between font-data text-[11px] uppercase tracking-wider text-ink-2">
       <span>{label}</span>
       {#if showValue}
         <span class={valueColors[resolvedColor] ?? 'text-ink-2'}>{capped}%</span>
       {/if}
     </div>
   {/if}
-  <div class="bg-b1 relative h-[2px]">
+  <div class="bg-b1 relative h-[3px]">
     <div
       class="{fills[resolvedColor] ?? fills.ora} relative h-full transition-all duration-500"
       style="width: {capped}%"
     >
       <!-- tick mark -->
-      <div class="absolute -right-px -top-[3px] h-2 w-px bg-ink-0"></div>
+      <div class="absolute -right-px -top-[3px] h-2.5 w-px bg-ink-0"></div>
     </div>
   </div>
 </div>

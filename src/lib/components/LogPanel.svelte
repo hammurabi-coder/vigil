@@ -34,11 +34,11 @@
 
 <div
   bind:this={container}
-  class="overflow-y-auto font-data text-[10px] tracking-wide"
+  class="overflow-y-auto font-data text-[12px] tracking-wide"
   style="max-height: {maxHeight}px"
 >
   {#each entries as entry}
-    <div class="flex gap-2.5 leading-[1.9]">
+    <div class="flex gap-3 leading-[1.9]">
       <span class="flex-shrink-0 text-ink-2">{entry.ts} ·</span>
       <span class="flex-shrink-0 {levelCls[entry.level] ?? levelCls.info}"
         >{levelLabel[entry.level] ?? levelLabel.info}</span

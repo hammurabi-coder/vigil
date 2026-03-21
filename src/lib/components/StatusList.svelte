@@ -5,7 +5,7 @@
    */
   export let items = []
 
-  const dotBase = 'w-[5px] h-[5px] rounded-full flex-shrink-0'
+  const dotBase = 'w-[6px] h-[6px] rounded-full flex-shrink-0'
   const dots = {
     ok: `${dotBase} bg-teal shadow-[0_0_5px_theme(colors.teal.DEFAULT)]`,
     warn: `${dotBase} bg-ora shadow-[0_0_5px_theme(colors.ora.DEFAULT)] animate-blink-slow`,
@@ -17,8 +17,8 @@
 <div class="flex flex-col">
   {#each items as item}
     <div
-      class="border-b0 flex items-center gap-2.5 border-b py-[7px] font-data
-                text-[9px] uppercase tracking-wider last:border-b-0"
+      class="border-b0 flex items-center gap-3 border-b py-3 font-data
+                text-[11px] uppercase tracking-wider last:border-b-0"
     >
       <div class={dots[item.status] ?? dots.off}></div>
       <span class="flex-1 text-ink-1">{item.label}</span>

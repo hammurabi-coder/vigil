@@ -30,18 +30,18 @@
     alert: 'border-red text-red animate-blink',
   }
 
-  $: cls = [base, variants[variant] ?? variants.default, flush ? '' : 'p-5'].join(' ')
+  $: cls = [base, variants[variant] ?? variants.default, flush ? '' : 'p-6'].join(' ')
 </script>
 
 <div class={cls}>
   {#if title || badge}
-    <div class="border-b0 mb-4 flex items-center justify-between border-b pb-2.5">
+    <div class="border-b0 mb-5 flex items-center justify-between border-b pb-3">
       {#if title}
-        <span class="font-data text-[9px] uppercase tracking-widest text-ink-1">{title}</span>
+        <span class="font-data text-[11px] uppercase tracking-widest text-ink-1">{title}</span>
       {/if}
       {#if badge}
         <span
-          class="border px-1.5 py-0.5 font-data text-[8px] uppercase tracking-wider {badgeClasses[
+          class="border px-2 py-0.5 font-data text-[10px] uppercase tracking-wider {badgeClasses[
             badgeVariant
           ] ?? badgeClasses.ok}"
         >
