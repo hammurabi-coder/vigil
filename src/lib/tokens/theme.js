@@ -5,15 +5,22 @@
  * Single source of truth — consumed by tailwind.config.js
  */
 
+// Color Math Design Tokens
+// Utilizing HSL to maintain strict mathematical relationships between lightness steps
+
+const HUE = 225
+const SAT = '20%'
+
 /** @type {Object} */
 export const colors = {
-  void: '#000000',
+  // mathematical lightness increments for the surface stack
+  void: `hsl(${HUE}, ${SAT}, 4%)`,
   bg: {
-    0: '#05050C', // main background
-    1: '#0B0D14', // sidebar
-    2: '#11141D', // header
-    3: '#181C27', // deep panels
-    4: '#202533', // card backgrounds
+    0: `hsl(${HUE}, ${SAT}, 8%)`, // main background
+    1: `hsl(${HUE}, ${SAT}, 12%)`, // sidebar
+    2: `hsl(${HUE}, ${SAT}, 16%)`, // header
+    3: `hsl(${HUE}, ${SAT}, 20%)`, // deep panels
+    4: `hsl(${HUE}, ${SAT}, 24%)`, // card backgrounds
   },
   // Borders
   border: {
@@ -22,47 +29,47 @@ export const colors = {
     2: 'rgba(255,255,255,0.20)',
     3: 'rgba(255,255,255,0.32)',
   },
-  // Orange — primary accent (FF6B1A)
+  // Orange — primary accent (H: 21, S: 100%, L: 55%)
   ora: {
-    DEFAULT: '#FF6B1A',
-    lo: 'rgba(255,107,26,0.12)',
-    xlo: 'rgba(255,107,26,0.05)',
-    300: '#FF8A47',
-    500: '#FF6B1A',
-    700: '#CC5515',
+    DEFAULT: 'hsl(21, 100%, 55%)',
+    lo: 'hsla(21, 100%, 55%, 0.12)',
+    xlo: 'hsla(21, 100%, 55%, 0.05)',
+    300: 'hsl(21, 100%, 65%)',
+    500: 'hsl(21, 100%, 55%)',
+    700: 'hsl(21, 100%, 45%)',
   },
-  // Red — alert/error (E82038)
+  // Red — alert/error (H: 353, S: 82%, L: 52%)
   red: {
-    DEFAULT: '#E82038',
-    lo: 'rgba(232,32,56,0.12)',
-    xlo: 'rgba(232,32,56,0.05)',
-    300: '#ED4D60',
-    500: '#E82038',
-    700: '#B91A2D',
+    DEFAULT: 'hsl(353, 82%, 52%)',
+    lo: 'hsla(353, 82%, 52%, 0.12)',
+    xlo: 'hsla(353, 82%, 52%, 0.05)',
+    300: 'hsl(353, 82%, 62%)',
+    500: 'hsl(353, 82%, 52%)',
+    700: 'hsl(353, 82%, 42%)',
   },
-  // Amber — data readout values (D4A832)
+  // Amber — data readout values (H: 44, S: 65%, L: 51%)
   amb: {
-    DEFAULT: '#D4A832',
-    lo: 'rgba(212,168,50,0.12)',
-    300: '#E0BD5B',
-    500: '#D4A832',
-    700: '#AA8628',
+    DEFAULT: 'hsl(44, 65%, 51%)',
+    lo: 'hsla(44, 65%, 51%, 0.12)',
+    300: 'hsl(44, 65%, 61%)',
+    500: 'hsl(44, 65%, 51%)',
+    700: 'hsl(44, 65%, 41%)',
   },
-  // Teal — nominal/ok signal (26C4BC)
+  // Teal — nominal/ok signal (H: 177, S: 68%, L: 46%)
   teal: {
-    DEFAULT: '#26C4BC',
-    lo: 'rgba(38,196,188,0.12)',
-    xlo: 'rgba(38,196,188,0.05)',
-    300: '#51D0C9',
-    500: '#26C4BC',
-    700: '#1E9D96',
+    DEFAULT: 'hsl(177, 68%, 46%)',
+    lo: 'hsla(177, 68%, 46%, 0.12)',
+    xlo: 'hsla(177, 68%, 46%, 0.05)',
+    300: 'hsl(177, 68%, 56%)',
+    500: 'hsl(177, 68%, 46%)',
+    700: 'hsl(177, 68%, 36%)',
   },
-  // Text scale
+  // Text scale mathematical increments
   ink: {
-    0: '#FFFFFF', // primary text
-    1: '#A0AAB8', // secondary
-    2: '#64748B', // muted
-    3: '#334155', // faint
+    0: 'hsl(225, 10%, 98%)', // primary text
+    1: 'hsl(225, 20%, 80%)', // secondary
+    2: 'hsl(225, 20%, 60%)', // muted
+    3: 'hsl(225, 20%, 40%)', // faint
   },
 }
 
@@ -99,15 +106,15 @@ export const chartColors = {
   tick: colors.ink[2],
   tooltip: {
     backgroundColor: colors.bg[2],
-    borderColor: 'rgba(255,107,26,0.4)',
+    borderColor: 'hsla(21, 100%, 55%, 0.4)',
     borderWidth: 1,
     titleColor: colors.ink[0],
     bodyColor: colors.ink[1],
     padding: 10,
   },
   glow: {
-    ora: 'rgba(255,107,26,0.35)',
-    red: 'rgba(232,32,56,0.35)',
-    oraLight: 'rgba(255,107,26,0.06)',
+    ora: 'hsla(21, 100%, 55%, 0.35)',
+    red: 'hsla(353, 82%, 52%, 0.35)',
+    oraLight: 'hsla(21, 100%, 55%, 0.06)',
   },
 }
