@@ -7,12 +7,12 @@
 
   const variants = {
     ok: 'border-teal text-teal',
-    warn: 'border-ora text-ora',
+    warn: 'border-nasa text-nasa',
     alert: 'border-red text-red animate-blink',
-    muted: 'border-b2 text-ink-2',
+    muted: 'border-b2 text-warm-3',
   }
 
-  $: cls = `font-data text-[10px] px-2 py-0.5 border tracking-wider uppercase inline-flex items-center ${
+  $: cls = `font-data text-[11px] px-2.5 py-0.5 border tracking-wider uppercase inline-flex items-center ${
     variants[variant] ?? variants.ok
   }`
 </script>

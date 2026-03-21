@@ -109,19 +109,20 @@ export const fontFamily = {
 }
 
 /**
- *
+ * Font sizes — modern readable baseline
+ * Minimum annotation size: 10px (was 8px)
  */
 export const fontSize = {
-  '2xs': ['0.65rem', { lineHeight: '1', letterSpacing: '0.3em' }],
+  '2xs': ['0.625rem', { lineHeight: '1', letterSpacing: '0.3em' }],
   xs: ['0.75rem', { lineHeight: '1.4' }],
   sm: ['0.875rem', { lineHeight: '1.5' }],
   base: ['1rem', { lineHeight: '1.6' }],
   lg: ['1.125rem', { lineHeight: '1.5' }],
-  xl: ['1.5rem', { lineHeight: '1.3' }],
+  xl: ['1.5rem', { lineHeight: '1.2' }],
   '2xl': ['2rem', { lineHeight: '1.1' }],
   '3xl': ['3rem', { lineHeight: '1' }],
   '4xl': ['4.5rem', { lineHeight: '0.9' }],
-  hero: ['7rem', { lineHeight: '0.85' }],
+  hero: ['6rem', { lineHeight: '0.85' }],
 }
 
 /** Chart.js palette — import directly into chart components */

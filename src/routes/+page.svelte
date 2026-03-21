@@ -249,10 +249,10 @@
   >
     <!-- Logo -->
     <div class="border-b1 flex items-center gap-3 border-b p-5">
-      <LogoMark size={32} />
+      <LogoMark size={36} />
       <div>
-        <div class="font-display text-[18px] leading-none tracking-wide">TERTIUS</div>
-        <div class="mt-0.5 font-data text-[8px] uppercase tracking-widest text-ora">
+        <div class="font-display text-[20px] leading-none tracking-wide">TERTIUS</div>
+        <div class="mt-0.5 font-data text-[10px] uppercase tracking-widest text-nasa">
           Design System
         </div>
       </div>
@@ -263,7 +263,7 @@
       {#each nav as item}
         <a
           href="#{item.id}"
-          class="px-5 py-2.5 font-data text-[9px] uppercase tracking-widest transition-colors duration-100
+          class="px-5 py-3 font-data text-[11px] uppercase tracking-widest transition-colors duration-100
                  {activeSection === item.id
             ? 'border-l-2 border-nasa bg-nasa-xlo pl-[calc(1.25rem-2px)] text-nasa'
             : 'border-l-2 border-transparent text-warm-1 hover:text-warm-0'}"
@@ -274,9 +274,9 @@
     </div>
 
     <!-- Clock footer -->
-    <div class="border-b1 border-t p-5 font-data text-[9px] tracking-wider text-warm-2">
-      <div class="text-[13px] tabular-nums text-amb">{clock}</div>
-      <div class="mt-0.5 text-[8px] uppercase tracking-widest text-warm-3">System Time</div>
+    <div class="border-b1 border-t p-5 font-data text-[10px] tracking-wider text-warm-2">
+      <div class="text-[15px] tabular-nums text-amb">{clock}</div>
+      <div class="mt-0.5 text-[10px] uppercase tracking-widest text-warm-3">System Time</div>
     </div>
   </nav>
 
@@ -286,12 +286,12 @@
       <!-- MASTHEAD -->
       <header class="nasa-header border-b1 relative flex items-end justify-between border-b pb-6">
         <div>
-          <div class="font-display text-[48px] leading-none tracking-wide">vigil</div>
-          <div class="mt-2 font-data text-[10px] uppercase tracking-widest text-nasa">
+          <div class="font-display text-[56px] leading-none tracking-wide">vigil</div>
+          <div class="mt-2 font-data text-[12px] uppercase tracking-widest text-nasa">
             Operational Dark · Component Library · v0.1.0
           </div>
         </div>
-        <div class="text-right font-data text-[9px] leading-loose tracking-wider text-warm-2">
+        <div class="text-right font-data text-[11px] leading-loose tracking-wider text-warm-2">
           DOC <span class="text-amb">SP-168-NG</span><br />
           REV <span class="text-amb">0.1.0-alpha</span><br />
           STATUS <span class="text-teal">ACTIVE</span>
@@ -315,13 +315,13 @@
           <div class="mt-4 grid grid-cols-4 gap-4">
             {#each [{ name: 'NASA Red / Primary', swatches: ['#7A0016', '#B3000C', '#E3000F', '#FF3040'], active: 2 }, { name: 'Red / Alert', swatches: ['#5C0018', '#E82038', '#FF5068'], active: 1 }, { name: 'Amber / Data', swatches: ['#7A5800', '#D4A832', '#EDD070'], active: 1 }, { name: 'Teal / Nominal', swatches: ['#105C58', '#26C4BC', '#5EEAE0'], active: 1 }] as ramp}
               <div>
-                <div class="mb-2 font-data text-[10px] uppercase tracking-widest text-warm-3">
+                <div class="mb-2 font-data text-[11px] uppercase tracking-widest text-warm-3">
                   {ramp.name}
                 </div>
-                <div class="flex gap-0.5">
+                <div class="flex gap-1">
                   {#each ramp.swatches as swatch, i}
                     <div
-                      class="h-8 flex-1 {i === ramp.active
+                      class="h-10 flex-1 {i === ramp.active
                         ? 'outline outline-1 outline-offset-1 outline-white/30'
                         : ''}"
                       style="background:{swatch}"
@@ -332,11 +332,11 @@
             {/each}
           </div>
           <!-- Text scale -->
-          <div class="mt-4 flex flex-wrap items-center gap-4">
+          <div class="mt-4 flex flex-wrap items-center gap-6">
             {#each [['text-ink-0', 'Primary', '#F0EDE6'], ['text-warm-1', 'Secondary', '#E8E6E1'], ['text-warm-3', 'Muted', '#A8A49C'], ['text-warm-5', 'Faint', '#484440']] as [cls, label, hex]}
-              <div class="flex items-center gap-2">
-                <div class="border-b1 h-4 w-4 rounded-full border" style="background:{hex}"></div>
-                <span class="font-data text-[11px] {cls} tracking-wide">{label} · {hex}</span>
+              <div class="flex items-center gap-3">
+                <div class="border-b1 h-5 w-5 rounded-full border" style="background:{hex}"></div>
+                <span class="font-data text-[13px] {cls} tracking-wide">{label} · {hex}</span>
               </div>
             {/each}
           </div>
@@ -348,12 +348,12 @@
         <div class="breathing-space mb-8"></div>
         <SectionLabel number="02">Typography</SectionLabel>
         <Panel variant="deep" flush>
-          {#each [{ sample: 'EVANGELION', cls: 'font-display text-[58px] leading-none tracking-wide', meta: 'Display · 58px · Bebas Neue' }, { sample: 'MISSION CRITICAL ALERT', cls: 'font-label text-[26px] uppercase tracking-widest font-bold', meta: 'Label-XL · 26px · Barlow Condensed 700' }, { sample: 'System Parameter Alpha', cls: 'font-label text-[15px] uppercase tracking-wider font-semibold text-ink-1', meta: 'Label · 15px · Barlow Condensed 600' }, { sample: 'Interface systems require precise nomenclature across all operational readouts.', cls: 'font-body text-[13px] text-ink-1 max-w-xl leading-relaxed', meta: 'Body · 13px · Barlow 400' }, { sample: 'SYS.UPTIME 00:04:32.807 · NODE-03 ACTIVE', cls: 'font-data text-[12px] text-amb tracking-wide', meta: 'Data · 12px · Share Tech Mono' }, { sample: 'OPERATIONAL · RESTRICTED · NERV INTERNAL', cls: 'font-data text-[11px] text-ink-1 tracking-widest2 uppercase', meta: 'Annotation · 11px · STMono' }] as row}
+          {#each [{ sample: 'EVANGELION', cls: 'font-display text-[64px] leading-none tracking-wide', meta: 'Display · 64px · Bebas Neue' }, { sample: 'MISSION CRITICAL ALERT', cls: 'font-label text-[28px] uppercase tracking-widest font-bold', meta: 'Label-XL · 28px · Barlow Condensed 700' }, { sample: 'System Parameter Alpha', cls: 'font-label text-[16px] uppercase tracking-wider font-semibold text-ink-1', meta: 'Label · 16px · Barlow Condensed 600' }, { sample: 'Interface systems require precise nomenclature across all operational readouts.', cls: 'font-body text-[14px] text-ink-1 max-w-xl leading-relaxed', meta: 'Body · 14px · Barlow 400' }, { sample: 'SYS.UPTIME 00:04:32.807 · NODE-03 ACTIVE', cls: 'font-data text-[13px] text-amb tracking-wide', meta: 'Data · 13px · Share Tech Mono' }, { sample: 'OPERATIONAL · RESTRICTED · NERV INTERNAL', cls: 'font-data text-[12px] text-ink-1 tracking-widest2 uppercase', meta: 'Annotation · 12px · STMono' }] as row}
             <div
-              class="border-b0 flex items-baseline justify-between gap-4 border-b px-6 py-4 last:border-b-0"
+              class="border-b0 flex items-baseline justify-between gap-4 border-b px-6 py-5 last:border-b-0"
             >
               <div class={row.cls}>{row.sample}</div>
-              <div class="flex-shrink-0 font-data text-[10px] tracking-wide text-ink-2">
+              <div class="flex-shrink-0 font-data text-[11px] tracking-wide text-warm-3">
                 {row.meta}
               </div>
             </div>
@@ -367,32 +367,32 @@
         <SectionLabel number="03">Panel Variants</SectionLabel>
         <div class="grid grid-cols-2 gap-0.5">
           <Panel title="Default Panel" badge="NOMINAL" badgeVariant="ok">
-            <p class="font-body text-[12px] leading-relaxed text-ink-1">
+            <p class="font-body text-[13px] leading-relaxed text-ink-1">
               Standard surface. BG-1 base with dim border. Use for most content containers.
             </p>
           </Panel>
           <Panel variant="accent" title="Accent Panel" badge="ACTIVE" badgeVariant="warn">
-            <p class="font-body text-[12px] leading-relaxed text-ink-1">
+            <p class="font-body text-[13px] leading-relaxed text-ink-1">
               Orange left border + faint tint. For primary action areas or selected states.
             </p>
           </Panel>
           <Panel variant="alert" title="Alert Panel" badge="CRITICAL" badgeVariant="alert">
-            <p class="font-body text-[12px] leading-relaxed text-ink-1">
+            <p class="font-body text-[13px] leading-relaxed text-ink-1">
               Red border + background tint. Reserved for system errors and warnings.
             </p>
           </Panel>
           <Panel variant="teal" title="Nominal Panel" badge="OK" badgeVariant="ok">
-            <p class="font-body text-[12px] leading-relaxed text-ink-1">
+            <p class="font-body text-[13px] leading-relaxed text-ink-1">
               Teal border for confirmed nominal or success states.
             </p>
           </Panel>
           <Panel variant="deep" title="Deep Panel">
-            <p class="font-body text-[12px] leading-relaxed text-ink-1">
+            <p class="font-body text-[13px] leading-relaxed text-ink-1">
               BG-0 background — sits lower in the surface stack. Good for data readout groups.
             </p>
           </Panel>
           <Panel variant="raised" title="Raised Panel">
-            <p class="font-body text-[12px] leading-relaxed text-ink-1">
+            <p class="font-body text-[13px] leading-relaxed text-ink-1">
               BG-2 background — slightly elevated. Use for overlays or focus areas.
             </p>
           </Panel>
@@ -607,22 +607,22 @@
         <SectionLabel number="07">Buttons &amp; Inputs</SectionLabel>
         <div class="grid grid-cols-2 gap-0.5">
           <Panel variant="deep" title="Button Variants">
-            <div class="space-y-5">
+            <div class="space-y-6">
               <div>
-                <div class="mb-3 font-data text-[8px] uppercase tracking-widest text-ink-2">
+                <div class="mb-3 font-data text-[11px] uppercase tracking-widest text-warm-3">
                   Size · Primary
                 </div>
-                <div class="flex flex-wrap items-start gap-2">
+                <div class="flex flex-wrap items-start gap-3">
                   <Button size="sm">Execute</Button>
                   <Button>Execute Command</Button>
                   <Button size="lg">Execute Sequence</Button>
                 </div>
               </div>
               <div>
-                <div class="mb-3 font-data text-[8px] uppercase tracking-widest text-ink-2">
+                <div class="mb-3 font-data text-[11px] uppercase tracking-widest text-warm-3">
                   Style variants
                 </div>
-                <div class="flex flex-wrap items-start gap-2">
+                <div class="flex flex-wrap items-start gap-3">
                   <Button variant="primary">Confirm</Button>
                   <Button variant="outline">Review</Button>
                   <Button variant="ghost">Dismiss</Button>
@@ -630,10 +630,10 @@
                 </div>
               </div>
               <div>
-                <div class="mb-3 font-data text-[8px] uppercase tracking-widest text-ink-2">
+                <div class="mb-3 font-data text-[11px] uppercase tracking-widest text-warm-3">
                   Badges
                 </div>
-                <div class="flex flex-wrap items-center gap-2">
+                <div class="flex flex-wrap items-center gap-3">
                   <Badge variant="ok">Nominal</Badge>
                   <Badge variant="warn">Active</Badge>
                   <Badge variant="alert">Critical</Badge>
