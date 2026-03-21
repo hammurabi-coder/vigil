@@ -55,10 +55,10 @@ export const colors = {
     700: '#105C58',
   },
   ink: {
-    0: '#E8E4DA', // primary text
-    1: '#98948A', // secondary text
-    2: '#48463E', // muted text
-    3: '#26241E', // faint text
+    0: '#F0EDE6', // primary text
+    1: '#A8A296', // secondary text
+    2: '#706860', // muted text (was too dim)
+    3: '#484440', // faint text
   },
 }
 

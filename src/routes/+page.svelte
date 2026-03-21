@@ -305,8 +305,8 @@
           <div class="flex gap-0.5">
             {#each ['#000000', '#05050C', '#0A0A16', '#0F0F1F', '#151528', '#1C1C34'] as bg, i}
               <div class="flex-1">
-                <div class="border-b0 h-10 border" style="background:{bg}"></div>
-                <div class="mt-1 font-data text-[8px] tracking-wide text-ink-2">BG-{i}</div>
+                <div class="border-b0 h-12 border" style="background:{bg}"></div>
+                <div class="mt-1.5 font-data text-[10px] tracking-wide text-ink-2">BG-{i}</div>
               </div>
             {/each}
           </div>
@@ -314,7 +314,7 @@
           <div class="mt-4 grid grid-cols-4 gap-4">
             {#each [{ name: 'Orange / Primary', swatches: ['#7A3008', '#CC4E00', '#FF6B1A', '#FF9050'], active: 2 }, { name: 'Red / Alert', swatches: ['#5C0018', '#E82038', '#FF5068'], active: 1 }, { name: 'Amber / Data', swatches: ['#7A5800', '#D4A832', '#EDD070'], active: 1 }, { name: 'Teal / Nominal', swatches: ['#105C58', '#26C4BC', '#5EEAE0'], active: 1 }] as ramp}
               <div>
-                <div class="mb-2 font-data text-[8px] uppercase tracking-widest text-ink-2">
+                <div class="mb-2 font-data text-[10px] uppercase tracking-widest text-ink-2">
                   {ramp.name}
                 </div>
                 <div class="flex gap-0.5">
@@ -332,10 +332,10 @@
           </div>
           <!-- Text scale -->
           <div class="mt-4 flex flex-wrap items-center gap-4">
-            {#each [['text-ink-0', 'Primary', '#E8E4DA'], ['text-ink-1', 'Secondary', '#98948A'], ['text-ink-2', 'Muted', '#48463E'], ['text-ink-3', 'Faint', '#26241E']] as [cls, label, hex]}
+            {#each [['text-ink-0', 'Primary', '#F0EDE6'], ['text-ink-1', 'Secondary', '#A8A296'], ['text-ink-2', 'Muted', '#706860'], ['text-ink-3', 'Faint', '#484440']] as [cls, label, hex]}
               <div class="flex items-center gap-2">
                 <div class="border-b1 h-4 w-4 rounded-full border" style="background:{hex}"></div>
-                <span class="font-data text-[9px] {cls} tracking-wide">{label} · {hex}</span>
+                <span class="font-data text-[11px] {cls} tracking-wide">{label} · {hex}</span>
               </div>
             {/each}
           </div>
@@ -346,12 +346,12 @@
       <section id="type">
         <SectionLabel number="02">Typography</SectionLabel>
         <Panel variant="deep" flush>
-          {#each [{ sample: 'EVANGELION', cls: 'font-display text-[58px] leading-none tracking-wide', meta: 'Display · 58px · Bebas Neue' }, { sample: 'MISSION CRITICAL ALERT', cls: 'font-label text-[26px] uppercase tracking-widest font-bold', meta: 'Label-XL · 26px · Barlow Condensed 700' }, { sample: 'System Parameter Alpha', cls: 'font-label text-[15px] uppercase tracking-wider font-semibold text-ink-1', meta: 'Label · 15px · Barlow Condensed 600' }, { sample: 'Interface systems require precise nomenclature across all operational readouts.', cls: 'font-body text-[13px] text-ink-1 font-light max-w-xl leading-relaxed', meta: 'Body · 13px · Barlow 300' }, { sample: 'SYS.UPTIME 00:04:32.807 · NODE-03 ACTIVE', cls: 'font-data text-[12px] text-amb tracking-wide', meta: 'Data · 12px · Share Tech Mono' }, { sample: 'OPERATIONAL · RESTRICTED · NERV INTERNAL', cls: 'font-data text-[9px] text-ink-2 tracking-widest2 uppercase', meta: 'Annotation · 9px · STMono' }] as row}
+          {#each [{ sample: 'EVANGELION', cls: 'font-display text-[58px] leading-none tracking-wide', meta: 'Display · 58px · Bebas Neue' }, { sample: 'MISSION CRITICAL ALERT', cls: 'font-label text-[26px] uppercase tracking-widest font-bold', meta: 'Label-XL · 26px · Barlow Condensed 700' }, { sample: 'System Parameter Alpha', cls: 'font-label text-[15px] uppercase tracking-wider font-semibold text-ink-1', meta: 'Label · 15px · Barlow Condensed 600' }, { sample: 'Interface systems require precise nomenclature across all operational readouts.', cls: 'font-body text-[13px] text-ink-1 max-w-xl leading-relaxed', meta: 'Body · 13px · Barlow 400' }, { sample: 'SYS.UPTIME 00:04:32.807 · NODE-03 ACTIVE', cls: 'font-data text-[12px] text-amb tracking-wide', meta: 'Data · 12px · Share Tech Mono' }, { sample: 'OPERATIONAL · RESTRICTED · NERV INTERNAL', cls: 'font-data text-[11px] text-ink-1 tracking-widest2 uppercase', meta: 'Annotation · 11px · STMono' }] as row}
             <div
               class="border-b0 flex items-baseline justify-between gap-4 border-b px-6 py-4 last:border-b-0"
             >
               <div class={row.cls}>{row.sample}</div>
-              <div class="flex-shrink-0 font-data text-[8px] tracking-wide text-ink-2">
+              <div class="flex-shrink-0 font-data text-[10px] tracking-wide text-ink-2">
                 {row.meta}
               </div>
             </div>
