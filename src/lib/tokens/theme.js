@@ -8,8 +8,8 @@
 // Color Math Design Tokens
 // Utilizing HSL to maintain strict mathematical relationships between lightness steps
 
-const HUE = 215
-const SAT = '8%'
+const HUE = 0
+const SAT = '0%'
 
 /** @type {Object} */
 export const colors = {
@@ -66,10 +66,10 @@ export const colors = {
   },
   // Text scale mathematical increments
   ink: {
-    0: 'hsl(225, 10%, 98%)', // primary text
-    1: 'hsl(225, 20%, 80%)', // secondary
-    2: 'hsl(225, 20%, 60%)', // muted
-    3: 'hsl(225, 20%, 40%)', // faint
+    0: 'hsl(0, 0%, 98%)', // primary text
+    1: 'hsl(0, 0%, 80%)', // secondary
+    2: 'hsl(0, 0%, 60%)', // muted
+    3: 'hsl(0, 0%, 40%)', // faint
   },
 }
 

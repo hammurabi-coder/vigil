@@ -259,7 +259,7 @@
         <div class="space-y-2">
           <!-- Backgrounds -->
           <div class="flex gap-0.5">
-            {#each ['hsl(215, 8%, 20%)', 'hsl(215, 8%, 22%)', 'hsl(215, 8%, 24%)', 'hsl(215, 8%, 26%)', 'hsl(215, 8%, 28%)', 'hsl(215, 8%, 30%)'] as bg, i}
+            {#each ['hsl(0, 0%, 20%)', 'hsl(0, 0%, 22%)', 'hsl(0, 0%, 24%)', 'hsl(0, 0%, 26%)', 'hsl(0, 0%, 28%)', 'hsl(0, 0%, 30%)'] as bg, i}
               <div class="flex-1">
                 <div class="border-b0 h-12 border" style="background:{bg}"></div>
                 <div class="mt-1.5 font-data text-[10px] tracking-wide text-ink-2">BG-{i}</div>
@@ -288,7 +288,7 @@
           </div>
           <!-- Text scale -->
           <div class="mt-4 flex flex-wrap items-center gap-6">
-            {#each [['text-ink-0', 'Primary', 'hsl(225, 10%, 98%)'], ['text-ink-1', 'Secondary', 'hsl(225, 20%, 80%)'], ['text-ink-2', 'Muted', 'hsl(225, 20%, 60%)'], ['text-ink-3', 'Faint', 'hsl(225, 20%, 40%)']] as [cls, label, hex]}
+            {#each [['text-ink-0', 'Primary', 'hsl(0, 0%, 98%)'], ['text-ink-1', 'Secondary', 'hsl(0, 0%, 80%)'], ['text-ink-2', 'Muted', 'hsl(0, 0%, 60%)'], ['text-ink-3', 'Faint', 'hsl(0, 0%, 40%)']] as [cls, label, hex]}
               <div class="flex items-center gap-3">
                 <div class="border-b1 h-5 w-5 rounded-full border" style="background:{hex}"></div>
                 <span class="font-data text-[13px] {cls} tracking-wide">{label} · {hex}</span>
