@@ -8,19 +8,19 @@
 // Color Math Design Tokens
 // Utilizing HSL to maintain strict mathematical relationships between lightness steps
 
-const HUE = 0
-const SAT = '0%'
+const HUE = 35
+const SAT = '10%'
 
 /** @type {Object} */
 export const colors = {
   // mathematical lightness increments for the surface stack
-  void: `hsl(${HUE}, ${SAT}, 20%)`,
+  void: `hsl(${HUE}, 12%, 14%)`,
   bg: {
-    0: `hsl(${HUE}, ${SAT}, 22%)`, // main background
-    1: `hsl(${HUE}, ${SAT}, 24%)`, // sidebar
-    2: `hsl(${HUE}, ${SAT}, 26%)`, // header
-    3: `hsl(${HUE}, ${SAT}, 28%)`, // deep panels
-    4: `hsl(${HUE}, ${SAT}, 30%)`, // card backgrounds
+    0: `hsl(${HUE}, ${SAT}, 16%)`, // main background
+    1: `hsl(${HUE}, ${SAT}, 18%)`, // sidebar
+    2: `hsl(${HUE}, ${SAT}, 20%)`, // header
+    3: `hsl(${HUE}, ${SAT}, 22%)`, // deep panels
+    4: `hsl(${HUE}, ${SAT}, 24%)`, // card backgrounds
   },
   // Borders
   border: {
@@ -66,10 +66,10 @@ export const colors = {
   },
   // Text scale mathematical increments
   ink: {
-    0: 'hsl(0, 0%, 98%)', // primary text
-    1: 'hsl(0, 0%, 80%)', // secondary
-    2: 'hsl(0, 0%, 60%)', // muted
-    3: 'hsl(0, 0%, 40%)', // faint
+    0: 'hsl(35, 15%, 96%)', // primary text
+    1: 'hsl(35, 15%, 80%)', // secondary
+    2: 'hsl(35, 15%, 60%)', // muted
+    3: 'hsl(35, 15%, 40%)', // faint
   },
 }
 
