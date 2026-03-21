@@ -51,8 +51,8 @@
           r: {
             min: 0,
             max: 100,
-            grid: { color: 'rgba(255,255,255,0.07)' },
-            angleLines: { color: 'rgba(255,255,255,0.07)' },
+            grid: { color: C.gridLine },
+            angleLines: { color: C.gridLine },
             ticks: { display: false, backdropColor: 'transparent' },
             pointLabels: {
               color: C.tick,

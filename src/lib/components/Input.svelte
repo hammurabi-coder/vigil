@@ -6,28 +6,18 @@
    * @prop {string} placeholder
    * @prop {'text'|'password'|'email'|'number'} type
    * @prop {'default'|'error'} state
-   * @prop {string} hint   — optional hint/error message below
+   * @prop {string} hint
    */
   export let label = ''
-  /**
-   *
-   */
+  /** @type {string} */
   export let value = ''
-  /**
-   *
-   */
+  /** @type {string} */
   export let placeholder = ''
-  /**
-   *
-   */
+  /** @type {'text'|'password'|'email'|'number'} */
   export let type = 'text'
-  /**
-   *
-   */
+  /** @type {'default'|'error'} */
   export let state = 'default'
-  /**
-   *
-   */
+  /** @type {string} */
   export let hint = ''
 
   const inputBase =
@@ -51,9 +41,7 @@
       class="flex items-center gap-2 font-data text-[11px] uppercase tracking-widest text-ink-2"
     >
       {label}
-      {#if state === 'error' && hint}
-        <span class="text-red">⚑ {hint}</span>
-      {/if}
+      {#if state === 'error' && hint}<span class="text-red">⚑ {hint}</span>{/if}
     </label>
   {/if}
   {#if type === 'text'}
@@ -105,7 +93,7 @@
       on:blur
     />
   {/if}
-  {#if state !== 'error' && hint}
-    <span class="font-data text-[11px] tracking-wide text-ink-2">{hint}</span>
-  {/if}
+  {#if state !== 'error' && hint}<span class="font-data text-[11px] tracking-wide text-ink-2"
+      >{hint}</span
+    >{/if}
 </div>

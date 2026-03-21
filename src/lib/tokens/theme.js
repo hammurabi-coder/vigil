@@ -120,13 +120,19 @@ export const chartColors = {
   teal: { stroke: colors.teal.DEFAULT, fill: colors.teal.xlo },
   cream: { stroke: colors.cream.DEFAULT, fill: colors.cream.lo },
   grid: 'rgba(255,255,255,0.06)',
+  gridLine: 'rgba(255,255,255,0.07)',
   tick: colors.ink[2],
   tooltip: {
-    backgroundColor: '#1E2640',
+    backgroundColor: colors.bg[2],
     borderColor: 'rgba(0,85,164,0.4)',
     borderWidth: 1,
     titleColor: colors.cream.DEFAULT,
     bodyColor: colors.ink[1],
     padding: 10,
+  },
+  glow: {
+    nasa: 'rgba(0,85,164,0.35)',
+    red: 'rgba(220,38,38,0.35)',
+    nasaLight: 'rgba(0,85,164,0.06)',
   },
 }

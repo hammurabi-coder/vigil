@@ -4,28 +4,27 @@
   /**
    * NodeGrid — animated operational sector map
    * @prop {number} cols
-   * @prop {string[]} rows   — row labels e.g. ['A','B','C','D']
+   * @prop {string[]} rows — row labels e.g. ['A','B','C','D']
    * @prop {Record<string,string>} overrides — { 'A1': 'ok', 'B3': 'alert' }
    * @prop {boolean} animate — randomly flicker nodes
    * @prop {number} interval — ms between random flickers
    */
   export let cols = 8
-  /**
-   *
-   */
+  /** @type {string[]} */
   export let rows = ['A', 'B', 'C', 'D', 'E', 'F']
-  /**
-   *
-   */
+  /** @type {Record<string,string>} */
   export let overrides = {}
-  /**
-   *
-   */
+  /** @type {boolean} */
   export let animate = true
-  /**
-   *
-   */
+  /** @type {number} */
   export let interval = 700
+
+  const stateMap = {
+    ok: { bg: 'bg-teal', text: 'text-teal', label: 'ACTIVE' },
+    warn: { bg: 'bg-nasa', text: 'text-nasa', label: 'WARN' },
+    alert: { bg: 'bg-red', text: 'text-red', label: 'ALERT' },
+    off: { bg: 'bg-ink-2', text: 'text-ink-2', label: 'OFFLINE' },
+  }
 
   function randomState() {
     const r = Math.random()
@@ -33,22 +32,12 @@
   }
 
   let nodes = []
-  $: {
-    nodes = rows.flatMap((r) =>
-      Array.from({ length: cols }, (_, i) => {
-        const id = `${r}${i + 1}`
-        return { id, state: overrides[id] ?? randomState() }
-      })
-    )
-  }
-
-  const nodeCls = {
-    ok: 'border-teal text-teal bg-teal-xlo',
-    warn: 'border-nasa text-nasa bg-nasa-xlo',
-    alert: 'border-red text-red bg-red-xlo animate-blink',
-    off: 'opacity-20',
-    '': 'border-b1 text-ink-2',
-  }
+  $: nodes = rows.flatMap((r) =>
+    Array.from({ length: cols }, (_, i) => {
+      const id = `${r}${i + 1}`
+      return { id, state: overrides[id] ?? randomState() }
+    })
+  )
 
   let timer
   onMount(() => {
@@ -64,11 +53,11 @@
 
 <div class="grid gap-1" style="grid-template-columns: repeat({cols}, 1fr)">
   {#each nodes as node (node.id)}
+    {@const s = stateMap[node.state] ?? {}}
     <div
-      class="flex aspect-square cursor-default items-center justify-center
+      class="border-b1 flex aspect-square cursor-default items-center justify-center
              border font-data text-[10px] transition-all duration-150
-             hover:border-nasa hover:text-nasa
-             {nodeCls[node.state] ?? nodeCls['']}"
+             hover:border-nasa {s.text} {s.bg}"
     >
       {node.id}
     </div>
@@ -79,26 +68,10 @@
   <slot name="legend" />
 {:else}
   <div class="mt-4 flex flex-wrap gap-4 font-data text-[10px]">
-    {#each [['ok', 'ACTIVE'], ['warn', 'WARN'], ['alert', 'ALERT'], ['off', 'OFFLINE']] as [state, label]}
+    {#each Object.entries(stateMap) as [_key, { bg, text, label }]}
       <div class="flex items-center gap-2">
-        <div
-          class="h-1.5 w-1.5 rounded-full {state === 'ok'
-            ? 'bg-teal'
-            : state === 'warn'
-              ? 'bg-nasa'
-              : state === 'alert'
-                ? 'bg-red'
-                : 'bg-ink-2'}"
-        ></div>
-        <span
-          class={state === 'ok'
-            ? 'text-teal'
-            : state === 'warn'
-              ? 'text-nasa'
-              : state === 'alert'
-                ? 'text-red'
-                : 'text-ink-2'}>{label}</span
-        >
+        <div class="h-1.5 w-1.5 rounded-full {bg}"></div>
+        <span class={text}>{label}</span>
       </div>
     {/each}
   </div>
