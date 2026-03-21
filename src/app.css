@@ -64,12 +64,12 @@
 
   /* Section divider label */
   .section-label {
-    @apply mb-5 flex items-center gap-2.5 font-data
-           text-[9px] uppercase tracking-widest2 text-ora;
+    @apply mb-6 flex items-center gap-3 font-data
+           text-[11px] uppercase tracking-widest2 text-ora;
   }
   .section-label::before {
     content: '';
-    @apply block h-px w-4 flex-shrink-0 bg-ora;
+    @apply block h-px w-6 flex-shrink-0 bg-ora;
   }
   .section-label::after {
     content: '';
