@@ -16,6 +16,10 @@ export default [
         ...globals.node,
       },
     },
+    rules: {
+      'no-unused-vars': ['error', { argsIgnorePattern: '^_', varsIgnorePattern: '^_' }],
+      'no-console': 'warn',
+    },
   },
   {
     ignores: ['.svelte-kit/', 'dist/', 'build/', 'node_modules/'],

@@ -684,10 +684,7 @@
       <section id="log">
         <SectionLabel number="09">System Log</SectionLabel>
         <!-- Warning stripe -->
-        <div
-          class="h-[5px]"
-          style="background:repeating-linear-gradient(-45deg,#E82038 0 8px,#05050C 8px 16px)"
-        ></div>
+        <div class="warning-stripe"></div>
         <Panel
           variant="deep"
           flush
@@ -699,10 +696,7 @@
             <LogPanel entries={logEntries} maxHeight={220} />
           </div>
         </Panel>
-        <div
-          class="h-[5px]"
-          style="background:repeating-linear-gradient(-45deg,#E82038 0 8px,#05050C 8px 16px)"
-        ></div>
+        <div class="warning-stripe"></div>
       </section>
     </div>
   </main>

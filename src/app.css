@@ -3,8 +3,14 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --color-void: #000000;
+    --color-bg-0: #05050c;
+    --color-red: #e82038;
+  }
+
   html {
-    background: #000000;
+    background: var(--color-void);
   }
 
   body {
@@ -75,5 +81,15 @@
     content: '';
     @apply h-px flex-1;
     background: linear-gradient(to right, rgba(255, 255, 255, 0.09), transparent);
+  }
+
+  /* Warning stripe pattern */
+  .warning-stripe {
+    height: 5px;
+    background: repeating-linear-gradient(
+      -45deg,
+      var(--color-red) 0 8px,
+      var(--color-bg-0) 8px 16px
+    );
   }
 }
