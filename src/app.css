@@ -4,9 +4,22 @@
 
 @layer base {
   :root {
-    --color-void: #1c2840;
-    --color-bg-0: #6b7d98;
+    --color-void: #1C2840;
+    --color-bg-0: #3D4A66;
   }
+
+  html {
+    background: #3D4A66;
+  }
+
+  body {
+    background: #3D4A66;
+    color: theme('colors.ink.0');
+    font-family: theme('fontFamily.label');
+    font-size: 13px;
+    min-height: 100vh;
+  }
+}
 
   html {
     background: #6b7d98;
@@ -88,6 +101,6 @@
   /* Warning stripe — diagonal rule pattern */
   .warning-stripe {
     height: 4px;
-    background: repeating-linear-gradient(-45deg, #dc2626 0 8px, #6b7d98 8px 16px);
+    background: repeating-linear-gradient(-45deg, #dc2626 0 8px, #3d4a66 8px 16px);
   }
 }

@@ -307,7 +307,7 @@
         <div class="space-y-2">
           <!-- Backgrounds -->
           <div class="flex gap-0.5">
-            {#each ['#0D1220', '#1E2640', '#252C4A', '#2F3860', '#3A4478', '#465595'] as bg, i}
+            {#each ['#3D4A66', '#2D3A52', '#252E47', '#1E2538', '#151C2C', '#0D1220'] as bg, i}
               <div class="flex-1">
                 <div class="border-b0 h-12 border" style="background:{bg}"></div>
                 <div class="mt-1.5 font-data text-[10px] tracking-wide text-ink-2">BG-{i}</div>
