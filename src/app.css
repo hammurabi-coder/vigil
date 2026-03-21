@@ -17,6 +17,7 @@
     color: theme('colors.ink.0');
     font-family: theme('fontFamily.label');
     font-size: 13px;
+    min-height: 100vh;
   }
 }
 
