@@ -49,7 +49,7 @@
   {#if title || badge}
     <div class="border-b0 mb-5 flex items-center justify-between border-b pb-3">
       {#if title}
-        <span class="font-data text-[12px] uppercase tracking-widest text-warm-1">{title}</span>
+        <span class="font-data text-[12px] uppercase tracking-widest text-ink-0">{title}</span>
       {/if}
       {#if badge}
         <span

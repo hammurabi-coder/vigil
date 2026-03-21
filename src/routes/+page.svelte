@@ -276,7 +276,7 @@
     <!-- Clock footer -->
     <div class="border-b1 border-t p-5 font-data text-[10px] tracking-wider text-warm-2">
       <div class="text-[15px] tabular-nums text-amb">{clock}</div>
-      <div class="mt-0.5 text-[10px] uppercase tracking-widest text-warm-3">System Time</div>
+      <div class="mt-0.5 text-[10px] uppercase tracking-widest text-warm-2">System Time</div>
     </div>
   </nav>
 
@@ -291,7 +291,7 @@
             Operational Dark · Component Library · v0.1.0
           </div>
         </div>
-        <div class="text-right font-data text-[11px] leading-loose tracking-wider text-warm-2">
+        <div class="text-right font-data text-[11px] leading-loose tracking-wider text-warm-1">
           DOC <span class="text-amb">SP-168-NG</span><br />
           REV <span class="text-amb">0.1.0-alpha</span><br />
           STATUS <span class="text-teal">ACTIVE</span>
@@ -353,7 +353,7 @@
               class="border-b0 flex items-baseline justify-between gap-4 border-b px-6 py-5 last:border-b-0"
             >
               <div class={row.cls}>{row.sample}</div>
-              <div class="flex-shrink-0 font-data text-[11px] tracking-wide text-warm-3">
+              <div class="flex-shrink-0 font-data text-[11px] tracking-wide text-warm-1">
                 {row.meta}
               </div>
             </div>
@@ -367,32 +367,32 @@
         <SectionLabel number="03">Panel Variants</SectionLabel>
         <div class="grid grid-cols-2 gap-0.5">
           <Panel title="Default Panel" badge="NOMINAL" badgeVariant="ok">
-            <p class="font-body text-[13px] leading-relaxed text-ink-1">
+            <p class="font-body text-[13px] leading-relaxed text-ink-0">
               Standard surface. BG-1 base with dim border. Use for most content containers.
             </p>
           </Panel>
           <Panel variant="accent" title="Accent Panel" badge="ACTIVE" badgeVariant="warn">
-            <p class="font-body text-[13px] leading-relaxed text-ink-1">
-              Orange left border + faint tint. For primary action areas or selected states.
+            <p class="font-body text-[13px] leading-relaxed text-ink-0">
+              NASA Red left border + faint tint. For primary action areas or selected states.
             </p>
           </Panel>
           <Panel variant="alert" title="Alert Panel" badge="CRITICAL" badgeVariant="alert">
-            <p class="font-body text-[13px] leading-relaxed text-ink-1">
+            <p class="font-body text-[13px] leading-relaxed text-ink-0">
               Red border + background tint. Reserved for system errors and warnings.
             </p>
           </Panel>
           <Panel variant="teal" title="Nominal Panel" badge="OK" badgeVariant="ok">
-            <p class="font-body text-[13px] leading-relaxed text-ink-1">
+            <p class="font-body text-[13px] leading-relaxed text-ink-0">
               Teal border for confirmed nominal or success states.
             </p>
           </Panel>
           <Panel variant="deep" title="Deep Panel">
-            <p class="font-body text-[13px] leading-relaxed text-ink-1">
+            <p class="font-body text-[13px] leading-relaxed text-ink-0">
               BG-0 background — sits lower in the surface stack. Good for data readout groups.
             </p>
           </Panel>
           <Panel variant="raised" title="Raised Panel">
-            <p class="font-body text-[13px] leading-relaxed text-ink-1">
+            <p class="font-body text-[13px] leading-relaxed text-ink-0">
               BG-2 background — slightly elevated. Use for overlays or focus areas.
             </p>
           </Panel>
