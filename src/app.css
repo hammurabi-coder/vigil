@@ -3,17 +3,8 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --color-void: #1c2840;
-    --color-bg-0: #3d4a66;
-  }
-
-  html {
-    background: #3d4a66;
-  }
-
   body {
-    background: #3d4a66;
+    background-color: theme('colors.void');
     color: theme('colors.ink.0');
     font-family: theme('fontFamily.label');
     font-size: 13px;
@@ -65,8 +56,8 @@
     top: 0;
     width: 8px;
     height: 8px;
-    border-bottom: 3px solid #0055a4;
-    border-right: 3px solid #0055a4;
+    border-bottom: 3px solid theme('colors.ora.DEFAULT');
+    border-right: 3px solid theme('colors.ora.DEFAULT');
   }
   .ora-header::after {
     content: '';
@@ -75,8 +66,8 @@
     bottom: 0;
     width: 8px;
     height: 8px;
-    border-top: 3px solid #0055a4;
-    border-left: 3px solid #0055a4;
+    border-top: 3px solid theme('colors.ora.DEFAULT');
+    border-left: 3px solid theme('colors.ora.DEFAULT');
   }
 
   /* Breathing space — solid rule per ORA SP-168 */
@@ -85,9 +76,12 @@
     background: rgba(255, 255, 255, 0.12);
   }
 
-  /* Warning stripe — diagonal rule pattern */
   .warning-stripe {
     height: 4px;
-    background: repeating-linear-gradient(-45deg, #dc2626 0 8px, #3d4a66 8px 16px);
+    background: repeating-linear-gradient(
+      -45deg,
+      theme('colors.red.DEFAULT') 0 8px,
+      theme('colors.bg.2') 8px 16px
+    );
   }
 }
