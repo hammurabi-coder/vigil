@@ -7,7 +7,7 @@
 
 <div class="section-label font-data text-[11px] uppercase tracking-widest">
   <span class="font-bold text-nasa">&#x5B;</span><!--
-  -->{#if number}<span class="text-warm-1"
+  -->{#if number}<span class="text-ink-2"
       >{number} ·</span
     >{/if}<!--
   --><slot /><!--

@@ -82,7 +82,7 @@
         68, 71, 73, 70, 72, 74, 71, 68, 65, 69, 73, 76, 74, 71, 73, 75, 72, 70, 73, 74, 71, 69, 73,
         73,
       ],
-      color: 'ora',
+      color: 'nasa',
       fill: true,
     },
     { label: 'Threshold', data: Array(24).fill(65), color: 'red', dashed: true, fill: false },
@@ -96,7 +96,7 @@
     {
       label: 'Primary',
       data: [40, 42, 45, 44, 46, 48, 45, 47, 50, 48, 46, 49, 52, 50, 48, 51],
-      color: 'ora',
+      color: 'nasa',
     },
     {
       label: 'Reserve',
@@ -111,7 +111,7 @@
   ]
 
   const radarDatasets = [
-    { label: 'EVA-01', data: [73, 88, 72, 80, 60, 85], color: 'ora' },
+    { label: 'EVA-01', data: [73, 88, 72, 80, 60, 85], color: 'nasa' },
     { label: 'EVA-02', data: [88, 82, 90, 85, 88, 88], color: 'teal' },
   ]
 
@@ -266,7 +266,7 @@
           class="px-5 py-3 font-data text-[11px] uppercase tracking-widest transition-colors duration-100
                  {activeSection === item.id
             ? 'border-l-2 border-nasa bg-nasa-xlo pl-[calc(1.25rem-2px)] text-nasa'
-            : 'border-l-2 border-transparent text-warm-1 hover:text-warm-0'}"
+            : 'text-warm-1 hover:text-warm-0 border-l-2 border-transparent'}"
         >
           {item.label}
         </a>
@@ -274,9 +274,9 @@
     </div>
 
     <!-- Clock footer -->
-    <div class="border-b1 border-t p-5 font-data text-[10px] tracking-wider text-warm-2">
+    <div class="border-b1 text-warm-2 border-t p-5 font-data text-[10px] tracking-wider">
       <div class="text-[15px] tabular-nums text-amb">{clock}</div>
-      <div class="mt-0.5 text-[10px] uppercase tracking-widest text-warm-2">System Time</div>
+      <div class="text-warm-2 mt-0.5 text-[10px] uppercase tracking-widest">System Time</div>
     </div>
   </nav>
 
@@ -291,7 +291,7 @@
             Operational Dark · Component Library · v0.1.0
           </div>
         </div>
-        <div class="text-right font-data text-[11px] leading-loose tracking-wider text-warm-1">
+        <div class="text-warm-1 text-right font-data text-[11px] leading-loose tracking-wider">
           DOC <span class="text-amb">SP-168-NG</span><br />
           REV <span class="text-amb">0.1.0-alpha</span><br />
           STATUS <span class="text-teal">ACTIVE</span>
@@ -315,7 +315,7 @@
           <div class="mt-4 grid grid-cols-4 gap-4">
             {#each [{ name: 'NASA Red / Primary', swatches: ['#7A0016', '#B3000C', '#E3000F', '#FF3040'], active: 2 }, { name: 'Red / Alert', swatches: ['#5C0018', '#E82038', '#FF5068'], active: 1 }, { name: 'Amber / Data', swatches: ['#7A5800', '#D4A832', '#EDD070'], active: 1 }, { name: 'Teal / Nominal', swatches: ['#105C58', '#26C4BC', '#5EEAE0'], active: 1 }] as ramp}
               <div>
-                <div class="mb-2 font-data text-[11px] uppercase tracking-widest text-warm-3">
+                <div class="text-warm-3 mb-2 font-data text-[11px] uppercase tracking-widest">
                   {ramp.name}
                 </div>
                 <div class="flex gap-1">
@@ -353,7 +353,7 @@
               class="border-b0 flex items-baseline justify-between gap-4 border-b px-6 py-5 last:border-b-0"
             >
               <div class={row.cls}>{row.sample}</div>
-              <div class="flex-shrink-0 font-data text-[11px] tracking-wide text-warm-1">
+              <div class="text-warm-1 flex-shrink-0 font-data text-[11px] tracking-wide">
                 {row.meta}
               </div>
             </div>
@@ -538,7 +538,7 @@
               <DonutChart
                 labels={['Primary', 'Reserve', 'Aux', 'Idle']}
                 data={[51, 20, 10, 19]}
-                colors={['ora', 'amb', 'teal', 'red']}
+                colors={['nasa', 'amb', 'teal', 'red']}
                 height={185}
               />
             </div>
@@ -572,7 +572,7 @@
           >
             <div class="px-5 pb-5">
               <BarChart
-                labels={['CPU', 'Memory', 'Network', 'Storage', 'GPU', 'Comms']}
+                labels={['CPU', 'Memory', 'Network', 'Stnasage', 'GPU', 'Comms']}
                 data={[67, 84, 31, 58, 45, 55]}
                 color="auto"
                 orientation="horizontal"
@@ -609,7 +609,7 @@
           <Panel variant="deep" title="Button Variants">
             <div class="space-y-6">
               <div>
-                <div class="mb-3 font-data text-[11px] uppercase tracking-widest text-warm-3">
+                <div class="text-warm-3 mb-3 font-data text-[11px] uppercase tracking-widest">
                   Size · Primary
                 </div>
                 <div class="flex flex-wrap items-start gap-3">
@@ -619,7 +619,7 @@
                 </div>
               </div>
               <div>
-                <div class="mb-3 font-data text-[11px] uppercase tracking-widest text-warm-3">
+                <div class="text-warm-3 mb-3 font-data text-[11px] uppercase tracking-widest">
                   Style variants
                 </div>
                 <div class="flex flex-wrap items-start gap-3">
@@ -630,7 +630,7 @@
                 </div>
               </div>
               <div>
-                <div class="mb-3 font-data text-[11px] uppercase tracking-widest text-warm-3">
+                <div class="text-warm-3 mb-3 font-data text-[11px] uppercase tracking-widest">
                   Badges
                 </div>
                 <div class="flex flex-wrap items-center gap-3">

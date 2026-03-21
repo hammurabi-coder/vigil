@@ -31,8 +31,8 @@
         datasets: datasets.map((ds) => ({
           label: ds.label,
           data: ds.data,
-          borderColor: C[ds.color ?? 'ora'].stroke,
-          backgroundColor: C[ds.color ?? 'ora'].fill,
+          borderColor: C[ds.color ?? 'nasa'].stroke,
+          backgroundColor: C[ds.color ?? 'nasa'].fill,
           fill: true,
           borderWidth: 1.5,
           tension: 0.4,

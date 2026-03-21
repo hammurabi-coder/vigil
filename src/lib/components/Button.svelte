@@ -12,10 +12,10 @@
     'font-label font-semibold tracking-wider uppercase inline-flex items-center gap-1.5 relative transition-all duration-150 cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed'
 
   const variants = {
-    primary: 'bg-nasa text-void hover:bg-nasa-300 hover:shadow-[0_0_18px_rgba(227,0,15,0.3)]',
+    primary: 'bg-nasa text-cream hover:bg-nasa-300 hover:shadow-[0_0_18px_rgba(0,85,164,0.35)]',
     outline: 'bg-transparent text-nasa border border-nasa hover:bg-nasa-xlo',
-    ghost: 'bg-transparent text-warm-1 border border-b1 hover:border-b2 hover:text-ink-0',
-    danger: 'bg-red text-white hover:brightness-110 hover:shadow-[0_0_20px_rgba(232,32,56,0.3)]',
+    ghost: 'bg-transparent text-ink-1 border border-b1 hover:border-b2 hover:text-ink-0',
+    danger: 'bg-red text-white hover:brightness-110 hover:shadow-[0_0_20px_rgba(220,38,38,0.35)]',
   }
 
   const sizes = {

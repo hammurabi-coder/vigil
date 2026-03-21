@@ -9,7 +9,7 @@
   export let labels = []
   /** @type {number[]} data */
   export let data = []
-  /** @type {'ora'|'red'|'amb'|'teal'|'auto'} color */
+  /** @type {'nasa'|'red'|'amb'|'teal'|'auto'} color */
   export let color = 'auto'
   /** @type {'vertical'|'horizontal'} orientation */
   export let orientation = 'vertical'
@@ -19,8 +19,8 @@
   const C = chartColors
 
   function resolveColor(v) {
-    if (color !== 'auto') return C[color] ?? C.ora
-    return v > 80 ? C.red : v > 60 ? C.ora : C.teal
+    if (color !== 'auto') return C[color] ?? C.nasa
+    return v > 80 ? C.red : v > 60 ? C.nasa : C.teal
   }
 
   let canvas

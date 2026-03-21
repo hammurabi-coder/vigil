@@ -9,7 +9,7 @@
     ok: 'border-teal text-teal',
     warn: 'border-nasa text-nasa',
     alert: 'border-red text-red animate-blink',
-    muted: 'border-b2 text-warm-3',
+    muted: 'border-b2 text-ink-3',
   }
 
   $: cls = `font-data text-[11px] px-2.5 py-0.5 border tracking-wider uppercase inline-flex items-center ${

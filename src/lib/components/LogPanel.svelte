@@ -17,7 +17,7 @@
 
   const levelCls = {
     ok: 'text-teal',
-    warn: 'text-ora',
+    warn: 'text-nasa',
     alert: 'text-red',
     info: 'text-ink-2',
   }
@@ -44,7 +44,7 @@
   style="max-height: {maxHeight}px"
 >
   {#each entries as entry}
-    <div class="flex gap-3 leading-[1.9]">
+    <div class="flex gap-3 leading-relaxed">
       <span class="flex-shrink-0 text-ink-2">{entry.ts} ·</span>
       <span class="flex-shrink-0 {levelCls[entry.level] ?? levelCls.info}"
         >{levelLabel[entry.level] ?? levelLabel.info}</span

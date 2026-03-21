@@ -16,7 +16,7 @@
   /**
    *
    */
-  export let colors = ['ora', 'teal', 'amb', 'red']
+  export let colors = ['nasa', 'teal', 'amb', 'red']
   /**
    *
    */
@@ -43,8 +43,8 @@
         datasets: [
           {
             data,
-            backgroundColor: colors.map((c) => C[c]?.fill ?? C.ora.fill),
-            borderColor: colors.map((c) => C[c]?.stroke ?? C.ora.stroke),
+            backgroundColor: colors.map((c) => C[c]?.fill ?? C.nasa.fill),
+            borderColor: colors.map((c) => C[c]?.stroke ?? C.nasa.stroke),
             borderWidth: 1.5,
             hoverOffset: 4,
           },

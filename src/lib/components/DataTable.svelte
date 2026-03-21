@@ -14,7 +14,7 @@
     default: 'text-ink-1',
     data: 'text-amb',
     ok: 'text-teal',
-    warn: 'text-ora',
+    warn: 'text-nasa',
     alert: 'text-red',
   }
 </script>

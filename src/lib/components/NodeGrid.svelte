@@ -44,7 +44,7 @@
 
   const nodeCls = {
     ok: 'border-teal text-teal bg-teal-xlo',
-    warn: 'border-ora text-ora bg-ora-xlo',
+    warn: 'border-nasa text-nasa bg-nasa-xlo',
     alert: 'border-red text-red bg-red-xlo animate-blink',
     off: 'opacity-20',
     '': 'border-b1 text-ink-2',
@@ -62,12 +62,12 @@
   onDestroy(() => clearInterval(timer))
 </script>
 
-<div class="grid gap-[3px]" style="grid-template-columns: repeat({cols}, 1fr)">
+<div class="grid gap-1" style="grid-template-columns: repeat({cols}, 1fr)">
   {#each nodes as node (node.id)}
     <div
       class="flex aspect-square cursor-default items-center justify-center
              border font-data text-[10px] transition-all duration-150
-             hover:border-ora hover:text-ora
+             hover:border-nasa hover:text-nasa
              {nodeCls[node.state] ?? nodeCls['']}"
     >
       {node.id}
@@ -78,11 +78,27 @@
 {#if $$slots.legend !== undefined}
   <slot name="legend" />
 {:else}
-  <div class="mt-4 flex flex-wrap gap-4">
-    {#each [['ok', 'teal', 'ACTIVE'], ['warn', 'ora', 'WARN'], ['alert', 'red', 'ALERT'], ['off', 'ink-2', 'OFFLINE']] as [c, l]}
-      <div class="flex items-center gap-2 font-data text-[10px] text-{c}">
-        <div class="h-[6px] w-[6px] rounded-full bg-{c}"></div>
-        {l}
+  <div class="mt-4 flex flex-wrap gap-4 font-data text-[10px]">
+    {#each [['ok', 'ACTIVE'], ['warn', 'WARN'], ['alert', 'ALERT'], ['off', 'OFFLINE']] as [state, label]}
+      <div class="flex items-center gap-2">
+        <div
+          class="h-1.5 w-1.5 rounded-full {state === 'ok'
+            ? 'bg-teal'
+            : state === 'warn'
+              ? 'bg-nasa'
+              : state === 'alert'
+                ? 'bg-red'
+                : 'bg-ink-2'}"
+        ></div>
+        <span
+          class={state === 'ok'
+            ? 'text-teal'
+            : state === 'warn'
+              ? 'text-nasa'
+              : state === 'alert'
+                ? 'text-red'
+                : 'text-ink-2'}>{label}</span
+        >
       </div>
     {/each}
   </div>
