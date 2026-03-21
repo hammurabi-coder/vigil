@@ -4,29 +4,16 @@
 
 @layer base {
   :root {
-    --color-void: #1C2840;
-    --color-bg-0: #3D4A66;
+    --color-void: #1c2840;
+    --color-bg-0: #3d4a66;
   }
 
   html {
-    background: #3D4A66;
+    background: #3d4a66;
   }
 
   body {
-    background: #3D4A66;
-    color: theme('colors.ink.0');
-    font-family: theme('fontFamily.label');
-    font-size: 13px;
-    min-height: 100vh;
-  }
-}
-
-  html {
-    background: #6b7d98;
-  }
-
-  body {
-    background: #6b7d98;
+    background: #3d4a66;
     color: theme('colors.ink.0');
     font-family: theme('fontFamily.label');
     font-size: 13px;
