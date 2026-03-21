@@ -1,13 +1,9 @@
 <script>
-  /**
-   * Button
-   * @prop {'primary'|'outline'|'ghost'|'danger'} variant
-   * @prop {'sm'|'md'|'lg'} size
-   * @prop {boolean} disabled
-   * @prop {'button'|'reset'|'submit'} type
-   */
+  /** @type {'primary'|'outline'|'ghost'|'danger'} */
   export let variant = 'primary'
+  /** @type {'sm'|'md'|'lg'} */
   export let size = 'md'
+  /** @type {boolean} */
   export let disabled = false
   /** @type {'button'|'reset'|'submit'} */
   export let type = 'button'

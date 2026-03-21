@@ -6,7 +6,13 @@
    * @prop {boolean} autoScroll
    */
   export let entries = []
+  /**
+   *
+   */
   export let maxHeight = 220
+  /**
+   *
+   */
   export let autoScroll = true
 
   const levelCls = {

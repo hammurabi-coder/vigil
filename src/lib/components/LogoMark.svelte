@@ -1,4 +1,7 @@
 <script>
+  /**
+   *
+   */
   export let size = 40 // px
 </script>
 

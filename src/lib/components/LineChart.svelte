@@ -13,8 +13,17 @@
    * @prop {number} height
    */
   export let labels = []
+  /**
+   *
+   */
   export let datasets = []
+  /**
+   *
+   */
   export let yAxis = {}
+  /**
+   *
+   */
   export let height = 200
 
   let canvas

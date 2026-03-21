@@ -8,9 +8,21 @@
    * @prop {boolean} flush    — remove padding (for full-bleed children)
    */
   export let variant = 'default'
+  /**
+   *
+   */
   export let title = ''
+  /**
+   *
+   */
   export let badge = ''
+  /**
+   *
+   */
   export let badgeVariant = 'ok'
+  /**
+   *
+   */
   export let flush = false
 
   const base = 'relative border border-b1'

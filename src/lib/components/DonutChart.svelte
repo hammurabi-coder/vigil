@@ -5,10 +5,25 @@
 
   Chart.register(...registerables)
 
+  /**
+   *
+   */
   export let labels = []
+  /**
+   *
+   */
   export let data = []
+  /**
+   *
+   */
   export let colors = ['ora', 'teal', 'amb', 'red']
+  /**
+   *
+   */
   export let height = 180
+  /**
+   *
+   */
   export let cutout = '68%'
 
   const C = chartColors

@@ -1,16 +1,13 @@
 <script>
-  /**
-   * DataReadout — operational numeric display
-   * @prop {string|number} value
-   * @prop {string} label   — small uppercase label above
-   * @prop {string} unit    — small text below
-   * @prop {'default'|'ok'|'alert'|'primary'} color
-   * @prop {'sm'|'md'|'lg'|'xl'} size
-   */
+  /** @type {string|number} */
   export let value = '—'
+  /** @type {string} label - small uppercase label above */
   export let label = ''
+  /** @type {string} unit - small text below */
   export let unit = ''
-  export let color = 'default' // default = amber
+  /** @type {'default'|'ok'|'alert'|'primary'} */
+  export let color = 'default'
+  /** @type {'sm'|'md'|'lg'|'xl'} */
   export let size = 'md'
 
   const colorMap = {

@@ -5,8 +5,17 @@
 
   Chart.register(...registerables)
 
+  /**
+   *
+   */
   export let labels = []
+  /**
+   *
+   */
   export let datasets = []
+  /**
+   *
+   */
   export let height = 200
 
   const C = chartColors

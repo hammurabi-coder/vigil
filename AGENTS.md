@@ -101,6 +101,44 @@ Features:
 
 ---
 
+## Architectural Principles
+
+These are the non-negotiable rules of vigil. Violations block merge.
+
+### 1. Tokens-First
+
+All visual values — colors, spacing, typography — must come from `theme.js`. No bare hex codes, pixel values, or font names in component markup.
+
+- **Enforce:** ESLint bans `#[0-9A-Fa-f]{3,6}` in `.svelte` `class=` and `style=` attributes.
+- **Exception:** Hex values in string literals (chart config, showcase data) are exempt.
+
+### 2. Props-Interface
+
+Components own no global state. Shared state lives in stores defined outside the component tree, passed via props or context. Components are pure functions of their props.
+
+- **Enforce:** Convention + code review.
+
+### 3. JSDoc-or-Die
+
+Every exported prop must have a `@prop` JSDoc comment with type. This is the library's API contract.
+
+- **Enforce:** `eslint-plugin-jsdoc` with `require-jsdoc` on all exports.
+
+### 4. CSS Components, Not Inline
+
+Reusable patterns → CSS component classes in `app.css`. Component-specific styles → Tailwind classes only. No `<style>` blocks in components.
+
+- **Allowed:** `style={dynamicValue}` for computed values (widths, heights, generated colors from props).
+- **Banned:** `<style>` blocks, static `style="..."` attributes.
+
+### 5. Atomic Components
+
+One component, one data concern. If you need two names to describe it, it should be two components.
+
+- **Enforce:** 200-line soft limit (`max-lines`). Naming convention. Code review.
+
+---
+
 ## Design rules — do not violate
 
 1. **True black base.** `--void: #000000`, `--bg-0: #05050C`. No grey backgrounds. No cream panels.
@@ -110,7 +148,7 @@ Features:
 5. **Teal = nominal/ok only.** Don't repurpose it for general UI elements.
 6. **Red = alert/error only.** Same rule.
 7. **No shadows except glow on interactive states.** Box shadows are orange/red glow only, not elevation.
-8. **Tailwind classes only.** No inline styles except for dynamic values (widths, heights from props). No `<style>` blocks in components unless absolutely necessary.
+8. **Tailwind classes only.** No inline styles except for dynamic values (widths, heights from props).
 9. **All design token references go through Tailwind classes** mapped from `theme.js`. Never hardcode hex values in components.
 
 ---

@@ -5,18 +5,15 @@
 
   Chart.register(...registerables)
 
-  /**
-   * BarChart — vertical or horizontal
-   * @prop {string[]} labels
-   * @prop {number[]} data
-   * @prop {'ora'|'red'|'amb'|'teal'|'auto'} color
-   * @prop {'vertical'|'horizontal'} orientation
-   * @prop {number} height
-   */
+  /** @type {string[]} labels */
   export let labels = []
+  /** @type {number[]} data */
   export let data = []
+  /** @type {'ora'|'red'|'amb'|'teal'|'auto'} color */
   export let color = 'auto'
+  /** @type {'vertical'|'horizontal'} orientation */
   export let orientation = 'vertical'
+  /** @type {number} height */
   export let height = 200
 
   const C = chartColors

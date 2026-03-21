@@ -4,6 +4,9 @@
  * Import in app code for runtime access if needed.
  */
 
+/**
+ *
+ */
 export const colors = {
   void: '#000000',
   bg: {
@@ -62,6 +65,9 @@ export const colors = {
   },
 }
 
+/**
+ *
+ */
 export const fontFamily = {
   display: ['Bebas Neue', 'sans-serif'],
   label: ['Barlow Condensed', 'sans-serif'],
@@ -69,6 +75,9 @@ export const fontFamily = {
   data: ['Share Tech Mono', 'monospace'],
 }
 
+/**
+ *
+ */
 export const fontSize = {
   '2xs': ['0.65rem', { lineHeight: '1', letterSpacing: '0.3em' }],
   xs: ['0.75rem', { lineHeight: '1.4' }],

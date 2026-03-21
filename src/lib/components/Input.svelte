@@ -9,10 +9,25 @@
    * @prop {string} hint   — optional hint/error message below
    */
   export let label = ''
+  /**
+   *
+   */
   export let value = ''
+  /**
+   *
+   */
   export let placeholder = ''
+  /**
+   *
+   */
   export let type = 'text'
+  /**
+   *
+   */
   export let state = 'default'
+  /**
+   *
+   */
   export let hint = ''
 
   const inputBase =

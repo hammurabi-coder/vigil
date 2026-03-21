@@ -1,4 +1,5 @@
 <script>
+  /* eslint-disable max-lines */
   import { onMount } from 'svelte'
 
   import LogoMark from '$lib/components/LogoMark.svelte'

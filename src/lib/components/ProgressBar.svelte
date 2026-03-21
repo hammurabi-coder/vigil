@@ -7,8 +7,17 @@
    * @prop {boolean} showValue
    */
   export let label = ''
+  /**
+   *
+   */
   export let value = 0
+  /**
+   *
+   */
   export let color = 'ora'
+  /**
+   *
+   */
   export let showValue = true
 
   const fills = {

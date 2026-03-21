@@ -10,9 +10,21 @@
    * @prop {number} interval — ms between random flickers
    */
   export let cols = 8
+  /**
+   *
+   */
   export let rows = ['A', 'B', 'C', 'D', 'E', 'F']
+  /**
+   *
+   */
   export let overrides = {}
+  /**
+   *
+   */
   export let animate = true
+  /**
+   *
+   */
   export let interval = 700
 
   function randomState() {

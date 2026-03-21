@@ -5,6 +5,9 @@
    * @prop {Array<Record<string,any>>} rows
    */
   export let columns = []
+  /**
+   *
+   */
   export let rows = []
 
   const cellColor = {

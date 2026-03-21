@@ -5,9 +5,13 @@
 
   Chart.register(...registerables)
 
+  /** @type {string[]} */
   export let labels = []
+  /** @type {Array<{label: string, data: number[], color?: string}>} */
   export let datasets = []
+  /** @type {boolean} */
   export let stacked = true
+  /** @type {number} */
   export let height = 180
 
   const C = chartColors
