@@ -10,11 +10,11 @@
   }
 
   html {
-    background: var(--color-void);
+    background: #0a0a16;
   }
 
   body {
-    background: theme('colors.bg.0');
+    background: #0a0a16;
     color: theme('colors.ink.0');
     font-family: theme('fontFamily.label');
     font-size: 13px;
@@ -68,14 +68,14 @@
     background-color: rgba(255, 255, 255, 0.09);
   }
 
-  /* Section divider label */
-  .section-label {
-    @apply mb-6 flex items-center gap-3 font-data
-           text-[11px] uppercase tracking-widest2 text-ora;
+  /* NASA SP-168 corner notch borders */
+  .border-nasa {
+    border-color: #e3000f;
   }
-  .section-label::before {
-    content: '';
-    @apply block h-px w-6 flex-shrink-0 bg-ora;
+
+  /* Section divider label — bracket style, NASA Red accents */
+  .section-label {
+    @apply mb-6 flex items-center gap-2 font-data text-[11px] uppercase tracking-widest;
   }
   .section-label::after {
     content: '';
@@ -83,13 +83,55 @@
     background: linear-gradient(to right, rgba(255, 255, 255, 0.09), transparent);
   }
 
-  /* Warning stripe pattern */
-  .warning-stripe {
+  /* NASA header corner notches — 5px visible L-shapes */
+  .nasa-header {
+    padding: 0 1.5rem 1.5rem;
+    margin: 0 -0.5rem;
+  }
+  .nasa-header::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px;
     height: 5px;
-    background: repeating-linear-gradient(
-      -45deg,
-      var(--color-red) 0 8px,
-      var(--color-bg-0) 8px 16px
+    border-bottom: 2px solid #e3000f;
+    border-right: 2px solid #e3000f;
+  }
+  .nasa-header::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 5px;
+    height: 5px;
+    border-top: 2px solid #e3000f;
+    border-left: 2px solid #e3000f;
+  }
+  .nasa-header::before {
+    content: '';
+    @apply absolute left-0 top-0 h-4 w-4 border-b-2 border-r-2 border-nasa;
+  }
+  .nasa-header::after {
+    content: '';
+    @apply absolute bottom-0 right-0 h-4 w-4 border-l-2 border-t-2 border-nasa;
+  }
+
+  /* Warning stripe pattern — NASA Red */
+  .warning-stripe {
+    height: 4px;
+    background: repeating-linear-gradient(-45deg, #e3000f 0 8px, #05050c 8px 16px);
+  }
+
+  /* Breathing space divider — warm gray horizontal rule */
+  .breathing-space {
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      transparent 5%,
+      rgba(168, 162, 150, 0.2) 20%,
+      rgba(168, 162, 150, 0.2) 80%,
+      transparent 95%
     );
   }
 }

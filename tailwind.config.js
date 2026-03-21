@@ -8,10 +8,12 @@ export default {
       colors: {
         void: colors.void,
         bg: colors.bg,
+        nasa: colors.nasa,
         ora: colors.ora,
         red: colors.red,
         amb: colors.amb,
         teal: colors.teal,
+        warm: colors.warm,
         ink: colors.ink,
       },
       fontFamily: {

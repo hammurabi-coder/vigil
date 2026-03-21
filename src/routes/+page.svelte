@@ -265,8 +265,8 @@
           href="#{item.id}"
           class="px-5 py-2.5 font-data text-[9px] uppercase tracking-widest transition-colors duration-100
                  {activeSection === item.id
-            ? 'border-l-2 border-ora bg-ora-xlo pl-[calc(1.25rem-2px)] text-ora'
-            : 'border-l-2 border-transparent text-ink-2 hover:text-ink-1'}"
+            ? 'border-l-2 border-nasa bg-nasa-xlo pl-[calc(1.25rem-2px)] text-nasa'
+            : 'border-l-2 border-transparent text-warm-1 hover:text-warm-0'}"
         >
           {item.label}
         </a>
@@ -274,9 +274,9 @@
     </div>
 
     <!-- Clock footer -->
-    <div class="border-b1 border-t p-5 font-data text-[9px] tracking-wider text-ink-2">
+    <div class="border-b1 border-t p-5 font-data text-[9px] tracking-wider text-warm-2">
       <div class="text-[13px] tabular-nums text-amb">{clock}</div>
-      <div class="mt-0.5 text-[8px] uppercase tracking-widest">System Time</div>
+      <div class="mt-0.5 text-[8px] uppercase tracking-widest text-warm-3">System Time</div>
     </div>
   </nav>
 
@@ -284,17 +284,17 @@
   <main class="flex-1 overflow-y-auto">
     <div class="mx-auto max-w-5xl space-y-20 px-8 py-12">
       <!-- MASTHEAD -->
-      <header class="border-b1 flex items-end justify-between border-b pb-6">
+      <header class="nasa-header border-b1 relative flex items-end justify-between border-b pb-6">
         <div>
           <div class="font-display text-[48px] leading-none tracking-wide">vigil</div>
-          <div class="mt-2 font-data text-[10px] uppercase tracking-widest text-ora">
+          <div class="mt-2 font-data text-[10px] uppercase tracking-widest text-nasa">
             Operational Dark · Component Library · v0.1.0
           </div>
         </div>
-        <div class="text-right font-data text-[9px] leading-loose tracking-wider text-ink-2">
+        <div class="text-right font-data text-[9px] leading-loose tracking-wider text-warm-2">
           DOC <span class="text-amb">SP-168-NG</span><br />
           REV <span class="text-amb">0.1.0-alpha</span><br />
-          STATUS <span class="text-teal">ACTIVE DESIGN</span>
+          STATUS <span class="text-teal">ACTIVE</span>
         </div>
       </header>
 
@@ -313,9 +313,9 @@
           </div>
           <!-- Accent ramps -->
           <div class="mt-4 grid grid-cols-4 gap-4">
-            {#each [{ name: 'Orange / Primary', swatches: ['#7A3008', '#CC4E00', '#FF6B1A', '#FF9050'], active: 2 }, { name: 'Red / Alert', swatches: ['#5C0018', '#E82038', '#FF5068'], active: 1 }, { name: 'Amber / Data', swatches: ['#7A5800', '#D4A832', '#EDD070'], active: 1 }, { name: 'Teal / Nominal', swatches: ['#105C58', '#26C4BC', '#5EEAE0'], active: 1 }] as ramp}
+            {#each [{ name: 'NASA Red / Primary', swatches: ['#7A0016', '#B3000C', '#E3000F', '#FF3040'], active: 2 }, { name: 'Red / Alert', swatches: ['#5C0018', '#E82038', '#FF5068'], active: 1 }, { name: 'Amber / Data', swatches: ['#7A5800', '#D4A832', '#EDD070'], active: 1 }, { name: 'Teal / Nominal', swatches: ['#105C58', '#26C4BC', '#5EEAE0'], active: 1 }] as ramp}
               <div>
-                <div class="mb-2 font-data text-[10px] uppercase tracking-widest text-ink-2">
+                <div class="mb-2 font-data text-[10px] uppercase tracking-widest text-warm-3">
                   {ramp.name}
                 </div>
                 <div class="flex gap-0.5">
@@ -333,7 +333,7 @@
           </div>
           <!-- Text scale -->
           <div class="mt-4 flex flex-wrap items-center gap-4">
-            {#each [['text-ink-0', 'Primary', '#F0EDE6'], ['text-ink-1', 'Secondary', '#A8A296'], ['text-ink-2', 'Muted', '#706860'], ['text-ink-3', 'Faint', '#484440']] as [cls, label, hex]}
+            {#each [['text-ink-0', 'Primary', '#F0EDE6'], ['text-warm-1', 'Secondary', '#E8E6E1'], ['text-warm-3', 'Muted', '#A8A49C'], ['text-warm-5', 'Faint', '#484440']] as [cls, label, hex]}
               <div class="flex items-center gap-2">
                 <div class="border-b1 h-4 w-4 rounded-full border" style="background:{hex}"></div>
                 <span class="font-data text-[11px] {cls} tracking-wide">{label} · {hex}</span>
@@ -345,6 +345,7 @@
 
       <!-- 02 · TYPE ────────────────────────────────────────── -->
       <section id="type">
+        <div class="breathing-space mb-8"></div>
         <SectionLabel number="02">Typography</SectionLabel>
         <Panel variant="deep" flush>
           {#each [{ sample: 'EVANGELION', cls: 'font-display text-[58px] leading-none tracking-wide', meta: 'Display · 58px · Bebas Neue' }, { sample: 'MISSION CRITICAL ALERT', cls: 'font-label text-[26px] uppercase tracking-widest font-bold', meta: 'Label-XL · 26px · Barlow Condensed 700' }, { sample: 'System Parameter Alpha', cls: 'font-label text-[15px] uppercase tracking-wider font-semibold text-ink-1', meta: 'Label · 15px · Barlow Condensed 600' }, { sample: 'Interface systems require precise nomenclature across all operational readouts.', cls: 'font-body text-[13px] text-ink-1 max-w-xl leading-relaxed', meta: 'Body · 13px · Barlow 400' }, { sample: 'SYS.UPTIME 00:04:32.807 · NODE-03 ACTIVE', cls: 'font-data text-[12px] text-amb tracking-wide', meta: 'Data · 12px · Share Tech Mono' }, { sample: 'OPERATIONAL · RESTRICTED · NERV INTERNAL', cls: 'font-data text-[11px] text-ink-1 tracking-widest2 uppercase', meta: 'Annotation · 11px · STMono' }] as row}
@@ -362,6 +363,7 @@
 
       <!-- 03 · PANELS ─────────────────────────────────────── -->
       <section id="panels">
+        <div class="breathing-space mb-8"></div>
         <SectionLabel number="03">Panel Variants</SectionLabel>
         <div class="grid grid-cols-2 gap-0.5">
           <Panel title="Default Panel" badge="NOMINAL" badgeVariant="ok">
@@ -399,6 +401,7 @@
 
       <!-- 04 · READOUTS ───────────────────────────────────── -->
       <section id="readouts">
+        <div class="breathing-space mb-8"></div>
         <SectionLabel number="04">Data Readouts</SectionLabel>
         <div class="mb-0.5 grid grid-cols-4 gap-0.5">
           <Panel variant="deep"
@@ -474,6 +477,7 @@
 
       <!-- 05 · CHARTS ─────────────────────────────────────── -->
       <section id="charts">
+        <div class="breathing-space mb-8"></div>
         <SectionLabel number="05">Charts &amp; Graphs</SectionLabel>
 
         <!-- Line + Bar -->
@@ -581,6 +585,7 @@
 
       <!-- 06 · STATUS ─────────────────────────────────────── -->
       <section id="status">
+        <div class="breathing-space mb-8"></div>
         <SectionLabel number="06">Status &amp; Progress</SectionLabel>
         <div class="grid grid-cols-2 gap-0.5">
           <Panel variant="deep" title="System Status / MAGI">
@@ -598,6 +603,7 @@
 
       <!-- 07 · CONTROLS ───────────────────────────────────── -->
       <section id="controls">
+        <div class="breathing-space mb-8"></div>
         <SectionLabel number="07">Buttons &amp; Inputs</SectionLabel>
         <div class="grid grid-cols-2 gap-0.5">
           <Panel variant="deep" title="Button Variants">
@@ -656,6 +662,7 @@
 
       <!-- 08 · DATA ───────────────────────────────────────── -->
       <section id="data">
+        <div class="breathing-space mb-8"></div>
         <SectionLabel number="08">Node Grid &amp; Data Table</SectionLabel>
         <div class="grid grid-cols-3 gap-0.5">
           <div class="col-span-2">
@@ -683,6 +690,7 @@
 
       <!-- 09 · LOG ─────────────────────────────────────────── -->
       <section id="log">
+        <div class="breathing-space mb-8"></div>
         <SectionLabel number="09">System Log</SectionLabel>
         <!-- Warning stripe -->
         <div class="warning-stripe"></div>

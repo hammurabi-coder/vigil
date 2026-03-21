@@ -1,11 +1,17 @@
 /**
- * EVA–NASA Design Tokens
+ * NASA SP-168 + EVA–NERV Design Tokens
  * Single source of truth — consumed by tailwind.config.js
  * Import in app code for runtime access if needed.
+ * Ref: REFERENCE_MATERIALS/nasa_graphics_standards_strategy.md
  */
 
 /**
- *
+ * Color architecture following NASA SP-168 principles:
+ * - NASA Red (#E3000F): Piercing vermilion, optically aggressive — reserved for CTAs/alerts only
+ * - Warm Gray scale: Matte desaturated brownish-gray for UI chrome/secondary surfaces
+ * - True black void base — NERV aesthetic
+ * - Orange retained as secondary accent (NASA-compatible warm tone)
+ * - Teal = nominal/ok only, Red = alert/error only
  */
 export const colors = {
   void: '#000000',
@@ -23,6 +29,19 @@ export const colors = {
     2: 'rgba(255,255,255,0.16)',
     3: 'rgba(255,255,255,0.28)',
   },
+  // NASA Red — primary accent, SP-168 #E3000F vermilion
+  nasa: {
+    DEFAULT: '#E3000F',
+    dim: '#7A0016',
+    mid: '#B3000C',
+    lo: 'rgba(227,0,15,0.12)',
+    xlo: 'rgba(227,0,15,0.05)',
+    300: '#FF3040',
+    500: '#E3000F',
+    700: '#B3000C',
+    900: '#7A0016',
+  },
+  // Orange — retained secondary accent (warm NASA-adjacent tone)
   ora: {
     DEFAULT: '#FF6B1A',
     dim: '#7A3008',
@@ -34,6 +53,7 @@ export const colors = {
     700: '#CC4E00',
     900: '#7A3008',
   },
+  // Alert red — signal/error state
   red: {
     DEFAULT: '#E82038',
     lo: 'rgba(232,32,56,0.16)',
@@ -42,6 +62,7 @@ export const colors = {
     500: '#E82038',
     700: '#8C0018',
   },
+  // Amber — data readout values
   amb: {
     DEFAULT: '#D4A832',
     lo: 'rgba(212,168,50,0.14)',
@@ -49,6 +70,7 @@ export const colors = {
     500: '#D4A832',
     700: '#7A5800',
   },
+  // Teal — nominal/ok signal only
   teal: {
     DEFAULT: '#26C4BC',
     lo: 'rgba(38,196,188,0.14)',
@@ -57,10 +79,21 @@ export const colors = {
     500: '#26C4BC',
     700: '#105C58',
   },
+  // Warm gray scale — NASA SP-168 "matte desaturated brownish-gray"
+  warm: {
+    0: '#F4F4F5', // light — NASA surface neutral
+    1: '#E8E6E1', // light-mid
+    2: '#D4D2CD', // mid
+    3: '#A8A49C', // mid-dark (NASA warm gray typical value)
+    4: '#706860', // dark — maps to ink-2 territory
+    5: '#484440', // darker
+    6: '#2C2824', // very dark
+  },
+  // Ink text scale
   ink: {
     0: '#F0EDE6', // primary text
     1: '#A8A296', // secondary text
-    2: '#706860', // muted text (was too dim)
+    2: '#706860', // muted text
     3: '#484440', // faint text
   },
 }
@@ -93,6 +126,7 @@ export const fontSize = {
 
 /** Chart.js palette — import directly into chart components */
 export const chartColors = {
+  nasa: { stroke: colors.nasa.DEFAULT, fill: colors.nasa.xlo },
   ora: { stroke: colors.ora.DEFAULT, fill: colors.ora.xlo },
   red: { stroke: colors.red.DEFAULT, fill: colors.red.xlo },
   amb: { stroke: colors.amb.DEFAULT, fill: colors.amb.lo },
@@ -101,7 +135,7 @@ export const chartColors = {
   tick: colors.ink[2],
   tooltip: {
     backgroundColor: '#0A0A16',
-    borderColor: 'rgba(255,107,26,0.35)',
+    borderColor: 'rgba(227,0,15,0.35)',
     borderWidth: 1,
     titleColor: colors.amb.DEFAULT,
     bodyColor: colors.ink[1],

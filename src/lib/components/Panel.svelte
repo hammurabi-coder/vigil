@@ -31,14 +31,14 @@
     default: 'bg-bg-1',
     deep: 'bg-bg-0',
     raised: 'bg-bg-2',
-    accent: 'bg-bg-1 border-l-2 border-l-ora',
+    accent: 'bg-bg-1 border-l-2 border-l-nasa',
     alert: 'bg-red-xlo border-l-2 border-l-red',
     teal: 'bg-teal-xlo border-l-2 border-l-teal',
   }
 
   const badgeClasses = {
     ok: 'border-teal text-teal',
-    warn: 'border-ora text-ora',
+    warn: 'border-nasa text-nasa',
     alert: 'border-red text-red animate-blink',
   }
 
