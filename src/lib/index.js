@@ -51,6 +51,30 @@ export { default as SectionLabel } from './components/SectionLabel.svelte'
  *
  */
 export { default as LogoMark } from './components/LogoMark.svelte'
+/**
+ *
+ */
+export { default as Modal } from './components/Modal.svelte'
+/**
+ *
+ */
+export { default as Select } from './components/Select.svelte'
+/**
+ *
+ */
+export { default as Sidebar } from './components/Sidebar.svelte'
+/**
+ *
+ */
+export { default as Sparkline } from './components/Sparkline.svelte'
+/**
+ *
+ */
+export { default as Toast } from './components/Toast.svelte'
+/**
+ *
+ */
+export { default as Topbar } from './components/Topbar.svelte'
 
 // Charts
 /**

@@ -2,7 +2,7 @@
 
 > dark operational component library
 
-Svelte + Tailwind. Aero × Aero 70s. True black. No border-radius. No grey panels.
+Svelte + Tailwind. Public Works × Civic 70s. True black. No border-radius. No grey panels.
 
 ---
 

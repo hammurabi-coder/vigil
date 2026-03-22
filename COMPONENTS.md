@@ -1,7 +1,7 @@
 # vigil — Component Reference
 
 This document provides quick copy-paste examples for all vigil components.
-Remember: the library uses Avionics/VIGIL operational dark aesthetic.
+Remember: the library uses Civic/Utility operational dark aesthetic.
 
 ## Primitives
 

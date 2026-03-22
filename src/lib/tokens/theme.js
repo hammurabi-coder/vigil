@@ -1,6 +1,6 @@
 /**
  * vigil Design Tokens
- * Neon Genesis Avionics-inspired palette: VIGIL mission control interfaces
+ * Civic utility-inspired palette: VIGIL operational control interfaces
  * Monochrome-plus-accent palette, high-density data readouts
  * Single source of truth — consumed by tailwind.config.js
  */

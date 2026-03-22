@@ -12,8 +12,8 @@ This file is for you. Read it before touching anything.
 
 The aesthetic is a fusion of:
 
-- **Neon Genesis Avionics** — VIGIL mission control interfaces, monochrome-plus-accent palette, high-density data readouts, annotation typography
-- **Aero SP-168 (1970s identity guide)** — geometric precision, rectilinear everything, no border-radius, corner notches, technical annotation language, orange as the primary accent
+- **Public Infrastructure** — VIGIL utility interfaces, monochrome-plus-accent palette, high-density data readouts, annotation typography
+- **Civic WPA-168 (1970s identity guide)** — geometric precision, rectilinear everything, no border-radius, corner notches, technical annotation language, orange as the primary accent
 
 The result is a design language suited to dashboards, data tools, and operational interfaces. Not a general-purpose UI kit — it has a specific, committed aesthetic.
 

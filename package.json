@@ -1,7 +1,7 @@
 {
   "name": "vigil",
   "version": "0.1.0",
-  "description": "vigil — dark operational component library. Aero x Aero 70s style guide, Svelte + Tailwind.",
+  "description": "vigil — dark operational component library. Civic utility x Public Works style guide, Svelte + Tailwind.",
   "keywords": [
     "svelte",
     "components",
@@ -9,7 +9,7 @@
     "dark",
     "operational"
   ],
-  "license": "MIT",
+  "license": "SEE LICENSE IN LICENSE",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build && npm run package",
