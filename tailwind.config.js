@@ -1,4 +1,4 @@
-import { colors, fontFamily, fontSize, chartColors } from './src/lib/tokens/theme.js'
+import { colors, fontFamily, fontSize, chartColors } from './src/lib/tokens/theme_burst.js'
 
 /** @type {import('tailwindcss').Config} */
 export default {
