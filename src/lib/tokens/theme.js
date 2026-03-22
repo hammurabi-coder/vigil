@@ -75,8 +75,8 @@ export const colors = {
 
 /** @type {Object} */
 export const fontFamily = {
-  display: ['Bebas Neue', 'sans-serif'],
-  label: ['Barlow Condensed', 'sans-serif'],
+  display: ['Barlow', 'sans-serif'],
+  label: ['Barlow', 'sans-serif'],
   body: ['Barlow', 'sans-serif'],
   data: ['Share Tech Mono', 'monospace'],
 }
