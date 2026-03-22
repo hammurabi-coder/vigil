@@ -2,7 +2,7 @@
 
 > dark operational component library
 
-Svelte + Tailwind. EVA × NASA 70s. True black. No border-radius. No grey panels.
+Svelte + Tailwind. Aero × Aero 70s. True black. No border-radius. No grey panels.
 
 ---
 

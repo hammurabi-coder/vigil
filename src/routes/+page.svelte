@@ -303,7 +303,7 @@
         <div class="breathing-space mb-8"></div>
         <SectionLabel number="02">Typography</SectionLabel>
         <Panel variant="deep" flush>
-          {#each [{ sample: 'EVANGELION', cls: 'font-display text-[64px] leading-none tracking-wide', meta: 'Display · 64px · Bebas Neue' }, { sample: 'MISSION CRITICAL ALERT', cls: 'font-label text-[28px] uppercase tracking-widest font-bold', meta: 'Label-XL · 28px · Barlow Condensed 700' }, { sample: 'System Parameter Alpha', cls: 'font-label text-[16px] uppercase tracking-wider font-semibold text-ink-1', meta: 'Label · 16px · Barlow Condensed 600' }, { sample: 'Interface systems require precise nomenclature across all operational readouts.', cls: 'font-body text-[14px] text-ink-1 max-w-xl leading-relaxed', meta: 'Body · 14px · Barlow 400' }, { sample: 'SYS.UPTIME 00:04:32.807 · NODE-03 ACTIVE', cls: 'font-data text-[13px] text-amb tracking-wide', meta: 'Data · 13px · Share Tech Mono' }, { sample: 'OPERATIONAL · RESTRICTED · NERV INTERNAL', cls: 'font-data text-[12px] text-ink-1 tracking-widest2 uppercase', meta: 'Annotation · 12px · STMono' }] as row}
+          {#each [{ sample: 'Avionics', cls: 'font-display text-[64px] leading-none tracking-wide', meta: 'Display · 64px · Bebas Neue' }, { sample: 'MISSION CRITICAL ALERT', cls: 'font-label text-[28px] uppercase tracking-widest font-bold', meta: 'Label-XL · 28px · Barlow Condensed 700' }, { sample: 'System Parameter Alpha', cls: 'font-label text-[16px] uppercase tracking-wider font-semibold text-ink-1', meta: 'Label · 16px · Barlow Condensed 600' }, { sample: 'Interface systems require precise nomenclature across all operational readouts.', cls: 'font-body text-[14px] text-ink-1 max-w-xl leading-relaxed', meta: 'Body · 14px · Barlow 400' }, { sample: 'SYS.UPTIME 00:04:32.807 · NODE-03 ACTIVE', cls: 'font-data text-[13px] text-amb tracking-wide', meta: 'Data · 13px · Share Tech Mono' }, { sample: 'OPERATIONAL · RESTRICTED · VIGIL INTERNAL', cls: 'font-data text-[12px] text-ink-1 tracking-widest2 uppercase', meta: 'Annotation · 12px · STMono' }] as row}
             <div
               class="border-b0 flex items-baseline justify-between gap-4 border-b px-6 py-5 last:border-b-0"
             >
@@ -600,7 +600,7 @@
           <Panel variant="deep" title="Form Inputs">
             <div class="space-y-4">
               <div class="grid grid-cols-2 gap-3">
-                <Input label="Operator ID" placeholder="NERV-0001" />
+                <Input label="Operator ID" placeholder="VIGIL-0001" />
                 <Input label="Access Code" type="password" placeholder="••••••••" />
               </div>
               <Input label="Target Designation" value="ANGEL CLASS / SACHIEL" />

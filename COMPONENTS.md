@@ -1,7 +1,7 @@
 # vigil — Component Reference
 
 This document provides quick copy-paste examples for all vigil components.
-Remember: the library uses Evangelion/NERV operational dark aesthetic.
+Remember: the library uses Avionics/VIGIL operational dark aesthetic.
 
 ## Primitives
 
@@ -37,7 +37,7 @@ Remember: the library uses Evangelion/NERV operational dark aesthetic.
 ### Input
 
 ```svelte
-<Input label="Operator ID" placeholder="NERV-0001" />
+<Input label="Operator ID" placeholder="VIGIL-0001" />
 <Input label="Override Code" state="error" hint="INVALID AUTHORIZATION" type="password" />
 ```
 

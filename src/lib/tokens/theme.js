@@ -1,6 +1,6 @@
 /**
  * vigil Design Tokens
- * Neon Genesis Evangelion-inspired palette: NERV mission control interfaces
+ * Neon Genesis Avionics-inspired palette: VIGIL mission control interfaces
  * Monochrome-plus-accent palette, high-density data readouts
  * Single source of truth — consumed by tailwind.config.js
  */
