@@ -31,14 +31,14 @@
   <div class="flex items-center gap-4">
     <LogoMark size={32} />
     <div>
-      <div class="font-display text-[56px] leading-none tracking-wide">{title}</div>
-      <div class="mt-2 font-data text-[18px] uppercase tracking-widest text-ora">
+      <div class="font-display text-4xl leading-none tracking-wide">{title}</div>
+      <div class="mt-2 font-data text-lg uppercase tracking-widest text-ora">
         {subtitle}
       </div>
     </div>
   </div>
   <div
-    class="flex items-center gap-6 text-right font-data text-[11px] leading-loose tracking-wider text-ink-1"
+    class="flex items-center gap-6 text-right font-data text-sm leading-loose tracking-wider text-ink-1"
   >
     <div>
       DOC <span class="text-amb">{doc}</span><br />
@@ -46,8 +46,8 @@
       STATUS <span class="text-teal">{status}</span>
     </div>
     <div class="border-b1 border-l pl-6">
-      <div class="text-[18px] tabular-nums text-amb">{clock}</div>
-      <div class="text-[10px] uppercase tracking-widest text-ink-2">System Time</div>
+      <div class="text-lg tabular-nums text-amb">{clock}</div>
+      <div class="text-2xs uppercase tracking-widest text-ink-2">System Time</div>
     </div>
   </div>
 </header>

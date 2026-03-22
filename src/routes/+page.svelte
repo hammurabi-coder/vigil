@@ -262,7 +262,7 @@
             {#each ['hsl(95, 24%, 16%)', 'hsl(95, 24%, 18%)', 'hsl(95, 24%, 20%)', 'hsl(95, 24%, 22%)', 'hsl(95, 24%, 24%)', 'hsl(95, 24%, 26%)'] as bg, i (bg)}
               <div class="flex-1">
                 <div class="border-b0 h-12 border" style="background:{bg}"></div>
-                <div class="mt-1.5 font-data text-[10px] tracking-wide text-ink-2">BG-{i}</div>
+                <div class="mt-1.5 font-data text-2xs tracking-wide text-ink-2">BG-{i}</div>
               </div>
             {/each}
           </div>
@@ -270,7 +270,7 @@
           <div class="mt-4 grid grid-cols-4 gap-4">
             {#each [{ name: 'Orange / Primary', swatches: ['hsl(21, 100%, 25%)', 'hsl(21, 100%, 35%)', 'hsl(21, 100%, 45%)', 'hsl(21, 100%, 55%)'], active: 3 }, { name: 'Red / Alert', swatches: ['hsl(353, 82%, 22%)', 'hsl(353, 82%, 32%)', 'hsl(353, 82%, 42%)', 'hsl(353, 82%, 52%)'], active: 3 }, { name: 'Amber / Data', swatches: ['hsl(44, 65%, 21%)', 'hsl(44, 65%, 31%)', 'hsl(44, 65%, 41%)', 'hsl(44, 65%, 51%)'], active: 3 }, { name: 'Teal / Nominal', swatches: ['hsl(177, 68%, 16%)', 'hsl(177, 68%, 26%)', 'hsl(177, 68%, 36%)', 'hsl(177, 68%, 46%)'], active: 3 }] as ramp (ramp.name)}
               <div>
-                <div class="mb-2 font-data text-[11px] uppercase tracking-widest text-ink-2">
+                <div class="mb-2 font-data text-xs uppercase tracking-widest text-ink-2">
                   {ramp.name}
                 </div>
                 <div class="flex gap-1">
@@ -291,7 +291,7 @@
             {#each [['text-ink-0', 'Primary', 'hsl(95, 20%, 96%)'], ['text-ink-1', 'Secondary', 'hsl(95, 20%, 80%)'], ['text-ink-2', 'Muted', 'hsl(95, 20%, 60%)'], ['text-ink-3', 'Faint', 'hsl(95, 20%, 40%)']] as [cls, label, hex] (label)}
               <div class="flex items-center gap-3">
                 <div class="border-b1 h-5 w-5 rounded-full border" style="background:{hex}"></div>
-                <span class="font-data text-[13px] {cls} tracking-wide">{label} · {hex}</span>
+                <span class="font-data text-sm {cls} tracking-wide">{label} · {hex}</span>
               </div>
             {/each}
           </div>
@@ -303,12 +303,12 @@
         <div class="breathing-space mb-8"></div>
         <SectionLabel number="02">Typography</SectionLabel>
         <Panel variant="deep" flush>
-          {#each [{ sample: 'PUBLIC WORKS', cls: 'font-display text-[64px] leading-none tracking-wide', meta: 'Display · 64px · Bebas Neue' }, { sample: 'MISSION CRITICAL ALERT', cls: 'font-label text-[28px] uppercase tracking-widest font-bold', meta: 'Label-XL · 28px · Barlow Condensed 700' }, { sample: 'System Parameter Alpha', cls: 'font-label text-[16px] uppercase tracking-wider font-semibold text-ink-1', meta: 'Label · 16px · Barlow Condensed 600' }, { sample: 'Interface systems require precise nomenclature across all operational readouts.', cls: 'font-body text-[14px] text-ink-1 max-w-xl leading-relaxed', meta: 'Body · 14px · Barlow 400' }, { sample: 'SYS.UPTIME 00:04:32.807 · NODE-03 ACTIVE', cls: 'font-data text-[13px] text-amb tracking-wide', meta: 'Data · 13px · Share Tech Mono' }, { sample: 'OPERATIONAL · RESTRICTED · VIGIL INTERNAL', cls: 'font-data text-[12px] text-ink-1 tracking-widest2 uppercase', meta: 'Annotation · 12px · STMono' }] as row (row.sample)}
+          {#each [{ sample: 'PUBLIC WORKS', cls: 'font-display text-hero leading-none tracking-wide', meta: 'Display · 64px · Bebas Neue' }, { sample: 'MISSION CRITICAL ALERT', cls: 'font-label text-2xl uppercase tracking-widest font-bold', meta: 'Label-XL · 28px · Barlow Condensed 700' }, { sample: 'System Parameter Alpha', cls: 'font-label text-base uppercase tracking-wider font-semibold text-ink-1', meta: 'Label · 16px · Barlow Condensed 600' }, { sample: 'Interface systems require precise nomenclature across all operational readouts.', cls: 'font-body text-sm text-ink-1 max-w-xl leading-relaxed', meta: 'Body · 14px · Barlow 400' }, { sample: 'SYS.UPTIME 00:04:32.807 · NODE-03 ACTIVE', cls: 'font-data text-sm text-amb tracking-wide', meta: 'Data · 13px · Share Tech Mono' }, { sample: 'OPERATIONAL · RESTRICTED · VIGIL INTERNAL', cls: 'font-data text-xs text-ink-1 tracking-widest2 uppercase', meta: 'Annotation · 12px · STMono' }] as row (row.sample)}
             <div
               class="border-b0 flex items-baseline justify-between gap-4 border-b px-6 py-5 last:border-b-0"
             >
               <div class={row.cls}>{row.sample}</div>
-              <div class="flex-shrink-0 font-data text-[11px] tracking-wide text-ink-2">
+              <div class="flex-shrink-0 font-data text-xs tracking-wide text-ink-2">
                 {row.meta}
               </div>
             </div>
@@ -322,32 +322,32 @@
         <SectionLabel number="03">Panel Variants</SectionLabel>
         <div class="grid grid-cols-2 gap-0.5">
           <Panel title="Default Panel" badge="NOMINAL" badgeVariant="ok">
-            <p class="font-body text-[13px] leading-relaxed text-ink-0">
+            <p class="font-body text-sm leading-relaxed text-ink-0">
               Standard surface. BG-1 base with dim border. Use for most content containers.
             </p>
           </Panel>
           <Panel variant="accent" title="Accent Panel" badge="ACTIVE" badgeVariant="warn">
-            <p class="font-body text-[13px] leading-relaxed text-ink-0">
+            <p class="font-body text-sm leading-relaxed text-ink-0">
               ORA Red left border + faint tint. For primary action areas or selected states.
             </p>
           </Panel>
           <Panel variant="alert" title="Alert Panel" badge="CRITICAL" badgeVariant="alert">
-            <p class="font-body text-[13px] leading-relaxed text-ink-0">
+            <p class="font-body text-sm leading-relaxed text-ink-0">
               Red border + background tint. Reserved for system errors and warnings.
             </p>
           </Panel>
           <Panel variant="teal" title="Nominal Panel" badge="OK" badgeVariant="ok">
-            <p class="font-body text-[13px] leading-relaxed text-ink-0">
+            <p class="font-body text-sm leading-relaxed text-ink-0">
               Teal border for confirmed nominal or success states.
             </p>
           </Panel>
           <Panel variant="deep" title="Deep Panel">
-            <p class="font-body text-[13px] leading-relaxed text-ink-0">
+            <p class="font-body text-sm leading-relaxed text-ink-0">
               BG-0 background — sits lower in the surface stack. Good for data readout groups.
             </p>
           </Panel>
           <Panel variant="raised" title="Raised Panel">
-            <p class="font-body text-[13px] leading-relaxed text-ink-0">
+            <p class="font-body text-sm leading-relaxed text-ink-0">
               BG-2 background — slightly elevated. Use for overlays or focus areas.
             </p>
           </Panel>
@@ -564,7 +564,7 @@
           <Panel variant="deep" title="Button Variants">
             <div class="space-y-6">
               <div>
-                <div class="mb-3 font-data text-[11px] uppercase tracking-widest text-ink-3">
+                <div class="mb-3 font-data text-xs uppercase tracking-widest text-ink-3">
                   Size · Primary
                 </div>
                 <div class="flex flex-wrap items-start gap-3">
@@ -574,7 +574,7 @@
                 </div>
               </div>
               <div>
-                <div class="mb-3 font-data text-[11px] uppercase tracking-widest text-ink-3">
+                <div class="mb-3 font-data text-xs uppercase tracking-widest text-ink-3">
                   Style variants
                 </div>
                 <div class="flex flex-wrap items-start gap-3">
@@ -585,7 +585,7 @@
                 </div>
               </div>
               <div>
-                <div class="mb-3 font-data text-[11px] uppercase tracking-widest text-ink-3">
+                <div class="mb-3 font-data text-xs uppercase tracking-widest text-ink-3">
                   Badges
                 </div>
                 <div class="flex flex-wrap items-center gap-3">

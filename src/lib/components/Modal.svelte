@@ -67,15 +67,13 @@
           : 'bg-ora-xlo'}"
       >
         <h2
-          class="font-display text-[24px] tracking-wide {variant === 'alert'
-            ? 'text-red'
-            : 'text-ora'}"
+          class="font-display text-xl tracking-wide {variant === 'alert' ? 'text-red' : 'text-ora'}"
         >
           {title}
         </h2>
         {#if badge}
           <div
-            class="border px-2 py-0.5 font-data text-[10px] tracking-widest {variant === 'alert'
+            class="border px-2 py-0.5 font-data text-2xs tracking-widest {variant === 'alert'
               ? 'border-red text-red'
               : 'border-ora text-ora'}"
           >

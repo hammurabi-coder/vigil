@@ -21,7 +21,7 @@
   export let hint = ''
 
   const inputBase =
-    'w-full bg-bg-0 text-ink-0 font-data text-[13px] tracking-wide px-4 py-2.5 border outline-none transition-all duration-150 placeholder:text-ink-2'
+    'w-full bg-bg-0 text-ink-0 font-data text-sm tracking-wide px-4 py-2.5 border outline-none transition-all duration-150 placeholder:text-ink-2'
   const states = {
     default:
       'border-b1 focus:border-ora focus:shadow-[0_0_0_1px_theme(colors.ora.DEFAULT),inset_0_0_10px_rgba(255,107,26,0.06)]',
@@ -38,7 +38,7 @@
   {#if label}
     <label
       for={inputId}
-      class="flex items-center gap-2 font-data text-[11px] uppercase tracking-widest text-ink-2"
+      class="flex items-center gap-2 font-data text-xs uppercase tracking-widest text-ink-2"
     >
       {label}
       {#if state === 'error' && hint}<span class="text-red">⚑ {hint}</span>{/if}
@@ -97,7 +97,7 @@
       on:blur
     />
   {/if}
-  {#if state !== 'error' && hint}<span class="font-data text-[11px] tracking-wide text-ink-2"
+  {#if state !== 'error' && hint}<span class="font-data text-xs tracking-wide text-ink-2"
       >{hint}</span
     >{/if}
 </div>

@@ -42,7 +42,7 @@
 
 <div
   bind:this={container}
-  class="overflow-y-auto font-data text-[12px] tracking-wide"
+  class="overflow-y-auto font-data text-xs tracking-wide"
   style="max-height: {maxHeight}px"
   role="log"
   aria-live="polite"

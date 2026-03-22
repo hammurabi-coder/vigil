@@ -19,9 +19,9 @@
   }
 
   const sizes = {
-    sm: 'text-[12px] px-4 py-2',
-    md: 'text-[13px] px-6 py-2.5',
-    lg: 'text-[14px] px-8 py-3',
+    sm: 'text-xs px-4 py-2',
+    md: 'text-sm px-6 py-2.5',
+    lg: 'text-sm px-8 py-3',
   }
 
   $: cls = [base, variants[variant] ?? variants.primary, sizes[size] ?? sizes.md].join(' ')

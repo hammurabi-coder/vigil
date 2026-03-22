@@ -32,7 +32,7 @@
 
 <div class="flex flex-col gap-1">
   {#if label || showValue}
-    <div class="flex justify-between font-data text-[11px] uppercase tracking-wider text-ink-2">
+    <div class="flex justify-between font-data text-xs uppercase tracking-wider text-ink-2">
       <span>{label}</span>
       {#if showValue}<span class={styles.text}>{capped}%</span>{/if}
     </div>

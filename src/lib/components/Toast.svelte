@@ -40,15 +40,15 @@
          {vMap[variant].border} {vMap[variant].bg}"
   role="alert"
 >
-  <div class="mt-0.5 font-data text-[14px] {vMap[variant].icon}">
+  <div class="mt-0.5 font-data text-sm {vMap[variant].icon}">
     {#if variant === 'info'}i{:else if variant === 'ok'}✓{:else}⚠{/if}
   </div>
   <div class="flex-1">
     {#if title}
-      <h4 class="font-data text-[12px] uppercase tracking-widest text-ink-0">{title}</h4>
+      <h4 class="font-data text-xs uppercase tracking-widest text-ink-0">{title}</h4>
     {/if}
     {#if message}
-      <p class="mt-1 font-body text-[13px] leading-relaxed text-ink-1">
+      <p class="mt-1 font-body text-sm leading-relaxed text-ink-1">
         {message}
       </p>
     {/if}

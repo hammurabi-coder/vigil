@@ -35,7 +35,7 @@
 
   /* Section divider label — bracket style */
   .section-label {
-    @apply mb-6 flex items-center gap-2 font-data text-[11px] uppercase tracking-widest;
+    @apply mb-6 flex items-center gap-2 font-data text-xs uppercase tracking-widest;
   }
   .section-label::after {
     content: '';

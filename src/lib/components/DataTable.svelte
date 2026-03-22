@@ -48,12 +48,12 @@
 </script>
 
 <div class="overflow-x-auto">
-  <table class="w-full border-collapse font-data text-[12px]">
+  <table class="w-full border-collapse font-data text-xs">
     <thead>
       <tr>
         {#each columns as col (col.key)}
           <th
-            class="border-b1 border-b px-4 py-2.5 text-left text-[10px] font-normal uppercase tracking-widest text-ink-2 {col.sortable
+            class="border-b1 border-b px-4 py-2.5 text-left text-2xs font-normal uppercase tracking-widest text-ink-2 {col.sortable
               ? 'cursor-pointer hover:text-ink-0'
               : ''}"
             on:click={() => handleSort(col.key, col.sortable)}

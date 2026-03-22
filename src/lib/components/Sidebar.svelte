@@ -22,10 +22,8 @@
   <div class="border-b1 flex items-center gap-3 border-b p-5">
     <LogoMark size={36} />
     <div>
-      <div class="font-display text-[20px] leading-none tracking-wide">TERTIUS</div>
-      <div class="mt-0.5 font-data text-[10px] uppercase tracking-widest text-ora">
-        Design System
-      </div>
+      <div class="font-display text-xl leading-none tracking-wide">TERTIUS</div>
+      <div class="mt-0.5 font-data text-2xs uppercase tracking-widest text-ora">Design System</div>
     </div>
   </div>
 
@@ -34,7 +32,7 @@
     {#each nav as item (item.id)}
       <a
         href="#{item.id}"
-        class="px-5 py-3 font-data text-[11px] uppercase tracking-widest transition-colors duration-100
+        class="px-5 py-3 font-data text-xs uppercase tracking-widest transition-colors duration-100
                {activeSection === item.id
           ? 'border-l-2 border-ora bg-ora-xlo pl-[calc(1.25rem-2px)] text-ora'
           : 'border-l-2 border-transparent text-ink-1 hover:text-ink-0'}"
@@ -45,8 +43,8 @@
   </div>
 
   <!-- Clock footer -->
-  <div class="border-b1 border-t p-5 font-data text-[10px] tracking-wider text-ink-2">
-    <div class="text-[15px] tabular-nums text-amb">{clock}</div>
-    <div class="mt-0.5 text-[10px] uppercase tracking-widest text-ink-2">System Time</div>
+  <div class="border-b1 border-t p-5 font-data text-2xs tracking-wider text-ink-2">
+    <div class="text-base tabular-nums text-amb">{clock}</div>
+    <div class="mt-0.5 text-2xs uppercase tracking-widest text-ink-2">System Time</div>
   </div>
 </nav>

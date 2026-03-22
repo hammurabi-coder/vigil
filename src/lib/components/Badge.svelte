@@ -12,7 +12,7 @@
     muted: 'border-b2 text-ink-3',
   }
 
-  $: cls = `font-data text-[11px] px-2.5 py-0.5 border tracking-wider uppercase inline-flex items-center ${
+  $: cls = `font-data text-xs px-2.5 py-0.5 border tracking-wider uppercase inline-flex items-center ${
     variants[variant] ?? variants.ok
   }`
 </script>

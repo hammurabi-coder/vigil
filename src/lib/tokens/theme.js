@@ -8,19 +8,19 @@
 // Color Math Design Tokens
 // Utilizing HSL to maintain strict mathematical relationships between lightness steps
 
-const HUE = 140
-const SAT = '10%'
+const HUE = 240
+const SAT = '40%'
 
 /** @type {Object} */
 export const colors = {
   // mathematical lightness increments for the surface stack
-  void: `hsl(${HUE}, ${SAT}, 16%)`,
+  void: '#000000',
   bg: {
-    0: `hsl(${HUE}, ${SAT}, 18%)`, // main background
-    1: `hsl(${HUE}, ${SAT}, 20%)`, // sidebar
-    2: `hsl(${HUE}, ${SAT}, 22%)`, // header
-    3: `hsl(${HUE}, ${SAT}, 24%)`, // deep panels
-    4: `hsl(${HUE}, ${SAT}, 26%)`, // card backgrounds
+    0: '#05050C', // main background
+    1: `hsl(${HUE}, ${SAT}, 6%)`, // sidebar
+    2: `hsl(${HUE}, ${SAT}, 8%)`, // header
+    3: `hsl(${HUE}, ${SAT}, 11%)`, // deep panels
+    4: `hsl(${HUE}, ${SAT}, 14%)`, // card backgrounds
   },
   // Borders
   border: {
@@ -66,10 +66,10 @@ export const colors = {
   },
   // Text scale mathematical increments
   ink: {
-    0: 'hsl(140, 10%, 96%)', // primary text
-    1: 'hsl(140, 10%, 80%)', // secondary
-    2: 'hsl(140, 10%, 60%)', // muted
-    3: 'hsl(140, 10%, 40%)', // faint
+    0: 'hsl(210, 15%, 98%)', // primary text
+    1: 'hsl(210, 15%, 85%)', // secondary
+    2: 'hsl(210, 15%, 70%)', // muted
+    3: 'hsl(210, 15%, 55%)', // faint
   },
 }
 
@@ -83,11 +83,11 @@ export const fontFamily = {
 
 /** @type {Object} */
 export const fontSize = {
-  '2xs': ['0.625rem', { lineHeight: '1', letterSpacing: '0.3em' }],
-  xs: ['0.75rem', { lineHeight: '1.4' }],
-  sm: ['0.875rem', { lineHeight: '1.5' }],
-  base: ['1rem', { lineHeight: '1.6' }],
-  lg: ['1.125rem', { lineHeight: '1.5' }],
+  '2xs': ['0.6875rem', { lineHeight: '1.2', letterSpacing: '0.15em' }], // 11px
+  xs: ['0.8125rem', { lineHeight: '1.4', letterSpacing: '0.05em' }], // 13px
+  sm: ['0.9375rem', { lineHeight: '1.5', letterSpacing: '0.02em' }], // 15px
+  base: ['1.0625rem', { lineHeight: '1.6' }], // 17px
+  lg: ['1.1875rem', { lineHeight: '1.5' }], // 19px
   xl: ['1.5rem', { lineHeight: '1.2' }],
   '2xl': ['2rem', { lineHeight: '1.1' }],
   '3xl': ['3rem', { lineHeight: '1' }],
@@ -101,10 +101,10 @@ export const colorValues = {
   ora: 'hsl(21, 100%, 55%)',
   red: 'hsl(353, 82%, 52%)',
   ink: {
-    0: 'hsl(140, 10%, 96%)',
-    1: 'hsl(140, 10%, 80%)',
-    2: 'hsl(140, 10%, 60%)',
-    3: 'hsl(140, 10%, 40%)',
+    0: 'hsl(210, 15%, 98%)',
+    1: 'hsl(210, 15%, 85%)',
+    2: 'hsl(210, 15%, 70%)',
+    3: 'hsl(210, 15%, 55%)',
   },
 }
 

@@ -58,7 +58,7 @@
     {@const s = stateMap[node.state] ?? {}}
     <div
       class="border-b1 flex aspect-square cursor-default items-center justify-center
-             border border-white/10 font-data text-[10px] transition-all duration-150
+             border border-white/10 font-data text-2xs transition-all duration-150
              hover:border-ora"
       style="background-color: {s.bg ?? 'transparent'}; color: {s.bg ?? 'inherit'}"
     >
@@ -70,7 +70,7 @@
 {#if $$slots.legend !== undefined}
   <slot name="legend" />
 {:else}
-  <div class="mt-4 flex flex-wrap gap-4 font-data text-[10px]">
+  <div class="mt-4 flex flex-wrap gap-4 font-data text-2xs">
     {#each Object.entries(stateMap) as [key, { bg, label }] (key)}
       <div class="flex items-center gap-2">
         <div class="h-1.5 w-1.5 rounded-full" style="background-color: {bg}"></div>
