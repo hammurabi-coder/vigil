@@ -68,7 +68,7 @@
   <slot name="legend" />
 {:else}
   <div class="mt-4 flex flex-wrap gap-4 font-data text-[10px]">
-    {#each Object.entries(stateMap) as [_key, { bg, text, label }]}
+    {#each Object.entries(stateMap) as [key, { bg, text, label }] (key)}
       <div class="flex items-center gap-2">
         <div class="h-1.5 w-1.5 rounded-full {bg}"></div>
         <span class={text}>{label}</span>

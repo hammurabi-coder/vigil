@@ -15,7 +15,7 @@
 </script>
 
 <div class="flex flex-col">
-  {#each items as item}
+  {#each items as item (item.label)}
     <div
       class="border-b0 flex items-center gap-3 border-b py-3 font-data
                 text-[11px] uppercase tracking-wider last:border-b-0"

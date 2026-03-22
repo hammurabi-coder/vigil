@@ -51,7 +51,7 @@
   <table class="w-full border-collapse font-data text-[12px]">
     <thead>
       <tr>
-        {#each columns as col}
+        {#each columns as col (col.key)}
           <th
             class="border-b1 border-b px-4 py-2.5 text-left text-[10px] font-normal uppercase tracking-widest text-ink-2 {col.sortable
               ? 'cursor-pointer hover:text-ink-0'
@@ -71,9 +71,9 @@
       </tr>
     </thead>
     <tbody>
-      {#each sortedRows as row}
+      {#each sortedRows as row (row.id || row.key)}
         <tr class="group">
-          {#each columns as col}
+          {#each columns as col (col.key)}
             <td
               class="border-b0 border-b px-4 py-2.5 align-middle tracking-wide transition-colors
                        duration-100 group-last:border-b-0 group-hover:bg-bg-3

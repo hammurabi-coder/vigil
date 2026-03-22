@@ -7,7 +7,7 @@
 </script>
 
 <div class="border-b0 flex gap-[2px] border-t">
-  {#each items as item}
+  {#each items as item (item.label)}
     <div class="flex-1 bg-bg-0 px-3 py-3 text-center font-data">
       <div class="mb-1.5 text-[10px] uppercase tracking-widest text-ink-2">{item.label}</div>
       <div class="text-[16px] tabular-nums text-amb">{item.value}</div>

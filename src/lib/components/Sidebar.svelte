@@ -31,7 +31,7 @@
 
   <!-- Nav links -->
   <div class="flex flex-1 flex-col py-4">
-    {#each nav as item}
+    {#each nav as item (item.id)}
       <a
         href="#{item.id}"
         class="px-5 py-3 font-data text-[11px] uppercase tracking-widest transition-colors duration-100

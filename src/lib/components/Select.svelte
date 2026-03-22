@@ -43,7 +43,7 @@
   {/if}
   <div class="relative">
     <select id={inputId} bind:value class={inputCls} on:change on:focus on:blur>
-      {#each options as opt}
+      {#each options as opt (opt.value)}
         <option value={opt.value}>{opt.label}</option>
       {/each}
     </select>

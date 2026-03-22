@@ -33,9 +33,10 @@ export default [
       'jsdoc/require-property': 'error',
       'svelte/no-at-html-tags': 'error',
       'svelte/no-unused-svelte-ignore': 'warn',
+      'svelte/infinite-reactive-loop': 'off',
     },
   },
   {
-    ignores: ['.svelte-kit/', 'dist/', 'build/', 'node_modules/', 'scripts/'],
+    ignores: ['.svelte-kit/', 'dist/', 'build/', 'node_modules/', 'scripts/', '*.timestamp-*.mjs'],
   },
 ]

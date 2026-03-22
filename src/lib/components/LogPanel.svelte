@@ -30,11 +30,13 @@
   }
 
   let container
-  $: if (autoScroll && container && entries) {
-    // tick then scroll
-    setTimeout(() => {
-      container.scrollTop = container.scrollHeight
-    }, 0)
+
+  $: if (autoScroll && container) {
+    if (entries.length > 0) {
+      setTimeout(() => {
+        if (container) container.scrollTop = container.scrollHeight
+      }, 0)
+    }
   }
 </script>
 
@@ -45,7 +47,7 @@
   role="log"
   aria-live="polite"
 >
-  {#each entries as entry}
+  {#each entries as entry (entry.ts + entry.text)}
     <div class="flex gap-3 leading-relaxed">
       <span class="flex-shrink-0 text-ink-2">{entry.ts} ·</span>
       <span class="flex-shrink-0 {levelCls[entry.level] ?? levelCls.info}"
