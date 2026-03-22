@@ -259,7 +259,7 @@
         <div class="space-y-2">
           <!-- Backgrounds -->
           <div class="flex gap-0.5">
-            {#each ['hsl(95, 24%, 16%)', 'hsl(95, 24%, 18%)', 'hsl(95, 24%, 20%)', 'hsl(95, 24%, 22%)', 'hsl(95, 24%, 24%)', 'hsl(95, 24%, 26%)'] as bg, i (bg)}
+            {#each ['#000000', '#05050C', 'hsl(240, 40%, 6%)', 'hsl(240, 40%, 8%)', 'hsl(240, 40%, 11%)', 'hsl(240, 40%, 14%)'] as bg, i (bg)}
               <div class="flex-1">
                 <div class="border-b0 h-12 border" style="background:{bg}"></div>
                 <div class="mt-1.5 font-data text-2xs tracking-wide text-ink-2">BG-{i}</div>
@@ -288,7 +288,7 @@
           </div>
           <!-- Text scale -->
           <div class="mt-4 flex flex-wrap items-center gap-6">
-            {#each [['text-ink-0', 'Primary', 'hsl(95, 20%, 96%)'], ['text-ink-1', 'Secondary', 'hsl(95, 20%, 80%)'], ['text-ink-2', 'Muted', 'hsl(95, 20%, 60%)'], ['text-ink-3', 'Faint', 'hsl(95, 20%, 40%)']] as [cls, label, hex] (label)}
+            {#each [['text-ink-0', 'Primary', 'hsl(210, 15%, 98%)'], ['text-ink-1', 'Secondary', 'hsl(210, 15%, 85%)'], ['text-ink-2', 'Muted', 'hsl(210, 15%, 70%)'], ['text-ink-3', 'Faint', 'hsl(210, 15%, 55%)']] as [cls, label, hex] (label)}
               <div class="flex items-center gap-3">
                 <div class="border-b1 h-5 w-5 rounded-full border" style="background:{hex}"></div>
                 <span class="font-data text-sm {cls} tracking-wide">{label} · {hex}</span>
@@ -303,7 +303,7 @@
         <div class="breathing-space mb-8"></div>
         <SectionLabel number="02">Typography</SectionLabel>
         <Panel variant="deep" flush>
-          {#each [{ sample: 'PUBLIC WORKS', cls: 'font-display text-hero leading-none tracking-wide font-bold', meta: 'Display · 64px · Barlow 700' }, { sample: 'MISSION CRITICAL ALERT', cls: 'font-label text-2xl uppercase tracking-widest font-bold', meta: 'Label-XL · 28px · Barlow 700' }, { sample: 'System Parameter Alpha', cls: 'font-label text-base uppercase tracking-wider font-semibold', meta: 'Label · 16px · Barlow 600' }, { sample: 'Interface systems require precise nomenclature across all operational readouts.', cls: 'font-body text-sm text-ink-1 max-w-xl leading-relaxed', meta: 'Body · 14px · Barlow 400' }, { sample: 'SYS.UPTIME 00:04:32.807 · NODE-03 ACTIVE', cls: 'font-data text-sm text-amb tracking-wide', meta: 'Data · 13px · Share Tech Mono' }, { sample: 'OPERATIONAL · RESTRICTED · VIGIL INTERNAL', cls: 'font-data text-xs text-ink-1 tracking-widest2 uppercase', meta: 'Annotation · 12px · Share Tech Mono' }] as row (row.sample)}
+          {#each [{ sample: 'PUBLIC WORKS', cls: 'font-display text-5xl leading-none tracking-wide font-bold', meta: 'Display · 64px · Barlow 700' }, { sample: 'MISSION CRITICAL ALERT', cls: 'font-label text-2xl uppercase tracking-widest font-bold', meta: 'Label-XL · 28px · Barlow 700' }, { sample: 'System Parameter Alpha', cls: 'font-label text-base uppercase tracking-wider font-semibold', meta: 'Label · 16px · Barlow 600' }, { sample: 'Interface systems require precise nomenclature across all operational readouts.', cls: 'font-body text-sm text-ink-1 max-w-xl leading-relaxed', meta: 'Body · 14px · Barlow 400' }, { sample: 'SYS.UPTIME 00:04:32.807 · NODE-03 ACTIVE', cls: 'font-data text-sm text-amb tracking-wide', meta: 'Data · 13px · Share Tech Mono' }, { sample: 'OPERATIONAL · RESTRICTED · VIGIL INTERNAL', cls: 'font-data text-xs text-ink-1 tracking-widest2 uppercase', meta: 'Annotation · 12px · Share Tech Mono' }] as row (row.sample)}
             <div
               class="border-b0 flex items-baseline justify-between gap-4 border-b px-6 py-5 last:border-b-0"
             >

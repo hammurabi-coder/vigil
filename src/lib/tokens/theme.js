@@ -90,8 +90,9 @@ export const fontSize = {
   lg: ['1.1875rem', { lineHeight: '1.5' }], // 19px
   xl: ['1.5rem', { lineHeight: '1.2' }],
   '2xl': ['2rem', { lineHeight: '1.1' }],
-  '3xl': ['3rem', { lineHeight: '1' }],
-  '4xl': ['4.5rem', { lineHeight: '0.9' }],
+  '3xl': ['2.625rem', { lineHeight: '1.05' }],
+  '4xl': ['3.25rem', { lineHeight: '1' }],
+  '5xl': ['4rem', { lineHeight: '0.9' }],
   hero: ['6rem', { lineHeight: '0.85' }],
 }
 
