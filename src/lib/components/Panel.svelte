@@ -45,8 +45,10 @@
   $: cls = [base, variants[variant] ?? variants.default, flush ? '' : 'p-6'].join(' ')
 </script>
 
-<div class={cls}>
-  {#if title || badge}
+<div class={cls} {...$$restProps}>
+  {#if $$slots.header}
+    <slot name="header" />
+  {:else if title || badge}
     <div class="border-b0 mb-5 flex items-center justify-between border-b pb-3">
       {#if title}
         <span class="font-data text-[12px] uppercase tracking-widest text-ink-0">{title}</span>

@@ -51,6 +51,7 @@
       {placeholder}
       bind:value
       class={inputCls}
+      {...$$restProps}
       on:input
       on:change
       on:focus
@@ -63,6 +64,7 @@
       {placeholder}
       bind:value
       class={inputCls}
+      {...$$restProps}
       on:input
       on:change
       on:focus
@@ -75,6 +77,7 @@
       {placeholder}
       bind:value
       class={inputCls}
+      {...$$restProps}
       on:input
       on:change
       on:focus
@@ -87,6 +90,7 @@
       {placeholder}
       bind:value
       class={inputCls}
+      {...$$restProps}
       on:input
       on:change
       on:focus

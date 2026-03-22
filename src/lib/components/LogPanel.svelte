@@ -42,6 +42,8 @@
   bind:this={container}
   class="overflow-y-auto font-data text-[12px] tracking-wide"
   style="max-height: {maxHeight}px"
+  role="log"
+  aria-live="polite"
 >
   {#each entries as entry}
     <div class="flex gap-3 leading-relaxed">

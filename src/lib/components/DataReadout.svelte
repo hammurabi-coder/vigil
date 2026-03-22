@@ -28,7 +28,7 @@
   $: valCls = [
     colorMap[color] ?? colorMap.default,
     sizeMap[size] ?? sizeMap.md,
-    'font-data leading-none tracking-tight',
+    'font-data leading-none tracking-tight tabular-nums',
   ].join(' ')
 </script>
 
