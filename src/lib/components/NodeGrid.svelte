@@ -1,5 +1,6 @@
 <script>
   import { onMount, onDestroy } from 'svelte'
+  import { colorValues } from '$lib/tokens/theme.js'
 
   /**
    * NodeGrid — animated operational sector map
@@ -19,11 +20,12 @@
   /** @type {number} */
   export let interval = 700
 
+  const cv = colorValues
   const stateMap = {
-    ok: { bg: 'bg-teal', text: 'text-teal', label: 'ACTIVE' },
-    warn: { bg: 'bg-ora', text: 'text-ora', label: 'WARN' },
-    alert: { bg: 'bg-red', text: 'text-red', label: 'ALERT' },
-    off: { bg: 'bg-ink-2', text: 'text-ink-2', label: 'OFFLINE' },
+    ok: { bg: cv.teal, label: 'ACTIVE' },
+    warn: { bg: cv.ora, label: 'WARN' },
+    alert: { bg: cv.red, label: 'ALERT' },
+    off: { bg: cv.ink[2], label: 'OFFLINE' },
   }
 
   function randomState() {
@@ -56,8 +58,9 @@
     {@const s = stateMap[node.state] ?? {}}
     <div
       class="border-b1 flex aspect-square cursor-default items-center justify-center
-             border font-data text-[10px] transition-all duration-150
-             hover:border-ora {s.text} {s.bg}"
+             border border-white/10 font-data text-[10px] transition-all duration-150
+             hover:border-ora"
+      style="background-color: {s.bg ?? 'transparent'}; color: {s.bg ?? 'inherit'}"
     >
       {node.id}
     </div>
@@ -68,10 +71,10 @@
   <slot name="legend" />
 {:else}
   <div class="mt-4 flex flex-wrap gap-4 font-data text-[10px]">
-    {#each Object.entries(stateMap) as [key, { bg, text, label }] (key)}
+    {#each Object.entries(stateMap) as [key, { bg, label }] (key)}
       <div class="flex items-center gap-2">
-        <div class="h-1.5 w-1.5 rounded-full {bg}"></div>
-        <span class={text}>{label}</span>
+        <div class="h-1.5 w-1.5 rounded-full" style="background-color: {bg}"></div>
+        <span style="color: {bg}">{label}</span>
       </div>
     {/each}
   </div>

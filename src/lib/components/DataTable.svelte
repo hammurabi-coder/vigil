@@ -71,7 +71,7 @@
       </tr>
     </thead>
     <tbody>
-      {#each sortedRows as row (row.id || row.key)}
+      {#each sortedRows as row, i (row.id || row.key || i)}
         <tr class="group">
           {#each columns as col (col.key)}
             <td

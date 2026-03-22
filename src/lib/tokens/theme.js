@@ -96,6 +96,19 @@ export const fontSize = {
 }
 
 /** @type {Object} */
+export const colorValues = {
+  teal: 'hsl(177, 68%, 46%)',
+  ora: 'hsl(21, 100%, 55%)',
+  red: 'hsl(353, 82%, 52%)',
+  ink: {
+    0: 'hsl(140, 10%, 96%)',
+    1: 'hsl(140, 10%, 80%)',
+    2: 'hsl(140, 10%, 60%)',
+    3: 'hsl(140, 10%, 40%)',
+  },
+}
+
+/** @type {Object} */
 export const chartColors = {
   ora: { stroke: colors.ora.DEFAULT, fill: colors.ora.xlo },
   red: { stroke: colors.red.DEFAULT, fill: colors.red.xlo },
