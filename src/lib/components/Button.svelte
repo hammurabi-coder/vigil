@@ -17,7 +17,7 @@
     outline:
       'bg-[#1a1a2a] text-ink-1 border border-[#2a2a3a] shadow-[0_6px_0px_#0a0a14,0_8px_16px_rgba(0,0,0,0.4)] hover:shadow-[0_8px_0px_#0a0a14,0_12px_24px_rgba(0,0,0,0.5)] active:translate-y-[6px] active:shadow-[0_2px_0px_#0a0a14,0_2px_8px_rgba(0,0,0,0.2)]',
     ghost:
-      'bg-[#141420] text-ink-1 shadow-[0_6px_0px_#080810,0_8px_16px_rgba(0,0,0,0.4)] hover:shadow-[0_8px_0px_#080810,0_12px_24px_rgba(0,0,0,0.5)] active:translate-y-[6px] active:shadow-[0_2px_0px_#080810,0_2px_8px_rgba(0,0,0,0.2)]',
+      'bg-[#141420] text-ink-1 shadow-[0_6px_0px_#2a2a3a,0_8px_16px_rgba(0,0,0,0.5)] hover:shadow-[0_8px_0px_#2a2a3a,0_12px_24px_rgba(0,0,0,0.6)] active:translate-y-[6px] active:shadow-[0_2px_0px_#2a2a3a,0_2px_8px_rgba(0,0,0,0.3)]',
     danger:
       'bg-gradient-to-b from-red-300 to-red text-white shadow-[0_6px_0px_#8b1520,0_8px_16px_rgba(0,0,0,0.25)] hover:shadow-[0_8px_0px_#8b1520,0_12px_24px_rgba(0,0,0,0.3)] active:translate-y-[6px] active:shadow-[0_2px_0px_#8b1520,0_2px_8px_rgba(0,0,0,0.15)]',
   }
