@@ -26,7 +26,7 @@
 </script>
 
 <header
-  class="ora-header border-b1 relative flex items-center justify-between border-b bg-bg-1 px-6 pb-6 pt-6"
+  class="ora-header border-b1 relative flex items-center justify-between border-b bg-bg-4 px-6 pb-6 pt-6"
 >
   <div class="flex items-center gap-4">
     <LogoMark size={32} />

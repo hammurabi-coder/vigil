@@ -16,7 +16,7 @@
 </script>
 
 <nav
-  class="border-b1 sticky top-0 flex h-screen w-52 flex-shrink-0 flex-col overflow-y-auto border-r bg-bg-1"
+  class="border-b1 sticky top-0 flex h-screen w-52 flex-shrink-0 flex-col overflow-y-auto border-r bg-bg-4"
 >
   <!-- Logo -->
   <div class="border-b1 flex items-center gap-3 border-b p-5">

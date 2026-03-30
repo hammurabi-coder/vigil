@@ -4,11 +4,13 @@
 
 @layer base {
   body {
-    background-color: theme('colors.void');
+    background-color: theme('colors.bg.2');
     color: theme('colors.ink.0');
     font-family: theme('fontFamily.label');
     font-size: 13px;
     min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
 
