@@ -8,12 +8,12 @@
   /**
    * Sparkline
    * @prop {number[]} data
-   * @prop {'ora'|'red'|'amb'|'teal'} color
+   * @prop {'ora'|'red'|'amb'|'violet'} color
    * @prop {number} width
    * @prop {number} height
    */
   export let data = []
-  /** @type {'ora'|'red'|'amb'|'teal'} */
+  /** @type {'ora'|'red'|'amb'|'violet'} */
   export let color = 'ora'
   /** @type {number} */
   export let width = 60

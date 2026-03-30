@@ -8,7 +8,7 @@
   /**
    * LineChart
    * @prop {string[]} labels
-   * @prop {Array<{label:string, data:number[], color?:'ora'|'red'|'amb'|'teal', dashed?:boolean, fill?:boolean}>} datasets
+   * @prop {Array<{label:string, data:number[], color?:'ora'|'red'|'amb'|'violet', dashed?:boolean, fill?:boolean}>} datasets
    * @prop {{min?:number, max?:number, callback?:Function}} yAxis
    * @prop {number} height
    */

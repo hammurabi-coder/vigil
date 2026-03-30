@@ -24,12 +24,12 @@
   export let rows = 4
 
   const inputBase =
-    'w-full bg-bg-0 text-ink-0 font-data text-sm tracking-wide px-4 py-2.5 border outline-none transition-all duration-150 placeholder:text-ink-2 resize-y disabled:opacity-40 disabled:cursor-not-allowed'
+    'w-full bg-bg-0 text-luma-0 font-data text-sm tracking-wide px-4 py-2.5 border outline-none transition-all duration-150 placeholder:text-luma-2 resize-y disabled:opacity-40 disabled:cursor-not-allowed'
   const states = {
     default:
       'border-b1 focus-visible:border-ora focus-visible:shadow-[0_0_0_1px_theme(colors.ora.DEFAULT),inset_0_0_10px_rgba(255,107,26,0.06)]',
     success:
-      'border-teal focus-visible:border-teal focus-visible:shadow-[0_0_0_1px_theme(colors.teal.DEFAULT),inset_0_0_10px_rgba(139,92,246,0.06)]',
+      'border-violet focus-visible:border-violet focus-visible:shadow-[0_0_0_1px_theme(colors.teal.DEFAULT),inset_0_0_10px_rgba(139,92,246,0.06)]',
     error: 'border-red focus-visible:shadow-[0_0_0_1px_theme(colors.red.DEFAULT)]',
   }
 
@@ -45,11 +45,11 @@
   {#if label}
     <label
       for={inputId}
-      class="flex items-center gap-2 font-data text-xs uppercase tracking-widest text-ink-2"
+      class="text-luma-2 flex items-center gap-2 font-data text-xs uppercase tracking-widest"
     >
       {label}
       {#if state === 'error' && hint}<span class="text-red">⚑ {hint}</span>{/if}
-      {#if state === 'success' && hint}<span class="text-teal">✓ {hint}</span>{/if}
+      {#if state === 'success' && hint}<span class="text-kelly">✓ {hint}</span>{/if}
     </label>
   {/if}
   <textarea
@@ -68,6 +68,6 @@
     on:blur
   ></textarea>
   {#if state !== 'error' && state !== 'success' && hint}
-    <span id={hintId} class="font-data text-xs tracking-wide text-ink-2">{hint}</span>
+    <span id={hintId} class="text-luma-2 font-data text-xs tracking-wide">{hint}</span>
   {/if}
 </div>

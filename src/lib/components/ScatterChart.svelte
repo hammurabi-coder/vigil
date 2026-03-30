@@ -38,8 +38,8 @@
         datasets: datasets.map((ds) => ({
           label: ds.label,
           data: ds.data,
-          backgroundColor: C[ds.color ?? 'teal'].fill,
-          borderColor: C[ds.color ?? 'teal'].stroke,
+          backgroundColor: C[ds.color ?? 'violet'].fill,
+          borderColor: C[ds.color ?? 'violet'].stroke,
           borderWidth: 1.5,
           pointRadius: ds.pointRadius ?? 3,
           pointStyle: ds.pointStyle ?? 'circle',

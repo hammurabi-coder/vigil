@@ -19,8 +19,8 @@
   const dispatch = createEventDispatcher()
 
   const vMap = {
-    info: { border: 'border-b1', icon: 'text-ink-0', bg: 'bg-bg-0' },
-    ok: { border: 'border-teal', icon: 'text-teal', bg: 'bg-teal-xlo' },
+    info: { border: 'border-b1', icon: 'text-luma-0', bg: 'bg-bg-0' },
+    ok: { border: 'border-violet', icon: 'text-kelly', bg: 'bg-violet-xlo' },
     warn: { border: 'border-ora', icon: 'text-ora', bg: 'bg-ora-xlo' },
     alert: { border: 'border-red', icon: 'text-red', bg: 'bg-red-xlo' },
   }
@@ -127,10 +127,10 @@
   <!-- Content -->
   <div class="flex-1">
     {#if title}
-      <h4 class="font-data text-xs uppercase tracking-widest text-ink-0">{title}</h4>
+      <h4 class="text-luma-0 font-data text-xs uppercase tracking-widest">{title}</h4>
     {/if}
     {#if message}
-      <p class="mt-1 font-body text-sm leading-relaxed text-ink-1">
+      <p class="text-luma-1 mt-1 font-body text-sm leading-relaxed">
         {message}
       </p>
     {/if}
@@ -138,7 +138,7 @@
 
   <!-- Close -->
   <button
-    class="text-ink-2 transition-colors hover:text-ink-0"
+    class="text-luma-2 hover:text-luma-0 transition-colors"
     on:click={() => {
       visible = false
       setTimeout(() => dispatch('close'), 300)

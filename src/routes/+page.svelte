@@ -34,7 +34,7 @@
 
   onMount(() => {
     const id = setInterval(() => {
-      clock = new Date().toLocaleTimeString('en-US', { hour12: false })
+      clock = new Date().toLocaleTimeString('en-US', { hour12: true })
       const s = Math.floor((Date.now() - t0) / 1000)
       elapsed = [
         String(Math.floor(s / 3600)).padStart(2, '0'),
@@ -69,7 +69,7 @@
     { label: 'Reserve Unit-00', value: 'OFFLINE', status: 'off' },
   ]
 
-  /** @type {Array<{label: string, value: number, color: 'ora'|'teal'|'red'|'amb'|'auto'}>} */
+  /** @type {Array<{label: string, value: number, color: 'ora'|'violet'|'red'|'amb'|'auto'}>} */
   const progressItems = [
     { label: 'CPU Load', value: 67, color: 'auto' },
     { label: 'Memory', value: 84, color: 'auto' },
@@ -112,19 +112,19 @@
     {
       label: 'Aux',
       data: [10, 10, 11, 10, 11, 12, 11, 12, 10, 11, 12, 10, 11, 12, 11, 10],
-      color: 'teal',
+      color: 'violet',
     },
   ]
 
   const radarDatasets = [
     { label: 'EVA-01', data: [73, 88, 72, 80, 60, 85], color: 'ora' },
-    { label: 'EVA-02', data: [88, 82, 90, 85, 88, 88], color: 'teal' },
+    { label: 'EVA-02', data: [88, 82, 90, 85, 88, 88], color: 'violet' },
   ]
 
   const scatterDatasets = [
     {
       label: 'Sensor',
-      color: 'teal',
+      color: 'violet',
       data: Array.from({ length: 20 }, () => ({
         x: Math.random() * 90 + 5,
         y: Math.random() * 90 + 5,
@@ -267,15 +267,15 @@
             {#each [[colors.void, 'void'], [colors.bg[0], 'BG-0'], [colors.bg[1], 'BG-1'], [colors.bg[2], 'BG-2'], [colors.bg[3], 'BG-3'], [colors.bg[4], 'BG-4']] as [bg, label], i (label + i)}
               <div class="flex-1">
                 <div class="border-b0 h-12 border" style="background:{bg}"></div>
-                <div class="mt-1.5 font-data text-2xs tracking-wide text-ink-2">{label}</div>
+                <div class="text-luma-2 mt-1.5 font-data text-2xs tracking-wide">{label}</div>
               </div>
             {/each}
           </div>
           <!-- Accent ramps -->
           <div class="mt-4 grid grid-cols-6 gap-4">
-            {#each [{ name: 'Orange/Primary', swatches: [colors.ora[700], colors.ora[500], colors.ora[300], colors.ora.DEFAULT], active: 3 }, { name: 'Red/Alert', swatches: [colors.red[700], colors.red[500], colors.red[300], colors.red.DEFAULT], active: 3 }, { name: 'Amber/Data', swatches: [colors.amb[700], colors.amb[500], colors.amb[300], colors.amb.DEFAULT], active: 3 }, { name: 'Teal/Nominal', swatches: [colors.teal[700], colors.teal[500], colors.teal[300], colors.teal.DEFAULT], active: 3 }, { name: 'Sky/Info', swatches: [colors.sky[700], colors.sky[500], colors.sky[300], colors.sky.DEFAULT], active: 3 }, { name: 'Kelly/Active', swatches: [colors.kelly[700], colors.kelly[500], colors.kelly[300], colors.kelly.DEFAULT], active: 3 }] as ramp (ramp.name)}
+            {#each [{ name: 'Orange/Primary', swatches: [colors.ora[700], colors.ora[500], colors.ora[300], colors.ora.DEFAULT], active: 3 }, { name: 'Red/Alert', swatches: [colors.red[700], colors.red[500], colors.red[300], colors.red.DEFAULT], active: 3 }, { name: 'Amber/Data', swatches: [colors.amb[700], colors.amb[500], colors.amb[300], colors.amb.DEFAULT], active: 3 }, { name: 'Violet/Info', swatches: [colors.violet[700], colors.violet[500], colors.violet[300], colors.violet.DEFAULT], active: 3 }, { name: 'Sky/Info', swatches: [colors.sky[700], colors.sky[500], colors.sky[300], colors.sky.DEFAULT], active: 3 }, { name: 'Kelly/Active', swatches: [colors.kelly[700], colors.kelly[500], colors.kelly[300], colors.kelly.DEFAULT], active: 3 }] as ramp (ramp.name)}
               <div>
-                <div class="mb-2 font-data text-xs uppercase tracking-widest text-ink-2">
+                <div class="text-luma-2 mb-2 font-data text-xs uppercase tracking-widest">
                   {ramp.name}
                 </div>
                 <div class="flex gap-1">
@@ -293,7 +293,7 @@
           </div>
           <!-- Text scale -->
           <div class="mt-4 flex flex-wrap items-center gap-6">
-            {#each [['text-ink-0', 'Primary', colors.ink[0]], ['text-ink-1', 'Secondary', colors.ink[1]], ['text-ink-2', 'Muted', colors.ink[2]], ['text-ink-3', 'Faint', colors.ink[3]]] as [cls, label, hex], ti (label + ti)}
+            {#each [['text-luma-0', 'Primary', colors.ink[0]], ['text-luma-1', 'Secondary', colors.ink[1]], ['text-luma-2', 'Muted', colors.ink[2]], ['text-luma-3', 'Faint', colors.ink[3]]] as [cls, label, hex], ti (label + ti)}
               <div class="flex items-center gap-3">
                 <div class="border-b1 h-5 w-5 rounded-full border" style="background:{hex}"></div>
                 <span class="font-data text-sm {cls} tracking-wide">{label} · {hex}</span>
@@ -308,12 +308,12 @@
         <div class="breathing-space mb-8"></div>
         <SectionLabel number="02">Typography</SectionLabel>
         <Panel variant="deep" flush>
-          {#each [{ sample: 'PUBLIC WORKS', cls: 'font-display text-5xl leading-none tracking-wide font-bold', meta: 'Display · 64px · Barlow Cond 700' }, { sample: 'MISSION CRITICAL ALERT', cls: 'font-label text-2xl uppercase tracking-widest font-bold', meta: 'Label-XL · 28px · Barlow Cond 700' }, { sample: 'System Parameter Alpha', cls: 'font-label text-base uppercase tracking-wider font-semibold', meta: 'Label · 16px · Barlow Cond 600' }, { sample: 'Interface systems require precise nomenclature across all operational readouts.', cls: 'font-body text-sm text-ink-1 max-w-xl leading-relaxed', meta: 'Body · 14px · Barlow 400' }, { sample: 'SYS.UPTIME 00:04:32.807 · NODE-03 ACTIVE', cls: 'font-data text-sm text-amb tracking-wide', meta: 'Data · 13px · Share Tech Mono' }, { sample: 'OPERATIONAL · RESTRICTED · VIGIL INTERNAL', cls: 'font-data text-xs text-ink-1 tracking-widest2 uppercase', meta: 'Annotation · 12px · Share Tech Mono' }] as row (row.sample)}
+          {#each [{ sample: 'PUBLIC WORKS', cls: 'font-display text-5xl leading-none tracking-wide font-bold', meta: 'Display · 64px · Barlow Cond 700' }, { sample: 'MISSION CRITICAL ALERT', cls: 'font-label text-2xl uppercase tracking-widest font-bold', meta: 'Label-XL · 28px · Barlow Cond 700' }, { sample: 'System Parameter Alpha', cls: 'font-label text-base uppercase tracking-wider font-semibold', meta: 'Label · 16px · Barlow Cond 600' }, { sample: 'Interface systems require precise nomenclature across all operational readouts.', cls: 'font-body text-sm text-luma-1 max-w-xl leading-relaxed', meta: 'Body · 14px · Barlow 400' }, { sample: 'SYS.UPTIME 00:04:32.807 · NODE-03 ACTIVE', cls: 'font-data text-sm text-amb tracking-wide', meta: 'Data · 13px · Share Tech Mono' }, { sample: 'OPERATIONAL · RESTRICTED · VIGIL INTERNAL', cls: 'font-data text-xs text-luma-1 tracking-widest2 uppercase', meta: 'Annotation · 12px · Share Tech Mono' }] as row (row.sample)}
             <div
               class="border-b0 flex items-baseline justify-between gap-4 border-b px-6 py-5 last:border-b-0"
             >
               <div class={row.cls}>{row.sample}</div>
-              <div class="flex-shrink-0 font-data text-xs tracking-wide text-ink-2">
+              <div class="flex-shrluma-0 text-luma-2 font-data text-xs tracking-wide">
                 {row.meta}
               </div>
             </div>
@@ -327,32 +327,32 @@
         <SectionLabel number="03">Panel Variants</SectionLabel>
         <div class="grid grid-cols-2 gap-0.5">
           <Panel title="Default Panel" badge="NOMINAL" badgeVariant="ok">
-            <p class="font-body text-sm leading-relaxed text-ink-0">
+            <p class="text-luma-0 font-body text-sm leading-relaxed">
               Standard surface. BG-1 base with dim border. Use for most content containers.
             </p>
           </Panel>
           <Panel variant="accent" title="Accent Panel" badge="ACTIVE" badgeVariant="warn">
-            <p class="font-body text-sm leading-relaxed text-ink-0">
+            <p class="text-luma-0 font-body text-sm leading-relaxed">
               ORA Red left border + faint tint. For primary action areas or selected states.
             </p>
           </Panel>
           <Panel variant="alert" title="Alert Panel" badge="CRITICAL" badgeVariant="alert">
-            <p class="font-body text-sm leading-relaxed text-ink-0">
+            <p class="text-luma-0 font-body text-sm leading-relaxed">
               Red border + background tint. Reserved for system errors and warnings.
             </p>
           </Panel>
-          <Panel variant="teal" title="Nominal Panel" badge="OK" badgeVariant="ok">
-            <p class="font-body text-sm leading-relaxed text-ink-0">
+          <Panel variant="violet" title="Nominal Panel" badge="OK" badgeVariant="ok">
+            <p class="text-luma-0 font-body text-sm leading-relaxed">
               Teal border for confirmed nominal or success states.
             </p>
           </Panel>
           <Panel variant="deep" title="Deep Panel">
-            <p class="font-body text-sm leading-relaxed text-ink-0">
+            <p class="text-luma-0 font-body text-sm leading-relaxed">
               BG-0 background — sits lower in the surface stack. Good for data readout groups.
             </p>
           </Panel>
           <Panel variant="raised" title="Raised Panel">
-            <p class="font-body text-sm leading-relaxed text-ink-0">
+            <p class="text-luma-0 font-body text-sm leading-relaxed">
               BG-2 background — slightly elevated. Use for overlays or focus areas.
             </p>
           </Panel>
@@ -498,7 +498,7 @@
               <DonutChart
                 labels={['Primary', 'Reserve', 'Aux', 'Idle']}
                 data={[51, 20, 10, 19]}
-                colors={['ora', 'amb', 'teal', 'red']}
+                colors={['ora', 'amb', 'violet', 'red']}
                 height={185}
               />
             </div>
@@ -569,7 +569,7 @@
           <Panel variant="deep" title="Button Variants">
             <div class="space-y-6">
               <div>
-                <div class="mb-3 font-data text-xs uppercase tracking-widest text-ink-3">
+                <div class="text-luma-3 mb-3 font-data text-xs uppercase tracking-widest">
                   Size · Primary
                 </div>
                 <div class="flex flex-wrap items-start gap-3">
@@ -579,7 +579,7 @@
                 </div>
               </div>
               <div>
-                <div class="mb-3 font-data text-xs uppercase tracking-widest text-ink-3">
+                <div class="text-luma-3 mb-3 font-data text-xs uppercase tracking-widest">
                   Style variants
                 </div>
                 <div class="flex flex-wrap items-start gap-3">
@@ -590,7 +590,7 @@
                 </div>
               </div>
               <div>
-                <div class="mb-3 font-data text-xs uppercase tracking-widest text-ink-3">
+                <div class="text-luma-3 mb-3 font-data text-xs uppercase tracking-widest">
                   Badges
                 </div>
                 <div class="flex flex-wrap items-center gap-3">
@@ -632,7 +632,7 @@
           <Panel variant="deep" title="Toggles &amp; Checkboxes">
             <div class="space-y-4">
               <div>
-                <div class="mb-3 font-data text-xs uppercase tracking-widest text-ink-3">
+                <div class="text-luma-3 mb-3 font-data text-xs uppercase tracking-widest">
                   Toggle Switches
                 </div>
                 <div class="space-y-3">
@@ -646,7 +646,7 @@
                 </div>
               </div>
               <div>
-                <div class="mb-3 font-data text-xs uppercase tracking-widest text-ink-3">
+                <div class="text-luma-3 mb-3 font-data text-xs uppercase tracking-widest">
                   Checkboxes
                 </div>
                 <div class="space-y-2">

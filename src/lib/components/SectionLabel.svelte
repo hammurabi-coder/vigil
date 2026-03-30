@@ -7,7 +7,7 @@
 
 <div class="section-label font-data text-xs uppercase tracking-widest">
   <span class="font-bold text-ora">&#x5B;</span><!--
-  -->{#if number}<span class="text-ink-2"
+  -->{#if number}<span class="text-luma-2"
       >{number} ·</span
     >{/if}<!--
   --><slot /><!--

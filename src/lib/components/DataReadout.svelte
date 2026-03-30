@@ -12,9 +12,9 @@
 
   const colorMap = {
     default: 'text-amb',
-    ok: 'text-teal',
+    ok: 'text-kelly',
     alert: 'text-red animate-blink-slow',
-    primary: 'text-ink-0',
+    primary: 'text-luma-0',
     warn: 'text-ora',
   }
 
@@ -34,10 +34,10 @@
 
 <div class="select-none font-data">
   {#if label}
-    <div class="mb-1 text-2xs text-ink-2">{label}</div>
+    <div class="text-luma-2 mb-1 text-2xs">{label}</div>
   {/if}
   <div class={valCls}>{value}</div>
   {#if unit}
-    <div class="mt-1 text-2xs text-ink-2">{unit}</div>
+    <div class="text-luma-2 mt-1 text-2xs">{unit}</div>
   {/if}
 </div>

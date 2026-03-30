@@ -73,8 +73,7 @@ export const colors = {
     500: 'hsl(44, 65%, 51%)',
     700: 'hsl(44, 65%, 41%)',
   },
-  // Violet — nominal/ok signal (H: 265, S: 70%, L: 65%)
-  // teal key kept as alias so all bg-teal, text-teal, border-teal utilities still work
+  // Violet — H: 265, S: 70%, L: 65%
   violet: {
     DEFAULT: 'hsl(265, 70%, 65%)',
     lo: 'hsla(265, 70%, 65%, 0.12)',
@@ -83,16 +82,8 @@ export const colors = {
     500: 'hsl(265, 70%, 65%)',
     700: 'hsl(265, 70%, 55%)',
   },
-  teal: {
-    DEFAULT: 'hsl(265, 70%, 65%)',
-    lo: 'hsla(265, 70%, 65%, 0.12)',
-    xlo: 'hsla(265, 70%, 65%, 0.05)',
-    300: 'hsl(265, 70%, 75%)',
-    500: 'hsl(265, 70%, 65%)',
-    700: 'hsl(265, 70%, 55%)',
-  },
   // Text scale mathematical increments
-  ink: {
+  luma: {
     0: 'hsl(210, 15%, 98%)', // primary text
     1: 'hsl(210, 15%, 85%)', // secondary
     2: 'hsl(210, 15%, 70%)', // muted
@@ -125,12 +116,12 @@ export const fontSize = {
 
 /** @type {Object} */
 export const colorValues = {
-  teal: 'hsl(265, 70%, 65%)',
+  violet: 'hsl(265, 70%, 65%)',
   ora: 'hsl(21, 100%, 55%)',
   red: 'hsl(353, 82%, 52%)',
   sky: 'hsl(200, 75%, 55%)',
   kelly: 'hsl(145, 70%, 48%)',
-  ink: {
+  luma: {
     0: 'hsl(210, 15%, 98%)',
     1: 'hsl(210, 15%, 85%)',
     2: 'hsl(210, 15%, 70%)',
@@ -144,17 +135,18 @@ export const chartColors = {
   red: { stroke: colors.red.DEFAULT, fill: colors.red.xlo },
   amb: { stroke: colors.amb.DEFAULT, fill: colors.amb.lo },
   teal: { stroke: colors.violet.DEFAULT, fill: colors.violet.xlo },
+  violet: { stroke: colors.violet.DEFAULT, fill: colors.violet.xlo },
   sky: { stroke: colors.sky.DEFAULT, fill: colors.sky.xlo },
   kelly: { stroke: colors.kelly.DEFAULT, fill: colors.kelly.xlo },
   grid: 'rgba(255,255,255,0.06)',
   gridLine: 'rgba(255,255,255,0.07)',
-  tick: colors.ink[2],
+  tick: colors.luma[2],
   tooltip: {
     backgroundColor: colors.bg[2],
     borderColor: 'hsla(21, 100%, 55%, 0.4)',
     borderWidth: 1,
-    titleColor: colors.ink[0],
-    bodyColor: colors.ink[1],
+    titleColor: colors.luma[0],
+    bodyColor: colors.luma[1],
     padding: 10,
   },
   glow: {

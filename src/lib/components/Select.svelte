@@ -21,7 +21,7 @@
   export let disabled = false
 
   const inputBase =
-    'w-full bg-bg-0 text-ink-0 font-data text-sm tracking-wide px-4 py-2.5 pr-10 border outline-none transition-all duration-150 appearance-none disabled:opacity-40 disabled:cursor-not-allowed'
+    'w-full bg-bg-0 text-luma-0 font-data text-sm tracking-wide px-4 py-2.5 pr-10 border outline-none transition-all duration-150 appearance-none disabled:opacity-40 disabled:cursor-not-allowed'
   const states = {
     default:
       'border-b1 focus-visible:border-ora focus-visible:shadow-[0_0_0_1px_theme(colors.ora.DEFAULT),inset_0_0_10px_rgba(255,107,26,0.06)]',
@@ -40,7 +40,7 @@
   {#if label}
     <label
       for={inputId}
-      class="flex items-center gap-2 font-data text-xs uppercase tracking-widest text-ink-2"
+      class="text-luma-2 flex items-center gap-2 font-data text-xs uppercase tracking-widest"
     >
       {label}
       {#if state === 'error' && hint}<span class="text-red">⚑ {hint}</span>{/if}
@@ -64,7 +64,7 @@
     </select>
     <!-- Custom chevron — inline SVG matches the technical/mono aesthetic -->
     <svg
-      class="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 text-ink-2"
+      class="text-luma-2 pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2"
       width="10"
       height="10"
       viewBox="0 0 10 10"
@@ -81,6 +81,6 @@
     </svg>
   </div>
   {#if state !== 'error' && hint}
-    <span id={hintId} class="font-data text-xs tracking-wide text-ink-2">{hint}</span>
+    <span id={hintId} class="text-luma-2 font-data text-xs tracking-wide">{hint}</span>
   {/if}
 </div>

@@ -16,10 +16,10 @@
   export let autoScroll = true
 
   const levelCls = {
-    ok: 'text-teal',
+    ok: 'text-kelly',
     warn: 'text-ora',
     alert: 'text-red',
-    info: 'text-ink-2',
+    info: 'text-luma-2',
   }
 
   const levelLabel = {
@@ -49,11 +49,11 @@
 >
   {#each entries as entry (entry.ts + entry.text)}
     <div class="flex gap-3 leading-relaxed">
-      <span class="flex-shrink-0 text-ink-2">{entry.ts} ·</span>
-      <span class="flex-shrink-0 {levelCls[entry.level] ?? levelCls.info}"
+      <span class="flex-shrluma-0 text-luma-2">{entry.ts} ·</span>
+      <span class="flex-shrluma-0 {levelCls[entry.level] ?? levelCls.info}"
         >{levelLabel[entry.level] ?? levelLabel.info}</span
       >
-      <span class="text-ink-1">{entry.text}</span>
+      <span class="text-luma-1">{entry.text}</span>
     </div>
   {/each}
 </div>

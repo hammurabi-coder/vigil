@@ -13,8 +13,8 @@ export default {
         amb: colors.amb,
         sky: colors.sky,
         kelly: colors.kelly,
-        teal: colors.violet,
-        ink: colors.ink,
+        violet: colors.violet,
+        ink: colors.luma,
         glow: chartColors.glow,
       },
       fontFamily: {

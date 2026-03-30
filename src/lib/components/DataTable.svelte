@@ -9,9 +9,9 @@
   export let rows = []
 
   const cellColor = {
-    default: 'text-ink-1',
+    default: 'text-luma-1',
     data: 'text-amb',
-    ok: 'text-teal',
+    ok: 'text-kelly',
     warn: 'text-ora',
     alert: 'text-red',
   }
@@ -53,8 +53,8 @@
       <tr>
         {#each columns as col (col.key)}
           <th
-            class="border-b1 border-b px-4 py-2.5 text-left text-2xs font-normal uppercase tracking-widest text-ink-2 {col.sortable
-              ? 'cursor-pointer hover:text-ink-0'
+            class="border-b1 text-luma-2 border-b px-4 py-2.5 text-left text-2xs font-normal uppercase tracking-widest {col.sortable
+              ? 'hover:text-luma-0 cursor-pointer'
               : ''}"
             on:click={() => handleSort(col.key, col.sortable)}
             on:keydown={(e) => e.key === 'Enter' && handleSort(col.key, col.sortable)}

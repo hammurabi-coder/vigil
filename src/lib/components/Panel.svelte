@@ -1,7 +1,7 @@
 <script>
   /**
    * Panel — base surface container
-   * @prop {'default'|'accent'|'alert'|'teal'|'deep'|'raised'} variant
+   * @prop {'default'|'accent'|'alert'|'violet'|'deep'|'raised'} variant
    * @prop {string} title     — optional header label
    * @prop {string} badge     — optional badge text
    * @prop {'ok'|'warn'|'alert'} badgeVariant
@@ -33,11 +33,11 @@
     raised: 'bg-bg-2',
     accent: 'bg-bg-1 border-l-2 border-l-ora',
     alert: 'bg-red-xlo border-l-2 border-l-red',
-    teal: 'bg-teal-xlo border-l-2 border-l-teal',
+    teal: 'bg-violet-xlo border-l-2 border-l-violet',
   }
 
   const badgeClasses = {
-    ok: 'border-teal text-teal',
+    ok: 'border-violet text-kelly',
     warn: 'border-ora text-ora',
     alert: 'border-red text-red animate-blink',
   }
@@ -56,7 +56,7 @@
   {:else if title || badge}
     <div class={titleCls}>
       {#if title}
-        <span class="font-data text-xs uppercase tracking-widest text-ink-0">{title}</span>
+        <span class="text-luma-0 font-data text-xs uppercase tracking-widest">{title}</span>
       {/if}
       {#if badge}
         <span

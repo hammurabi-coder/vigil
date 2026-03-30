@@ -5,14 +5,14 @@
    */
   export let items = []
 
-  const dotBase = 'w-1.5 h-1.5 rounded-full flex-shrink-0'
+  const dotBase = 'w-1.5 h-1.5 rounded-full flex-shrluma-0'
   // Using hardcoded HSL values instead of theme() — avoids Tailwind JIT
   // scan issues when values live in JS const/template literals
   const dots = {
-    ok: `${dotBase} bg-teal`,
+    ok: `${dotBase} bg-kelly`,
     warn: `${dotBase} bg-ora animate-blink-slow`,
     alert: `${dotBase} bg-red animate-blink`,
-    off: `${dotBase} bg-ink-2`,
+    off: `${dotBase} bg-luma-2`,
   }
 </script>
 
@@ -23,8 +23,8 @@
                 text-xs last:border-b-0"
     >
       <div class={dots[item.status] ?? dots.off}></div>
-      <span class="flex-1 text-ink-1">{item.label}</span>
-      <span class="text-ink-2">{item.value}</span>
+      <span class="text-luma-1 flex-1">{item.label}</span>
+      <span class="text-luma-2">{item.value}</span>
     </div>
   {/each}
 </div>

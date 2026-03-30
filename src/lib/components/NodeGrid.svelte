@@ -22,7 +22,7 @@
 
   const cv = colorValues
   const stateMap = {
-    ok: { bg: cv.teal, label: 'ACTIVE' },
+    ok: { bg: cv.violet, label: 'ACTIVE' },
     warn: { bg: cv.ora, label: 'WARN' },
     alert: { bg: cv.red, label: 'ALERT' },
     off: { bg: cv.ink[2], label: 'OFFLINE' },

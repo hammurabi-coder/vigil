@@ -10,7 +10,7 @@
   /** @type {string} */
   export let title = 'vigil'
   /** @type {string} */
-  export let subtitle = 'Operational Dark · Component Library · v0.1.0'
+  export let subtitle = 'Operational Interface Library'
   /** @type {string} */
   export let clock = '——:——:——'
 </script>
@@ -21,18 +21,18 @@
   <div class="flex items-center gap-4">
     <LogoMark size={32} />
     <div>
-      <div class="font-display text-4xl leading-none tracking-wide">{title}</div>
-      <div class="mt-1 font-data text-sm text-ink-2">
+      <div class="font-display text-4xl font-bold leading-none tracking-wide">{title}</div>
+      <div class="text-luma-2 mt-1 font-display text-sm font-bold tracking-wide">
         {subtitle}
       </div>
     </div>
   </div>
   <div
-    class="flex items-center gap-6 text-right font-data text-sm leading-loose tracking-wider text-ink-1"
+    class="text-luma-1 flex items-center gap-6 text-right font-data text-sm leading-loose tracking-wider"
   >
     <div class="border-b1 border-l pl-6">
       <div class="text-lg tabular-nums text-amb">{clock}</div>
-      <div class="text-2xs text-ink-2">System Time</div>
+      <div class="text-luma-2 text-2xs">System Time</div>
     </div>
   </div>
 </header>

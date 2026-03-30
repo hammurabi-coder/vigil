@@ -9,7 +9,7 @@
   export let labels = []
   /** @type {number[]} data */
   export let data = []
-  /** @type {'ora'|'red'|'amb'|'teal'|'auto'} color */
+  /** @type {'ora'|'red'|'amb'|'violet'|'auto'} color */
   export let color = 'auto'
   /** @type {'vertical'|'horizontal'} orientation */
   export let orientation = 'vertical'
@@ -20,7 +20,7 @@
 
   function resolveColor(v) {
     if (color !== 'auto') return C[color] ?? C.ora
-    return v > 80 ? C.red : v > 60 ? C.ora : C.teal
+    return v > 80 ? C.red : v > 60 ? C.ora : C.violet
   }
 
   let canvas

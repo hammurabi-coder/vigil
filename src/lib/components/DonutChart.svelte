@@ -16,7 +16,7 @@
   /**
    *
    */
-  export let colors = ['ora', 'teal', 'amb', 'red']
+  export let colors = ['ora', 'violet', 'amb', 'red']
   /**
    *
    */

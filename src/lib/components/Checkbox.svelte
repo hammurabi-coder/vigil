@@ -36,7 +36,7 @@
 
   <!-- Visual checkbox box -->
   <span
-    class="border-b2 relative mt-0.5 flex h-4 w-4 flex-shrink-0 items-center justify-center border bg-bg-0 transition-all
+    class="border-b2 flex-shrluma-0 relative mt-0.5 flex h-4 w-4 items-center justify-center border bg-bg-0 transition-all
            duration-150
            group-disabled:cursor-not-allowed group-disabled:opacity-40 peer-checked/checkbox:border-ora peer-checked/checkbox:bg-ora
            peer-focus-visible/checkbox:ring-2 peer-focus-visible/checkbox:ring-ora
@@ -66,10 +66,10 @@
   {#if label || hint}
     <div class="flex flex-col gap-0.5">
       {#if label}
-        <span class="font-data text-sm text-ink-0">{label}</span>
+        <span class="text-luma-0 font-data text-sm">{label}</span>
       {/if}
       {#if hint}
-        <span class="font-data text-xs text-ink-2">{hint}</span>
+        <span class="text-luma-2 font-data text-xs">{hint}</span>
       {/if}
     </div>
   {/if}
