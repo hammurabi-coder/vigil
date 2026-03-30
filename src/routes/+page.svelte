@@ -269,7 +269,7 @@
           </div>
           <!-- Accent ramps -->
           <div class="mt-4 grid grid-cols-4 gap-4">
-            {#each [{ name: 'Orange / Primary', swatches: ['hsl(21, 100%, 25%)', 'hsl(21, 100%, 35%)', 'hsl(21, 100%, 45%)', 'hsl(21, 100%, 55%)'], active: 3 }, { name: 'Red / Alert', swatches: ['hsl(353, 82%, 22%)', 'hsl(353, 82%, 32%)', 'hsl(353, 82%, 42%)', 'hsl(353, 82%, 52%)'], active: 3 }, { name: 'Amber / Data', swatches: ['hsl(44, 65%, 21%)', 'hsl(44, 65%, 31%)', 'hsl(44, 65%, 41%)', 'hsl(44, 65%, 51%)'], active: 3 }, { name: 'Teal / Nominal', swatches: ['hsl(177, 68%, 16%)', 'hsl(177, 68%, 26%)', 'hsl(177, 68%, 36%)', 'hsl(177, 68%, 46%)'], active: 3 }] as ramp (ramp.name)}
+            {#each [{ name: 'Orange / Primary', swatches: [colors.ora[700], colors.ora[500], colors.ora[300], colors.ora.DEFAULT], active: 3 }, { name: 'Red / Alert', swatches: [colors.red[700], colors.red[500], colors.red[300], colors.red.DEFAULT], active: 3 }, { name: 'Amber / Data', swatches: [colors.amb[700], colors.amb[500], colors.amb[300], colors.amb.DEFAULT], active: 3 }, { name: 'Teal / Nominal', swatches: [colors.teal[700], colors.teal[500], colors.teal[300], colors.teal.DEFAULT], active: 3 }] as ramp (ramp.name)}
               <div>
                 <div class="mb-2 font-data text-xs uppercase tracking-widest text-ink-2">
                   {ramp.name}
@@ -289,7 +289,7 @@
           </div>
           <!-- Text scale -->
           <div class="mt-4 flex flex-wrap items-center gap-6">
-            {#each [['text-ink-0', 'Primary', 'hsl(210, 15%, 98%)'], ['text-ink-1', 'Secondary', 'hsl(210, 15%, 85%)'], ['text-ink-2', 'Muted', 'hsl(210, 15%, 70%)'], ['text-ink-3', 'Faint', 'hsl(210, 15%, 55%)']] as [cls, label, hex] (label)}
+            {#each [['text-ink-0', 'Primary', colors.ink[0]], ['text-ink-1', 'Secondary', colors.ink[1]], ['text-ink-2', 'Muted', colors.ink[2]], ['text-ink-3', 'Faint', colors.ink[3]]] as [cls, label, hex] (label)}
               <div class="flex items-center gap-3">
                 <div class="border-b1 h-5 w-5 rounded-full border" style="background:{hex}"></div>
                 <span class="font-data text-sm {cls} tracking-wide">{label} · {hex}</span>
