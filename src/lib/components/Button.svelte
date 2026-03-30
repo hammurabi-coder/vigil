@@ -13,11 +13,12 @@
 
   const variants = {
     primary:
-      'bg-gradient-to-b from-ora-300 to-ora text-void shadow-[0_4px_12px_theme(colors.glow.ora)] hover:shadow-[0_6px_22px_theme(colors.glow.ora)] active:shadow-[0_1px_4px_rgba(0,0,0,0.5)] active:scale-[0.97]',
-    outline: 'bg-transparent text-ora border-[2px] border-ora-700 hover:bg-ora-lo active:bg-ora-lo',
+      'bg-ora text-void shadow-[0_3px_10px_rgba(0,0,0,0.22)] hover:bg-ora-300 hover:shadow-[0_5px_16px_rgba(0,0,0,0.28)] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.3)] active:scale-[0.97]',
+    outline:
+      'bg-transparent text-ora border-[2px] border-ora-700 hover:bg-ora-lo active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.15)]',
     ghost: 'bg-transparent text-ink-1 border border-b1 hover:border-b2 hover:text-ink-0',
     danger:
-      'bg-red text-white hover:shadow-[0_0_20px_theme(colors.glow.red)] active:brightness-90 active:shadow-[0_1px_4px_rgba(0,0,0,0.4)]',
+      'bg-red text-white shadow-[0_3px_10px_rgba(0,0,0,0.22)] hover:shadow-[0_5px_16px_rgba(0,0,0,0.28)] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.3)]',
   }
 
   const sizes = {
