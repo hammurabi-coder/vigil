@@ -18,7 +18,7 @@
       'bg-transparent text-ora border-[2px] border-ora-700 hover:bg-ora-lo active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.15)]',
     ghost: 'bg-transparent text-ink-1 border border-b1 hover:border-b2 hover:text-ink-0',
     danger:
-      'bg-red text-white shadow-[0_3px_10px_rgba(0,0,0,0.22)] hover:shadow-[0_5px_16px_rgba(0,0,0,0.28)] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.3)]',
+      'bg-gradient-to-b from-red-300 to-red text-white shadow-[0_3px_10px_rgba(0,0,0,0.22)] hover:from-red hover:to-red-700 hover:shadow-[0_5px_16px_rgba(0,0,0,0.28)] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.35)] active:scale-[0.97]',
   }
 
   const sizes = {
