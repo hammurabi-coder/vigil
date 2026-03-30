@@ -13,11 +13,11 @@
 
   const variants = {
     primary:
-      'bg-gradient-to-b from-ora-300 to-ora text-void border-[2px] border-ora-700 hover:from-ora hover:to-ora-700 hover:shadow-[0_4px_18px_theme(colors.glow.ora)] active:from-ora-700 active:to-ora active:shadow-[0_1px_4px_rgba(0,0,0,0.4)] active:scale-[0.97]',
+      'bg-gradient-to-b from-ora-300 to-ora text-void shadow-[0_4px_12px_theme(colors.glow.ora)] hover:shadow-[0_6px_22px_theme(colors.glow.ora)] active:shadow-[0_1px_4px_rgba(0,0,0,0.5)] active:scale-[0.97]',
     outline: 'bg-transparent text-ora border-[2px] border-ora-700 hover:bg-ora-lo active:bg-ora-lo',
     ghost: 'bg-transparent text-ink-1 border border-b1 hover:border-b2 hover:text-ink-0',
     danger:
-      'bg-red text-white border-[2px] border-red-700 hover:brightness-110 hover:shadow-[0_0_20px_theme(colors.glow.red)] active:brightness-90 active:shadow-[0_1px_4px_rgba(0,0,0,0.4)]',
+      'bg-red text-white hover:shadow-[0_0_20px_theme(colors.glow.red)] active:brightness-90 active:shadow-[0_1px_4px_rgba(0,0,0,0.4)]',
   }
 
   const sizes = {
@@ -29,15 +29,6 @@
   $: cls = [base, variants[variant] ?? variants.primary, sizes[size] ?? sizes.md].join(' ')
 </script>
 
-<!-- Corner notch on primary -->
 <button {type} {disabled} class={cls} {...$$restProps} on:click on:focus on:blur on:keydown>
-  {#if variant === 'primary'}
-    <span
-      class="pointer-events-none absolute right-0 top-0 h-0
-                 w-0 border-l-[7px]
-                 border-t-[7px] border-l-ora-700
-                 border-t-void"
-    ></span>
-  {/if}
   <slot />
 </button>
