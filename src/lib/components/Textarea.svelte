@@ -29,7 +29,7 @@
     default:
       'border-b1 focus-visible:border-ora focus-visible:shadow-[0_0_0_1px_theme(colors.ora.DEFAULT),inset_0_0_10px_rgba(255,107,26,0.06)]',
     success:
-      'border-violet focus-visible:border-violet focus-visible:shadow-[0_0_0_1px_theme(colors.teal.DEFAULT),inset_0_0_10px_rgba(139,92,246,0.06)]',
+      'border-violet focus-visible:border-violet focus-visible:shadow-[0_0_0_1px_theme(colors.violet.DEFAULT),inset_0_0_10px_rgba(139,92,246,0.06)]',
     error: 'border-red focus-visible:shadow-[0_0_0_1px_theme(colors.red.DEFAULT)]',
   }
 

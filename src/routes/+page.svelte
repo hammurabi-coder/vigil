@@ -1,6 +1,7 @@
 <script>
   /* eslint-disable max-lines */
   import { onMount } from 'svelte'
+  import { browser } from '$app/environment'
   import Sidebar from '$lib/components/Sidebar.svelte'
   import Topbar from '$lib/components/Topbar.svelte'
   import { colors } from '$lib/tokens/theme.js'
@@ -233,6 +234,7 @@
   let activeSection = 'colors'
 
   onMount(() => {
+    if (!browser) return
     const observer = new IntersectionObserver(
       (entries) =>
         entries.forEach((e) => {
@@ -293,7 +295,7 @@
           </div>
           <!-- Text scale -->
           <div class="mt-4 flex flex-wrap items-center gap-6">
-            {#each [['text-luma-0', 'Primary', colors.ink[0]], ['text-luma-1', 'Secondary', colors.ink[1]], ['text-luma-2', 'Muted', colors.ink[2]], ['text-luma-3', 'Faint', colors.ink[3]]] as [cls, label, hex], ti (label + ti)}
+            {#each [['text-luma-0', 'Primary', colors.luma[0]], ['text-luma-1', 'Secondary', colors.luma[1]], ['text-luma-2', 'Muted', colors.luma[2]], ['text-luma-3', 'Faint', colors.luma[3]]] as [cls, label, hex], ti (label + ti)}
               <div class="flex items-center gap-3">
                 <div class="border-b1 h-5 w-5 rounded-full border" style="background:{hex}"></div>
                 <span class="font-data text-sm {cls} tracking-wide">{label} · {hex}</span>

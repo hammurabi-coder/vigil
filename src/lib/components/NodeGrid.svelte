@@ -22,10 +22,10 @@
 
   const cv = colorValues
   const stateMap = {
-    ok: { bg: cv.violet, label: 'ACTIVE' },
+    ok: { bg: cv.kelly, label: 'ACTIVE' },
     warn: { bg: cv.ora, label: 'WARN' },
     alert: { bg: cv.red, label: 'ALERT' },
-    off: { bg: cv.ink[2], label: 'OFFLINE' },
+    off: { bg: cv.luma[2], label: 'OFFLINE' },
   }
 
   function randomState() {
