@@ -8,15 +8,15 @@
 // Color Math Design Tokens
 // Utilizing HSL to maintain strict mathematical relationships between lightness steps
 
-const HUE = 240
-const SAT = '40%'
+const HUE = 120
+const SAT = '25%'
 
 /** @type {Object} */
 export const colors = {
   // mathematical lightness increments for the surface stack
   void: '#000000',
   bg: {
-    0: '#05050C', // main background
+    0: `hsl(${HUE}, ${SAT}, 3%)`, // main background
     1: `hsl(${HUE}, ${SAT}, 6%)`, // sidebar
     2: `hsl(${HUE}, ${SAT}, 8%)`, // header
     3: `hsl(${HUE}, ${SAT}, 11%)`, // deep panels
