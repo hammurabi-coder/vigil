@@ -260,7 +260,7 @@
         <div class="space-y-2">
           <!-- Backgrounds -->
           <div class="flex gap-0.5">
-            {#each [[colors.void, 'void'], [colors.bg[0], 'BG-0'], [colors.bg[1], 'BG-1'], [colors.bg[2], 'BG-2'], [colors.bg[3], 'BG-3'], [colors.bg[4], 'BG-4']] as [bg, label] (label)}
+            {#each [[colors.void, 'void'], [colors.bg[0], 'BG-0'], [colors.bg[1], 'BG-1'], [colors.bg[2], 'BG-2'], [colors.bg[3], 'BG-3'], [colors.bg[4], 'BG-4']] as [bg, label], i (label + i)}
               <div class="flex-1">
                 <div class="border-b0 h-12 border" style="background:{bg}"></div>
                 <div class="mt-1.5 font-data text-2xs tracking-wide text-ink-2">{label}</div>
@@ -275,9 +275,9 @@
                   {ramp.name}
                 </div>
                 <div class="flex gap-1">
-                  {#each ramp.swatches as swatch, i (swatch)}
+                  {#each ramp.swatches as swatch, j (swatch + j)}
                     <div
-                      class="h-10 flex-1 {i === ramp.active
+                      class="h-10 flex-1 {j === ramp.active
                         ? 'outline outline-1 outline-offset-1 outline-white/30'
                         : ''}"
                       style="background:{swatch}"
@@ -289,7 +289,7 @@
           </div>
           <!-- Text scale -->
           <div class="mt-4 flex flex-wrap items-center gap-6">
-            {#each [['text-ink-0', 'Primary', colors.ink[0]], ['text-ink-1', 'Secondary', colors.ink[1]], ['text-ink-2', 'Muted', colors.ink[2]], ['text-ink-3', 'Faint', colors.ink[3]]] as [cls, label, hex] (label)}
+            {#each [['text-ink-0', 'Primary', colors.ink[0]], ['text-ink-1', 'Secondary', colors.ink[1]], ['text-ink-2', 'Muted', colors.ink[2]], ['text-ink-3', 'Faint', colors.ink[3]]] as [cls, label, hex], ti (label + ti)}
               <div class="flex items-center gap-3">
                 <div class="border-b1 h-5 w-5 rounded-full border" style="background:{hex}"></div>
                 <span class="font-data text-sm {cls} tracking-wide">{label} · {hex}</span>
