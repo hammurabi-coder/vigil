@@ -31,7 +31,7 @@
   <button
     type="button"
     role="switch"
-    aria-checked={checked}
+    aria-checked={String(checked)}
     aria-label={computedAriaLabel}
     {disabled}
     on:click={() => (checked = !checked)}
