@@ -3,6 +3,7 @@
   import { onMount } from 'svelte'
   import Sidebar from '$lib/components/Sidebar.svelte'
   import Topbar from '$lib/components/Topbar.svelte'
+  import { colors } from '$lib/tokens/theme.js'
   import SectionLabel from '$lib/components/SectionLabel.svelte'
   import Panel from '$lib/components/Panel.svelte'
   import Badge from '$lib/components/Badge.svelte'
@@ -259,10 +260,10 @@
         <div class="space-y-2">
           <!-- Backgrounds -->
           <div class="flex gap-0.5">
-            {#each ['#000000', '#05050C', 'hsl(240, 40%, 6%)', 'hsl(240, 40%, 8%)', 'hsl(240, 40%, 11%)', 'hsl(240, 40%, 14%)'] as bg, i (bg)}
+            {#each [[colors.void, 'void'], [colors.bg[0], 'BG-0'], [colors.bg[1], 'BG-1'], [colors.bg[2], 'BG-2'], [colors.bg[3], 'BG-3'], [colors.bg[4], 'BG-4']] as [bg, label] (label)}
               <div class="flex-1">
                 <div class="border-b0 h-12 border" style="background:{bg}"></div>
-                <div class="mt-1.5 font-data text-2xs tracking-wide text-ink-2">BG-{i}</div>
+                <div class="mt-1.5 font-data text-2xs tracking-wide text-ink-2">{label}</div>
               </div>
             {/each}
           </div>
