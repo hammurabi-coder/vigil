@@ -106,4 +106,18 @@ export { default as ScatterChart } from './components/ScatterChart.svelte'
 /**
  *
  */
-export { colors, fontFamily, fontSize, chartColors } from './tokens/theme.js'
+export { colors, colorValues, fontFamily, fontSize, chartColors } from './tokens/theme.js'
+
+// Form Controls
+/**
+ *
+ */
+export { default as Checkbox } from './components/Checkbox.svelte'
+/**
+ *
+ */
+export { default as Textarea } from './components/Textarea.svelte'
+/**
+ *
+ */
+export { default as Toggle } from './components/Toggle.svelte'

@@ -11,6 +11,6 @@ export default defineConfig({
     },
     pool: 'forks',
     globals: true,
-    include: ['src/**/*.{test,spec}.{js,ts}'],
+    include: ['tests/**/*.{test,spec}.{js,ts}'],
   },
 })

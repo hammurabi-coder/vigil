@@ -28,7 +28,9 @@
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "!dist/**/*.test.js",
+    "!dist/**/*.test.ts"
   ],
   "peerDependencies": {
     "svelte": "^5.0.0"
@@ -66,5 +68,13 @@
   "type": "module",
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hammurabi-coder/vigil.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hammurabi-coder/vigil/issues"
+  },
+  "homepage": "https://github.com/hammurabi-coder/vigil#readme"
 }
