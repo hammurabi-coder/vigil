@@ -272,8 +272,8 @@
             {/each}
           </div>
           <!-- Accent ramps -->
-          <div class="mt-4 grid grid-cols-4 gap-4">
-            {#each [{ name: 'Orange / Primary', swatches: [colors.ora[700], colors.ora[500], colors.ora[300], colors.ora.DEFAULT], active: 3 }, { name: 'Red / Alert', swatches: [colors.red[700], colors.red[500], colors.red[300], colors.red.DEFAULT], active: 3 }, { name: 'Amber / Data', swatches: [colors.amb[700], colors.amb[500], colors.amb[300], colors.amb.DEFAULT], active: 3 }, { name: 'Teal / Nominal', swatches: [colors.teal[700], colors.teal[500], colors.teal[300], colors.teal.DEFAULT], active: 3 }] as ramp (ramp.name)}
+          <div class="mt-4 grid grid-cols-6 gap-4">
+            {#each [{ name: 'Orange / Primary', swatches: [colors.ora[700], colors.ora[500], colors.ora[300], colors.ora.DEFAULT], active: 3 }, { name: 'Red / Alert', swatches: [colors.red[700], colors.red[500], colors.red[300], colors.red.DEFAULT], active: 3 }, { name: 'Amber / Data', swatches: [colors.amb[700], colors.amb[500], colors.amb[300], colors.amb.DEFAULT], active: 3 }, { name: 'Teal / Nominal', swatches: [colors.teal[700], colors.teal[500], colors.teal[300], colors.teal.DEFAULT], active: 3 }, { name: 'Sky / Info', swatches: [colors.sky[700], colors.sky[500], colors.sky[300], colors.sky.DEFAULT], active: 3 }, { name: 'Kelly / Active', swatches: [colors.kelly[700], colors.kelly[500], colors.kelly[300], colors.kelly.DEFAULT], active: 3 }] as ramp (ramp.name)}
               <div>
                 <div class="mb-2 font-data text-xs uppercase tracking-widest text-ink-2">
                   {ramp.name}
