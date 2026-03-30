@@ -5,11 +5,7 @@
    * Topbar
    * @prop {string} title
    * @prop {string} subtitle
-   * @prop {string} navTitle
    * @prop {string} clock
-   * @prop {string} doc
-   * @prop {string} rev
-   * @prop {string} status
    */
   /** @type {string} */
   export let title = 'vigil'
@@ -17,12 +13,6 @@
   export let subtitle = 'Operational Dark · Component Library · v0.1.0'
   /** @type {string} */
   export let clock = '——:——:——'
-  /** @type {string} */
-  export let doc = 'SP-168-NG'
-  /** @type {string} */
-  export let rev = '0.1.0-alpha'
-  /** @type {string} */
-  export let status = 'ACTIVE'
 </script>
 
 <header

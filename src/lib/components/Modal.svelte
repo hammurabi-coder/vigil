@@ -29,6 +29,7 @@
    */
   function handleKeydown(e) {
     if (e.key === 'Escape' && open) close()
+    if (e.key === 'Enter' || e.key === ' ') close()
   }
 
   onMount(() => {
@@ -45,11 +46,12 @@
 {#if open}
   <div class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6">
     <!-- Backdrop -->
-    <!-- svelte-ignore a11y-click-events-have-key-events -->
-    <!-- svelte-ignore a11y-no-static-element-interactions -->
     <div
-      class="absolute inset-0 bg-void/80 backdrop-blur-sm transition-opacity"
+      class="absolute inset-0 cursor-pointer bg-void/80 backdrop-blur-sm transition-opacity"
+      role="button"
+      tabindex="-1"
       on:click={close}
+      on:keydown={handleKeydown}
     ></div>
 
     <!-- Panel -->

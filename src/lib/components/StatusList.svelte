@@ -6,10 +6,12 @@
   export let items = []
 
   const dotBase = 'w-1.5 h-1.5 rounded-full flex-shrink-0'
+  // Using hardcoded HSL values instead of theme() — avoids Tailwind JIT
+  // scan issues when values live in JS const/template literals
   const dots = {
-    ok: `${dotBase} bg-teal shadow-[0_0_5px_theme(colors.teal.DEFAULT)]`,
-    warn: `${dotBase} bg-ora shadow-[0_0_5px_theme(colors.ora.DEFAULT)] animate-blink-slow`,
-    alert: `${dotBase} bg-red shadow-[0_0_7px_theme(colors.red.DEFAULT)] animate-blink`,
+    ok: `${dotBase} bg-teal`,
+    warn: `${dotBase} bg-ora animate-blink-slow`,
+    alert: `${dotBase} bg-red animate-blink`,
     off: `${dotBase} bg-ink-2`,
   }
 </script>
