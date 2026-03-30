@@ -13,13 +13,13 @@
 
   const variants = {
     primary:
-      'bg-ora text-void shadow-[0_3px_10px_rgba(0,0,0,0.22)] hover:bg-ora-300 hover:shadow-[0_5px_16px_rgba(0,0,0,0.28)] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.3)] active:scale-[0.97]',
+      'bg-gradient-to-b from-ora-300 to-ora text-void shadow-[0_3px_10px_rgba(0,0,0,0.22)] hover:from-ora hover:to-ora-700 hover:shadow-[0_5px_16px_rgba(0,0,0,0.28)] active:from-ora-700 active:to-ora active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.3)] active:scale-[0.97]',
     outline:
-      'bg-gradient-to-b from-ink-1 to-ink-2 text-void border border-ink-3 shadow-[0_3px_10px_rgba(0,0,0,0.22)] hover:from-ink-2 hover:to-ink-3 hover:shadow-[0_5px_16px_rgba(0,0,0,0.28)] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.35)] active:scale-[0.97]',
+      'bg-gradient-to-b from-ink-2 to-bg text-void border border-ink-3 shadow-[0_3px_10px_rgba(0,0,0,0.22)] hover:from-ink-3 hover:to-ink-2 hover:shadow-[0_5px_16px_rgba(0,0,0,0.28)] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.35)] active:scale-[0.97]',
     ghost:
-      'bg-gradient-to-b from-ink-1 to-ink-2 text-void border border-ink-3 shadow-[0_3px_10px_rgba(0,0,0,0.22)] hover:from-ink-2 hover:to-ink-3 hover:shadow-[0_5px_16px_rgba(0,0,0,0.28)] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.35)] active:scale-[0.97]',
+      'bg-gradient-to-b from-ink-2 to-bg text-void border border-ink-3 shadow-[0_3px_10px_rgba(0,0,0,0.22)] hover:from-ink-3 hover:to-ink-2 hover:shadow-[0_5px_16px_rgba(0,0,0,0.28)] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.35)] active:scale-[0.97]',
     danger:
-      'bg-gradient-to-b from-red-300 to-red text-white shadow-[0_3px_10px_rgba(0,0,0,0.22)] hover:from-red hover:to-red-700 hover:shadow-[0_5px_16px_rgba(0,0,0,0.28)] active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.35)] active:scale-[0.97]',
+      'bg-gradient-to-b from-red-300 to-red text-white shadow-[0_3px_10px_rgba(0,0,0,0.22)] hover:from-red hover:to-red-700 hover:shadow-[0_5px_16px_rgba(0,0,0,0.28)] active:from-red-700 active:to-red active:shadow-[inset_0_2px_4px_rgba(0,0,0,0.35)] active:scale-[0.97]',
   }
 
   const sizes = {
