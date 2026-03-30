@@ -55,14 +55,14 @@ export const colors = {
     500: 'hsl(44, 65%, 51%)',
     700: 'hsl(44, 65%, 41%)',
   },
-  // Teal — nominal/ok signal (H: 177, S: 68%, L: 46%)
-  teal: {
-    DEFAULT: 'hsl(177, 68%, 46%)',
-    lo: 'hsla(177, 68%, 46%, 0.12)',
-    xlo: 'hsla(177, 68%, 46%, 0.05)',
-    300: 'hsl(177, 68%, 56%)',
-    500: 'hsl(177, 68%, 46%)',
-    700: 'hsl(177, 68%, 36%)',
+  // Violet — nominal/ok signal (H: 265, S: 70%, L: 65%)
+  violet: {
+    DEFAULT: 'hsl(265, 70%, 65%)',
+    lo: 'hsla(265, 70%, 65%, 0.12)',
+    xlo: 'hsla(265, 70%, 65%, 0.05)',
+    300: 'hsl(265, 70%, 75%)',
+    500: 'hsl(265, 70%, 65%)',
+    700: 'hsl(265, 70%, 55%)',
   },
   // Text scale mathematical increments
   ink: {
@@ -98,7 +98,7 @@ export const fontSize = {
 
 /** @type {Object} */
 export const colorValues = {
-  teal: 'hsl(177, 68%, 46%)',
+  teal: 'hsl(265, 70%, 65%)',
   ora: 'hsl(21, 100%, 55%)',
   red: 'hsl(353, 82%, 52%)',
   ink: {
@@ -114,7 +114,7 @@ export const chartColors = {
   ora: { stroke: colors.ora.DEFAULT, fill: colors.ora.xlo },
   red: { stroke: colors.red.DEFAULT, fill: colors.red.xlo },
   amb: { stroke: colors.amb.DEFAULT, fill: colors.amb.lo },
-  teal: { stroke: colors.teal.DEFAULT, fill: colors.teal.xlo },
+  teal: { stroke: colors.violet.DEFAULT, fill: colors.violet.xlo },
   grid: 'rgba(255,255,255,0.06)',
   gridLine: 'rgba(255,255,255,0.07)',
   tick: colors.ink[2],

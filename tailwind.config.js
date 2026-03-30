@@ -11,7 +11,7 @@ export default {
         ora: colors.ora,
         red: colors.red,
         amb: colors.amb,
-        teal: colors.teal,
+        teal: colors.violet,
         ink: colors.ink,
         glow: chartColors.glow,
       },
