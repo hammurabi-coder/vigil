@@ -47,6 +47,24 @@ export const colors = {
     500: 'hsl(353, 82%, 52%)',
     700: 'hsl(353, 82%, 42%)',
   },
+  // Sky blue — cool info/accent (H: 200, S: 75%, L: 60%)
+  sky: {
+    DEFAULT: 'hsl(200, 75%, 55%)',
+    lo: 'hsla(200, 75%, 55%, 0.12)',
+    xlo: 'hsla(200, 75%, 55%, 0.05)',
+    300: 'hsl(200, 75%, 70%)',
+    500: 'hsl(200, 75%, 55%)',
+    700: 'hsl(200, 75%, 40%)',
+  },
+  // Kelly green — success/active signal (H: 145, S: 70%, L: 48%)
+  kelly: {
+    DEFAULT: 'hsl(145, 70%, 48%)',
+    lo: 'hsla(145, 70%, 48%, 0.12)',
+    xlo: 'hsla(145, 70%, 48%, 0.05)',
+    300: 'hsl(145, 70%, 60%)',
+    500: 'hsl(145, 70%, 48%)',
+    700: 'hsl(145, 70%, 36%)',
+  },
   // Amber — data readout values (H: 44, S: 65%, L: 51%)
   amb: {
     DEFAULT: 'hsl(44, 65%, 51%)',
@@ -110,6 +128,8 @@ export const colorValues = {
   teal: 'hsl(265, 70%, 65%)',
   ora: 'hsl(21, 100%, 55%)',
   red: 'hsl(353, 82%, 52%)',
+  sky: 'hsl(200, 75%, 55%)',
+  kelly: 'hsl(145, 70%, 48%)',
   ink: {
     0: 'hsl(210, 15%, 98%)',
     1: 'hsl(210, 15%, 85%)',
@@ -124,6 +144,8 @@ export const chartColors = {
   red: { stroke: colors.red.DEFAULT, fill: colors.red.xlo },
   amb: { stroke: colors.amb.DEFAULT, fill: colors.amb.lo },
   teal: { stroke: colors.violet.DEFAULT, fill: colors.violet.xlo },
+  sky: { stroke: colors.sky.DEFAULT, fill: colors.sky.xlo },
+  kelly: { stroke: colors.kelly.DEFAULT, fill: colors.kelly.xlo },
   grid: 'rgba(255,255,255,0.06)',
   gridLine: 'rgba(255,255,255,0.07)',
   tick: colors.ink[2],
