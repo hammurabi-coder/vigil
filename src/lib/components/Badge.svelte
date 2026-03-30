@@ -6,7 +6,7 @@
   export let variant = 'ok'
 
   const variants = {
-    ok: 'border-violet text-kelly',
+    ok: 'border-kelly text-kelly',
     warn: 'border-ora text-ora',
     alert: 'border-red text-red animate-blink',
     muted: 'border-b2 text-luma-3',

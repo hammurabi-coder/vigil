@@ -1,8 +1,6 @@
 # vigil
 
-> dark operational component library
-
-Svelte + Tailwind. Public Works × Civic 70s. True black. No border-radius. No grey panels.
+Dark operational interface library. Svelte + Tailwind. No border-radius. No grey panels.
 
 ---
 
@@ -11,39 +9,49 @@ Svelte + Tailwind. Public Works × Civic 70s. True black. No border-radius. No g
 ```bash
 npm install
 npm run dev
-# → http://localhost:5173
 ```
 
-The dev server runs the full component showcase — every module in one scrollable page with a sticky nav. That's your review environment.
+Full component showcase at `http://localhost:5173`.
+
+---
 
 ## Scripts
 
-| Command            | What it does                             |
-| ------------------ | ---------------------------------------- |
-| `npm run dev`      | Start showcase dev server                |
-| `npm run build`    | Build showcase + package library         |
-| `npm run package`  | Package src/lib to dist/ for consumption |
-| `npm run lint`     | ESLint + Prettier check                  |
-| `npm run lint:fix` | Auto-fix lint + format                   |
-| `npm run format`   | Prettier write                           |
-| `npm run check`    | svelte-check type/prop validation        |
+| Command         | What it does                      |
+| --------------- | --------------------------------- |
+| `npm run dev`   | Dev server + showcase             |
+| `npm run build` | Build showcase + package to dist/ |
+| `npm run check` | svelte-check prop validation      |
+| `npm run lint`  | ESLint + Prettier                 |
+
+---
+
+## Design tokens
+
+Single source of truth in `src/lib/tokens/theme.js`.
+
+### Accents
+
+| Token    | Hue  | Use               |
+| -------- | ---- | ----------------- |
+| `ora`    | 21°  | Primary action    |
+| `red`    | 353° | Alert/error       |
+| `amb`    | 44°  | Data readout      |
+| `sky`    | 200° | Info              |
+| `kelly`  | 145° | Success/nominal   |
+| `violet` | 265° | Neutral indicator |
+
+### Luma scale
+
+`luma[0]` (98%) → `luma[3]` (55%) — text hierarchy on dark background.
+
+---
 
 ## Structure
 
 ```
-vigil/
-├── src/
-│   ├── lib/
-│   │   ├── components/       ← all exported components
-│   │   ├── tokens/theme.js   ← single source of truth for all design tokens
-│   │   └── index.js          ← barrel export
-│   └── routes/
-│       └── +page.svelte      ← showcase / review site
-├── tailwind.config.js        ← imports from tokens/theme.js
-├── AGENTS.md                 ← full brief for AI coding agents
-└── README.md
+src/lib/
+├── components/       ← all components
+├── tokens/theme.js   ← design tokens
+└── index.js          ← barrel export
 ```
-
-## Design brief
-
-See AGENTS.md for the full design spec, token reference, component inventory, and task backlog.

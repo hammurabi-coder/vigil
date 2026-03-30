@@ -315,7 +315,7 @@
               class="border-b0 flex items-baseline justify-between gap-4 border-b px-6 py-5 last:border-b-0"
             >
               <div class={row.cls}>{row.sample}</div>
-              <div class="flex-shrluma-0 text-luma-2 font-data text-xs tracking-wide">
+              <div class="text-luma-2 flex-shrink-0 font-data text-xs tracking-wide">
                 {row.meta}
               </div>
             </div>
