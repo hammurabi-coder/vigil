@@ -32,7 +32,7 @@
     <LogoMark size={32} />
     <div>
       <div class="font-display text-4xl leading-none tracking-wide">{title}</div>
-      <div class="mt-2 font-data text-lg uppercase tracking-widest text-ora">
+      <div class="mt-1 font-data text-sm text-ink-2">
         {subtitle}
       </div>
     </div>
@@ -40,14 +40,9 @@
   <div
     class="flex items-center gap-6 text-right font-data text-sm leading-loose tracking-wider text-ink-1"
   >
-    <div>
-      DOC <span class="text-amb">{doc}</span><br />
-      REV <span class="text-amb">{rev}</span><br />
-      STATUS <span class="text-teal">{status}</span>
-    </div>
     <div class="border-b1 border-l pl-6">
       <div class="text-lg tabular-nums text-amb">{clock}</div>
-      <div class="text-2xs uppercase tracking-widest text-ink-2">System Time</div>
+      <div class="text-2xs text-ink-2">System Time</div>
     </div>
   </div>
 </header>

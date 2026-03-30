@@ -18,7 +18,7 @@
   {#each items as item (item.label)}
     <div
       class="border-b0 flex items-center gap-3 border-b py-3 font-data
-                text-xs uppercase tracking-wider last:border-b-0"
+                text-xs last:border-b-0"
     >
       <div class={dots[item.status] ?? dots.off}></div>
       <span class="flex-1 text-ink-1">{item.label}</span>
