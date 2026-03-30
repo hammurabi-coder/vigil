@@ -26,6 +26,8 @@ export default {
         none: '0',
         sm: '1px',
         DEFAULT: '2px',
+        md: '4px',
+        lg: '8px',
       },
       letterSpacing: {
         widest2: '0.35em',
