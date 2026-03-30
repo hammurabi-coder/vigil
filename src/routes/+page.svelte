@@ -22,6 +22,10 @@
   import RadarChart from '$lib/components/RadarChart.svelte'
   import DonutChart from '$lib/components/DonutChart.svelte'
   import ScatterChart from '$lib/components/ScatterChart.svelte'
+  import Textarea from '$lib/components/Textarea.svelte'
+  import Select from '$lib/components/Select.svelte'
+  import Checkbox from '$lib/components/Checkbox.svelte'
+  import Toggle from '$lib/components/Toggle.svelte'
 
   // ── Clock ─────────────────────────────────────────────────
   let clock = '——:——:——'
@@ -611,6 +615,50 @@
                 hint="EXCEEDED"
                 value="PATTERN BLUE CONFIRMED"
               />
+              <Textarea label="Mission Notes" placeholder="Enter tactical notes..." rows={3} />
+              <Select
+                label="Threat Classification"
+                value="confirmed"
+                state="default"
+                hint="Current engagement phase"
+                options={[
+                  { label: 'Unidentified', value: 'unidentified' },
+                  { label: 'Confirmed', value: 'confirmed' },
+                  { label: 'Neutralised', value: 'neutralised' },
+                ]}
+              />
+            </div>
+          </Panel>
+          <Panel variant="deep" title="Toggles &amp; Checkboxes">
+            <div class="space-y-4">
+              <div>
+                <div class="mb-3 font-data text-xs uppercase tracking-widest text-ink-3">
+                  Toggle Switches
+                </div>
+                <div class="space-y-3">
+                  <Toggle label="Auto-Sync" checked={true} hint="Synchronise MAGI telemetry" />
+                  <Toggle
+                    label="AT Field Active"
+                    checked={false}
+                    hint="Defensive barrier systems"
+                  />
+                  <Toggle label="Redundant Comms" checked={true} />
+                </div>
+              </div>
+              <div>
+                <div class="mb-3 font-data text-xs uppercase tracking-widest text-ink-3">
+                  Checkboxes
+                </div>
+                <div class="space-y-2">
+                  <Checkbox label="Accept mission parameters" checked={true} />
+                  <Checkbox
+                    label="Override safety lock"
+                    checked={false}
+                    hint="Requires Level-4 clearance"
+                  />
+                  <Checkbox label="Zero-0 compatibility" checked={false} />
+                </div>
+              </div>
             </div>
           </Panel>
         </div>
