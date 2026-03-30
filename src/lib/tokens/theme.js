@@ -56,7 +56,16 @@ export const colors = {
     700: 'hsl(44, 65%, 41%)',
   },
   // Violet — nominal/ok signal (H: 265, S: 70%, L: 65%)
+  // teal key kept as alias so all bg-teal, text-teal, border-teal utilities still work
   violet: {
+    DEFAULT: 'hsl(265, 70%, 65%)',
+    lo: 'hsla(265, 70%, 65%, 0.12)',
+    xlo: 'hsla(265, 70%, 65%, 0.05)',
+    300: 'hsl(265, 70%, 75%)',
+    500: 'hsl(265, 70%, 65%)',
+    700: 'hsl(265, 70%, 55%)',
+  },
+  teal: {
     DEFAULT: 'hsl(265, 70%, 65%)',
     lo: 'hsla(265, 70%, 65%, 0.12)',
     xlo: 'hsla(265, 70%, 65%, 0.05)',
