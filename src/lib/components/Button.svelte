@@ -12,10 +12,12 @@
     'font-label font-semibold tracking-wider uppercase inline-flex items-center gap-1.5 relative transition-all duration-150 cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ora active:scale-[0.98]'
 
   const variants = {
-    primary: 'bg-ora text-void hover:bg-ora-300 hover:shadow-[0_0_18px_theme(colors.glow.ora)]',
-    outline: 'bg-transparent text-ora border border-ora hover:bg-ora-xlo',
+    primary:
+      'bg-gradient-to-b from-ora-300 to-ora text-void border-[2px] border-ora-700 hover:from-ora hover:to-ora-700 hover:shadow-[0_4px_18px_theme(colors.glow.ora)] active:from-ora-700 active:to-ora active:shadow-[0_1px_4px_rgba(0,0,0,0.4)] active:scale-[0.97]',
+    outline: 'bg-transparent text-ora border-[2px] border-ora-700 hover:bg-ora-lo active:bg-ora-lo',
     ghost: 'bg-transparent text-ink-1 border border-b1 hover:border-b2 hover:text-ink-0',
-    danger: 'bg-red text-white hover:brightness-110 hover:shadow-[0_0_20px_theme(colors.glow.red)]',
+    danger:
+      'bg-red text-white border-[2px] border-red-700 hover:brightness-110 hover:shadow-[0_0_20px_theme(colors.glow.red)] active:brightness-90 active:shadow-[0_1px_4px_rgba(0,0,0,0.4)]',
   }
 
   const sizes = {
